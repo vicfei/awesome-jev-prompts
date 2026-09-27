@@ -1,6 +1,8 @@
 name: Link check
 
 on:
+  push:
+    branches: [main]
   schedule:
     - cron: "0 6 * * 1" # Mondays 06:00 UTC
   workflow_dispatch:

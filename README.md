@@ -2,10 +2,9 @@
 
 > A curated library of question patterns, anti-patterns, and calibration notes for [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) — TypeSafe AI's System One model. **Question design is the prompt engineering of typed decisions.**
 
-<!-- After creating the repo, replace OWNER with your GitHub username in the four badge URLs below (see LAUNCH.md). -->
-[![Stars](https://img.shields.io/github/stars/OWNER/awesome-jev-prompts?style=social&label=Star)](https://github.com/OWNER/awesome-jev-prompts/stargazers)
-[![Last commit](https://img.shields.io/github/last-commit/OWNER/awesome-jev-prompts?label=last%20commit)](https://github.com/OWNER/awesome-jev-prompts/commits)
-[![Link check](https://github.com/OWNER/awesome-jev-prompts/actions/workflows/link-check.yml/badge.svg)](https://github.com/OWNER/awesome-jev-prompts/actions/workflows/link-check.yml)
+[![Stars](https://img.shields.io/github/stars/vicfei/awesome-jev-prompts?style=social&label=Star)](https://github.com/vicfei/awesome-jev-prompts/stargazers)
+[![Last commit](https://img.shields.io/github/last-commit/vicfei/awesome-jev-prompts?label=last%20commit)](https://github.com/vicfei/awesome-jev-prompts/commits)
+[![Link check](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/link-check.yml/badge.svg)](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/link-check.yml)
 [![License: CC0](https://img.shields.io/badge/license-CC0-007ec6)](#license)
 
 **中文版 README 在[这里](README.zh-CN.md)。**

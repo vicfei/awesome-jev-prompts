@@ -6,16 +6,16 @@ Facts: Jev 1.13 (`jev-latest` alias), POST https://api.typesafe.ai/v1/systemone,
 
 ## Index
 
-- [Awesome Jev Prompts (README)](https://raw.githubusercontent.com/OWNER/awesome-jev-prompts/main/README.md): intro, primitives, quick facts, quick start, official resources
-- [中文版 README](https://raw.githubusercontent.com/OWNER/awesome-jev-prompts/main/README.zh-CN.md)
-- [Choice patterns](https://raw.githubusercontent.com/OWNER/awesome-jev-prompts/main/categories/choice-patterns.md): intent routing, tool selection, model routing, best-of-N, document classification, skill routing
-- [Score patterns](https://raw.githubusercontent.com/OWNER/awesome-jev-prompts/main/categories/score-patterns.md): severity rubrics, quality gates, moderation, RAG relevance, priority queues
-- [Noul patterns](https://raw.githubusercontent.com/OWNER/awesome-jev-prompts/main/categories/noul-patterns.md): policy checks, duplicate detection, citation checks, human escalation, retry control
-- [Routing & triage](https://raw.githubusercontent.com/OWNER/awesome-jev-prompts/main/categories/routing-and-triage.md): inbox triage, ticket queues, RAG filtering, document streams
-- [Guardrails & verification](https://raw.githubusercontent.com/OWNER/awesome-jev-prompts/main/categories/guardrails-and-verification.md): LLM output guardrails, jailbreak detection, structured-output validation, code review gates
-- [Context compaction](https://raw.githubusercontent.com/OWNER/awesome-jev-prompts/main/categories/context-compaction.md): keep-or-drop, summarize-or-quote, tool-result pruning
-- [Anti-patterns](https://raw.githubusercontent.com/OWNER/awesome-jev-prompts/main/categories/anti-patterns.md): the ten ways Jev questions go wrong, with fixes
-- [Calibration & eval](https://raw.githubusercontent.com/OWNER/awesome-jev-prompts/main/categories/calibration-and-eval.md): thresholds from logged distributions, versioned questions, consistency checks, shadow mode, System Two handoff
+- [Awesome Jev Prompts (README)](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/README.md): intro, primitives, quick facts, quick start, official resources
+- [中文版 README](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/README.zh-CN.md)
+- [Choice patterns](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/choice-patterns.md): intent routing, tool selection, model routing, best-of-N, document classification, skill routing
+- [Score patterns](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/score-patterns.md): severity rubrics, quality gates, moderation, RAG relevance, priority queues
+- [Noul patterns](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/noul-patterns.md): policy checks, duplicate detection, citation checks, human escalation, retry control
+- [Routing & triage](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/routing-and-triage.md): inbox triage, ticket queues, RAG filtering, document streams
+- [Guardrails & verification](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/guardrails-and-verification.md): LLM output guardrails, jailbreak detection, structured-output validation, code review gates
+- [Context compaction](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/context-compaction.md): keep-or-drop, summarize-or-quote, tool-result pruning
+- [Anti-patterns](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/anti-patterns.md): the ten ways Jev questions go wrong, with fixes
+- [Calibration & eval](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/calibration-and-eval.md): thresholds from logged distributions, versioned questions, consistency checks, shadow mode, System Two handoff
 
 ## Optional
 

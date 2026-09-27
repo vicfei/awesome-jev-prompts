@@ -2,8 +2,8 @@
 
 > 面向 [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)（TypeSafe AI 的 System One 模型）的问题模式库：经过验证的问题模板、反模式与校准实践。**在类型化决策的世界里，"问题设计"就是提示词工程。**
 
-[![Stars](https://img.shields.io/github/stars/OWNER/awesome-jev-prompts?style=social&label=Star)](https://github.com/OWNER/awesome-jev-prompts/stargazers)
-[![Link check](https://github.com/OWNER/awesome-jev-prompts/actions/workflows/link-check.yml/badge.svg)](https://github.com/OWNER/awesome-jev-prompts/actions/workflows/link-check.yml)
+[![Stars](https://img.shields.io/github/stars/vicfei/awesome-jev-prompts?style=social&label=Star)](https://github.com/vicfei/awesome-jev-prompts/stargazers)
+[![Link check](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/link-check.yml/badge.svg)](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/link-check.yml)
 [![License: CC0](https://img.shields.io/badge/license-CC0-007ec6)](LICENSE)
 
 **English version is [here](README.md).** 条目正文（模板与代码）以英文维护，欢迎提交中文场景的实践。
