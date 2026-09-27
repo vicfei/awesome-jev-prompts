@@ -1,0 +1,57 @@
+name: Submit a pattern
+description: Propose a question pattern, anti-pattern, or calibration practice
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One pattern per submission. Read the [entry format](https://github.com/OWNER/awesome-jev-prompts/blob/main/CONTRIBUTING.md) first — templates and sources are mandatory.
+  - type: input
+    id: name
+    attributes:
+      label: Pattern name
+      placeholder: "e.g. Escalation-trigger for ambiguous refunds"
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type
+      options:
+        - Pattern (Choice)
+        - Pattern (Score)
+        - Pattern (Noul)
+        - Pattern (Composite)
+        - Anti-pattern
+        - Calibration / eval practice
+    validations:
+      required: true
+  - type: textarea
+    id: template
+    attributes:
+      label: Question template (Python or TypeScript SDK)
+      description: Copy-pasteable code. Variable content goes in `state`, not the question.
+      render: python
+    validations:
+      required: true
+  - type: textarea
+    id: wiring
+    attributes:
+      label: Wiring & thresholds
+      description: Concrete bands/floors/fallbacks — how code should act on the answer.
+    validations:
+      required: true
+  - type: textarea
+    id: failures
+    attributes:
+      label: Failure modes
+      description: What goes wrong in practice and how to detect it.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Official docs, public repos, or articles. Write "observed in production by the author" if it's your own experience.
+    validations:
+      required: true
