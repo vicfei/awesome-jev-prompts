@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import re
+import subprocess
 import sys
 import urllib.error
 import urllib.request
@@ -13,7 +14,28 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 URL_RE = re.compile(r"https?://[^\s<>\")\]`]+")
 SKIP_HOSTS = ("img.shields.io",)  # badge host, not worth probing
-SKIP_URLS = ("/OWNER/",)  # launch-time placeholders, replaced per LAUNCH.md
+
+
+def self_url_prefixes() -> tuple[str, ...]:
+    """URL prefixes of this repo itself — self-links are structural, skip them."""
+    try:
+        remote = subprocess.run(
+            ["git", "remote", "get-url", "origin"],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            check=True,
+        ).stdout.strip()
+    except Exception:  # noqa: BLE001 - no origin (pre-launch) → nothing to skip
+        return ()
+    match = re.match(r"(?:https://|git@)(github\.com)[/:](.+?)(?:\.git)?$", remote)
+    if not match:
+        return ()
+    slug = match.group(2)
+    return (
+        f"https://github.com/{slug}/",
+        f"https://raw.githubusercontent.com/{slug}/",
+    )
 ALIVE_STATUSES = {401, 403, 405, 429, 501}  # bot-throttled but alive
 TIMEOUT = 15
 
@@ -23,12 +45,13 @@ def collect_urls() -> dict[str, list[str]]:
     llms = ROOT / "llms.txt"
     if llms.exists():
         files.append(llms)
+    skip = self_url_prefixes()
     found: dict[str, list[str]] = {}
     for path in files:
         for url in URL_RE.findall(path.read_text(encoding="utf-8")):
             url = url.rstrip(".,;")
             if not any(url.startswith(f"https://{host}/") for host in SKIP_HOSTS) and not any(
-                part in url for part in SKIP_URLS
+                url.startswith(prefix) for prefix in skip
             ):
                 found.setdefault(url, []).append(str(path.relative_to(ROOT)))
     return found
