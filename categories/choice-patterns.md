@@ -138,7 +138,7 @@ Invoice vs. receipt vs. contract vs. junk — the entry question of every docume
 
 **Wiring & thresholds**
 - For taxonomies deeper than ~15 labels, classify hierarchically (coarse group → fine type) rather than one flat 255-option question.
-- Feed extracted text, not scans — Jev is text-only.
+- Feed extracted text, not scans — Jev is text-only (multimodal variants are emerging; see [Ecosystem notes](../README.md#ecosystem-notes)).
 
 **Failure modes**
 - Jev is weak at math, counting, and dates; classify on structure and wording, never on "the total looks bigger than…".

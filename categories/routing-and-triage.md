@@ -138,7 +138,7 @@ A firehose of mixed documents (scans, exports, forwards) needs to land in N buck
 
 **Wiring & thresholds**
 - `manual` is the pressure valve — when its share in your weekly log spikes, a category definition has rotted.
-- Pass extracted text (OCR first if needed): Jev is text-only, no images or PDF bytes.
+- Pass extracted text (OCR first if needed): Jev is text-only, no images or PDF bytes. Multimodal System One variants ([OneJev](https://github.com/OmniJev/OneJev), [Valen](https://github.com/Liuziyu77/Valen)) can take pixels directly — pattern unchanged, thresholds re-tuned per modality.
 
 **Failure modes**
 - Cross-category hybrids (an HR contract) — pick the *processing* owner ("who acts on it"), not the *topic*; pipelines are about actions.

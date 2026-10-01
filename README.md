@@ -30,7 +30,7 @@ Quick facts (as of Jev 1.13 — verify against [docs](https://docs.typesafe.ai/m
 | Pricing | $0.042 per 1M input tokens; output tokens free |
 | Context | 64k tokens per request (32k state + longest question) |
 | Limits | 250k tokens/sec; 1,200 requests/min |
-| Modality | Text only — no images, audio, or video |
+| Modality | Text only (Jev proper) — multimodal System One variants exist, see [Ecosystem notes](#ecosystem-notes) |
 
 ## Quick start
 
@@ -123,6 +123,12 @@ Every entry gives the question template, threshold/wiring guidance, known failur
 | [Calibration & eval](categories/calibration-and-eval.md) | 5 | Thresholds from logs, versioned questions, shadow mode, System Two handoff |
 
 **The one rule that generates most of the others:** *questions describe judgments; code owns composition, thresholds, and side effects.*
+
+## Ecosystem notes
+
+The question-design approach in this list transfers across System One models. Notable developments:
+
+- **2026-10-02 — vision arrives.** [PixelJev](https://arxiv.org/abs/2609.29283) (paper: native-image typed decisions — image + instruction + candidate set → structured output), [OneJev](https://github.com/OmniJev/OneJev) (calibrated answers to typed questions about screens, photos, video, and text in one forward pass), and [Valen](https://github.com/Liuziyu77/Valen) (train-your-own Jev-like multimodal model) extend the paradigm to pixels. Design impact: Choice/Score/Noul thinking applies unchanged to visual state, but thresholds must be re-calibrated per modality — don't port text-tuned cutoffs.
 
 ## Official resources
 
