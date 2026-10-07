@@ -50,11 +50,33 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 
 **一条衍生出大半规则的元规则：** *问题只描述判断；组合、阈值与副作用归代码。*
 
+## 我该用哪个模式？
+
+- **从你可控的选项集合里挑一个** → [Choice 模式](categories/choice-patterns.md)——意图、工具、模型路由、Best-of-N
+- **在量表上给强度或质量打分** → [Score 模式](categories/score-patterns.md)——严重度、门禁、审核、相关性
+- **问"是否为真 / 是否违规 / 是否同一个"** → [Noul 模式](categories/noul-patterns.md)——策略、去重、引用、升级
+- **给非结构化的输入流分拣** → [路由与分诊](categories/routing-and-triage.md)
+- **评判另一个模型的输出** → [护栏与校验](categories/guardrails-and-verification.md)
+- **决定上下文窗口里留什么** → [上下文压缩](categories/context-compaction.md)
+- **以上任何一条上线之前** → 先读[反模式](categories/anti-patterns.md)，再读[校准与评估](categories/calibration-and-eval.md)
+
+## 验证政策
+
+每条条目都引用来源，来源分三类——上线前请先看清是哪类：
+
+- **官方文档（Documented）**——基于 TypeSafe 官方文档或 cookbook（已链接）。模式的*形态*有据可查，示例措辞是我们写的。
+- **社区实践（Community-observed）**——有公开项目或文章报告在这么做（已链接）。我们描述其做法，不构成背书。
+- **推导实践（Derived practice）**——从已文档化规则推导的工程默认值；无外部来源处已注明。
+
+**本清单中的阈值是起点，不是实测结果。** 请在你自己的日志分布上重新拟合——这正是[校准与评估](categories/calibration-and-eval.md)分类存在的意义。
+
 ## 生态动态
 
 本清单的问题设计方法可跨 System One 模型迁移。值得关注的进展：
 
 - **2026-10-08 · 问题设计技能化。** 可安装的 agent 技能开始从不同角度覆盖本清单的领域：[VBS2004/jev-questions-skill](https://github.com/VBS2004/jev-questions-skill)（9 条实测规则 + 5 个标准库检查脚本）、[PyModel/jev-skill](https://github.com/PyModel/jev-skill)（11 种实现形态带代码草图）、[abhisheksharma001/jev-skill](https://github.com/abhisheksharma001/jev-skill)（适配检查、代码库发现、问题优化，基准数据诚实）、[wuyoscar/jev-skill](https://github.com/wuyoscar/jev-skill)（5 个技能 + 108 个场景模板）。它们与本清单互补——想把它们串成一条工作流，可以用 [jev-pipeline-skill](https://github.com/vicfei/jev-pipeline-skill)：find → fit → draft → lint → spread → threshold → cascade。
+
+**与这些技能的配合方式**：① 在本库挑模式起草问题 → ② 用 [VBS2004/jev-questions-skill](https://github.com/VBS2004/jev-questions-skill) 的 `lint_questions.py` + `spread.py` 做静态与区分度检查（纯标准库、不调 API）→ ③ 拿不准该不该用 Jev 就跑 [abhisheksharma001/jev-skill](https://github.com/abhisheksharma001/jev-skill) 的 `fit_check.py`（确定性 go/no-go）→ ④ 或直接用 [jev-pipeline-skill](https://github.com/vicfei/jev-pipeline-skill) 一条命令串起来（可装为 Claude Code / Codex / OpenCode / ClawHub 技能）。
 - **2026-10-02 · 视觉来了。** [PixelJev](https://arxiv.org/abs/2609.29283)（论文：原生图像的类型化决策——图像 + 指令 + 候选集 → 结构化输出）、[OneJev](https://github.com/OmniJev/OneJev)（对屏幕、照片、视频和文本的类型化问题，单次前向传播给出校准答案）、[Valen](https://github.com/Liuziyu77/Valen)（自己训练 Jev 式多模态模型）把这一范式扩展到了像素。对问题设计的影响：Choice/Score/Noul 的思路对视觉状态原样适用，但阈值必须按模态重新校准——不要照搬文本上调好的阈值。
 
 ## 官方资源

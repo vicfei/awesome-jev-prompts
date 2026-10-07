@@ -14,6 +14,7 @@ Thanks for helping make Jev question design better. **Corrections take priority 
 ```markdown
 ### Pattern name
 **Primitive:** Choice | Score | Noul | Composite · **Added:** YYYY-MM-DD
+**Status:** documented | community-observed | derived practice
 
 One or two sentences: what decision this makes and where it fits.
 
@@ -34,6 +35,7 @@ One or two sentences: what decision this makes and where it fits.
 
 1. **Question template is copy-pasteable** — real SDK shape (`Choice/Score/Noul` from `typesafe_sdk` or `@typesafe-ai/sdk`), not pseudocode.
 2. **Every claim has a source** — official docs, the launch post, or a public repo/article. If it's your own hard-won lesson, say so ("observed in production by the author") instead of faking a citation.
+3. **State the entry's status** — `documented` (grounded in official docs/cookbooks), `community-observed` (a public project reports doing this), or `derived practice` (engineering default reasoned from documented rules). Thresholds are starting points either way — see the README's Verification policy.
 3. **Atomic judgment only** — composition, thresholds, and side effects belong to code; if your question does three things, split it (that's probably an anti-pattern entry too).
 4. **Failure modes are honest** — an entry with no known failure mode usually means it hasn't been used.
 5. **Variable content goes in `state`**, not in the question text — thresholds depend on question stability.

@@ -124,11 +124,40 @@ Every entry gives the question template, threshold/wiring guidance, known failur
 
 **The one rule that generates most of the others:** *questions describe judgments; code owns composition, thresholds, and side effects.*
 
+## Which pattern do I need?
+
+- **Picking one option from a set you control** → [Choice patterns](categories/choice-patterns.md) — intent, tool, model routing, best-of-N
+- **Grading intensity or quality on a scale** → [Score patterns](categories/score-patterns.md) — severity, gates, moderation, relevance
+- **Asking "is this true / does it violate / are these the same"** → [Noul patterns](categories/noul-patterns.md) — policy, dedup, citation, escalation
+- **Sorting a stream of unstructured input** → [Routing & triage](categories/routing-and-triage.md)
+- **Judging another model's output** → [Guardrails & verification](categories/guardrails-and-verification.md)
+- **Deciding what stays in the context window** → [Context compaction](categories/context-compaction.md)
+- **Before shipping any of the above** → [Anti-patterns](categories/anti-patterns.md), then [Calibration & eval](categories/calibration-and-eval.md)
+
+## Verification policy
+
+Every entry cites its sources, and sources come in three kinds — read them before shipping:
+
+- **Documented** — grounded in official TypeSafe docs or cookbooks (linked). The pattern's *shape* is documented; the example wording is ours.
+- **Community-observed** — a public project or writeup reports doing this (linked). We describe their practice, not an endorsement.
+- **Derived practice** — our engineering default, reasoned from the documented rules; marked where no external source exists.
+
+**Thresholds in this list are starting points, not measurements.** Fit them on your own logged distributions — that is the entire point of [Calibration & eval](categories/calibration-and-eval.md).
+
 ## Ecosystem notes
 
 The question-design approach in this list transfers across System One models. Notable developments:
 
 - **2026-10-08 — question-design skills emerge.** Installable agent skills now cover this list's territory from different angles: [VBS2004/jev-questions-skill](https://github.com/VBS2004/jev-questions-skill) (9 measured rules + 5 stdlib check scripts), [PyModel/jev-skill](https://github.com/PyModel/jev-skill) (eleven implementation shapes with code sketches), [abhisheksharma001/jev-skill](https://github.com/abhisheksharma001/jev-skill) (fit-check, codebase discovery, question optimization with honest benchmarks), and [wuyoscar/jev-skill](https://github.com/wuyoscar/jev-skill) (5 skills + 108 scenario templates). They complement this list — and if you want them chained into one workflow, [jev-pipeline-skill](https://github.com/vicfei/jev-pipeline-skill) orchestrates them: find → fit → draft → lint → spread → threshold → cascade.
+
+## Using this with the skills
+
+The pattern library is the drafting layer of a small toolbox — the community skills cover the neighboring steps:
+
+1. **Draft** — pick a pattern here and adapt the template to your decision.
+2. **Check** — lint the draft and test whether it discriminates: [VBS2004/jev-questions-skill](https://github.com/VBS2004/jev-questions-skill)'s `lint_questions.py` + `spread.py` (stdlib, no API calls).
+3. **Fit** — unsure Jev belongs in this code path at all? [abhisheksharma001/jev-skill](https://github.com/abhisheksharma001/jev-skill)'s `fit_check.py` gives a deterministic go / no-go.
+4. **Chained** — [jev-pipeline-skill](https://github.com/vicfei/jev-pipeline-skill) runs find → fit → draft → lint as one CLI (and installs as an agent skill on Claude Code, Codex, OpenCode, and ClawHub).
 - **2026-10-02 — vision arrives.** [PixelJev](https://arxiv.org/abs/2609.29283) (paper: native-image typed decisions — image + instruction + candidate set → structured output), [OneJev](https://github.com/OmniJev/OneJev) (calibrated answers to typed questions about screens, photos, video, and text in one forward pass), and [Valen](https://github.com/Liuziyu77/Valen) (train-your-own Jev-like multimodal model) extend the paradigm to pixels. Design impact: Choice/Score/Noul thinking applies unchanged to visual state, but thresholds must be re-calibrated per modality — don't port text-tuned cutoffs.
 
 ## Official resources
