@@ -54,6 +54,7 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 
 本清单的问题设计方法可跨 System One 模型迁移。值得关注的进展：
 
+- **2026-10-08 · 问题设计技能化。** 可安装的 agent 技能开始从不同角度覆盖本清单的领域：[VBS2004/jev-questions-skill](https://github.com/VBS2004/jev-questions-skill)（9 条实测规则 + 5 个标准库检查脚本）、[PyModel/jev-skill](https://github.com/PyModel/jev-skill)（11 种实现形态带代码草图）、[abhisheksharma001/jev-skill](https://github.com/abhisheksharma001/jev-skill)（适配检查、代码库发现、问题优化，基准数据诚实）、[wuyoscar/jev-skill](https://github.com/wuyoscar/jev-skill)（5 个技能 + 108 个场景模板）。它们与本清单互补——想把它们串成一条工作流，可以用 [jev-pipeline-skill](https://github.com/vicfei/jev-pipeline-skill)：find → fit → draft → lint → spread → threshold → cascade。
 - **2026-10-02 · 视觉来了。** [PixelJev](https://arxiv.org/abs/2609.29283)（论文：原生图像的类型化决策——图像 + 指令 + 候选集 → 结构化输出）、[OneJev](https://github.com/OmniJev/OneJev)（对屏幕、照片、视频和文本的类型化问题，单次前向传播给出校准答案）、[Valen](https://github.com/Liuziyu77/Valen)（自己训练 Jev 式多模态模型）把这一范式扩展到了像素。对问题设计的影响：Choice/Score/Noul 的思路对视觉状态原样适用，但阈值必须按模态重新校准——不要照搬文本上调好的阈值。
 
 ## 官方资源
