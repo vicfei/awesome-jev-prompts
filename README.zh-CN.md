@@ -6,7 +6,7 @@
 [![Link check](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/link-check.yml/badge.svg)](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/link-check.yml)
 [![License: CC0](https://img.shields.io/badge/license-CC0-007ec6)](LICENSE)
 
-**English version is [here](README.md).** 条目正文（模板与代码）以英文维护，欢迎提交中文场景的实践。
+**English version is [here](README.md).** 全部 43 条条目均提供[中文译本](#-模式库--8-个分类-43-条)（以英文版为准，同步于 2026-10-08）。
 
 Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（评分）、**Noul**（0–1 概率判断）——附带概率，70–500 毫秒内出结果。它不生成任何文本，所以你在 LLM 上积累的提示词技巧几乎全部失效。真正起作用的是**问题设计**：怎么把一个决策拆成原子判断、选项描述怎么措辞、阈值定在哪、什么时候不该信任那个数字。本库收录实践中有效的模式，以及悄悄毁掉生产系统的反模式。
 
@@ -39,26 +39,26 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 
 | 分类 | 条数 | 覆盖内容 |
 |---|---|---|
-| [Choice 模式](categories/choice-patterns.md) | 6 | 意图路由、工具选择、模型路由、Best-of-N、文档分类、技能路由 |
-| [Score 模式](categories/score-patterns.md) | 5 | 严重度、质量门禁、内容审核、RAG 相关性、优先级 |
-| [Noul 模式](categories/noul-patterns.md) | 5 | 策略检查、去重、引用核验、人工升级、重试控制 |
-| [路由与分诊](categories/routing-and-triage.md) | 4 | 收件箱分诊、工单队列、RAG 过滤、文档流 |
-| [护栏与校验](categories/guardrails-and-verification.md) | 5 | 输出护栏、越狱检测、结构化校验、代码评审门禁 |
-| [上下文压缩](categories/context-compaction.md) | 3 | 保留或丢弃、摘要或原文、工具结果裁剪 |
-| [反模式](categories/anti-patterns.md) | 10 | Jev 问题十种常见的翻车方式与修复方法 |
-| [校准与评估](categories/calibration-and-eval.md) | 5 | 从日志定阈值、问题版本化、影子模式、何时交给 System Two |
+| [Choice 模式](categories/choice-patterns.zh-CN.md) | 6 | 意图路由、工具选择、模型路由、Best-of-N、文档分类、技能路由 |
+| [Score 模式](categories/score-patterns.zh-CN.md) | 5 | 严重度、质量门禁、内容审核、RAG 相关性、优先级 |
+| [Noul 模式](categories/noul-patterns.zh-CN.md) | 5 | 策略检查、去重、引用核验、人工升级、重试控制 |
+| [路由与分诊](categories/routing-and-triage.zh-CN.md) | 4 | 收件箱分诊、工单队列、RAG 过滤、文档流 |
+| [护栏与校验](categories/guardrails-and-verification.zh-CN.md) | 5 | 输出护栏、越狱检测、结构化校验、代码评审门禁 |
+| [上下文压缩](categories/context-compaction.zh-CN.md) | 3 | 保留或丢弃、摘要或原文、工具结果裁剪 |
+| [反模式](categories/anti-patterns.zh-CN.md) | 10 | Jev 问题十种常见的翻车方式与修复方法 |
+| [校准与评估](categories/calibration-and-eval.zh-CN.md) | 5 | 从日志定阈值、问题版本化、影子模式、何时交给 System Two |
 
 **一条衍生出大半规则的元规则：** *问题只描述判断；组合、阈值与副作用归代码。*
 
 ## 我该用哪个模式？
 
-- **从你可控的选项集合里挑一个** → [Choice 模式](categories/choice-patterns.md)——意图、工具、模型路由、Best-of-N
-- **在量表上给强度或质量打分** → [Score 模式](categories/score-patterns.md)——严重度、门禁、审核、相关性
-- **问"是否为真 / 是否违规 / 是否同一个"** → [Noul 模式](categories/noul-patterns.md)——策略、去重、引用、升级
-- **给非结构化的输入流分拣** → [路由与分诊](categories/routing-and-triage.md)
-- **评判另一个模型的输出** → [护栏与校验](categories/guardrails-and-verification.md)
-- **决定上下文窗口里留什么** → [上下文压缩](categories/context-compaction.md)
-- **以上任何一条上线之前** → 先读[反模式](categories/anti-patterns.md)，再读[校准与评估](categories/calibration-and-eval.md)
+- **从你可控的选项集合里挑一个** → [Choice 模式](categories/choice-patterns.zh-CN.md)——意图、工具、模型路由、Best-of-N
+- **在量表上给强度或质量打分** → [Score 模式](categories/score-patterns.zh-CN.md)——严重度、门禁、审核、相关性
+- **问"是否为真 / 是否违规 / 是否同一个"** → [Noul 模式](categories/noul-patterns.zh-CN.md)——策略、去重、引用、升级
+- **给非结构化的输入流分拣** → [路由与分诊](categories/routing-and-triage.zh-CN.md)
+- **评判另一个模型的输出** → [护栏与校验](categories/guardrails-and-verification.zh-CN.md)
+- **决定上下文窗口里留什么** → [上下文压缩](categories/context-compaction.zh-CN.md)
+- **以上任何一条上线之前** → 先读[反模式](categories/anti-patterns.zh-CN.md)，再读[校准与评估](categories/calibration-and-eval.zh-CN.md)
 
 ## 验证政策
 

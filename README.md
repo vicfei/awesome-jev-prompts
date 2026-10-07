@@ -7,7 +7,7 @@
 [![Link check](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/link-check.yml/badge.svg)](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/link-check.yml)
 [![License: CC0](https://img.shields.io/badge/license-CC0-007ec6)](#license)
 
-**中文版 README 在[这里](README.zh-CN.md)。**
+**中文版（含全部 43 条中文译本）在[这里](README.zh-CN.md)。**
 
 Jev returns typed answers — **Choice**, **Score**, **Noul** — with probabilities, in 70–500 ms. It never writes text, so none of your prompt-engineering habits transfer. What transfers instead is **question design**: how you split a decision into atomic judgments, how you word option descriptions, where you set thresholds, and when you refuse to trust the number. This list collects the patterns that work — and the anti-patterns that quietly break production systems.
 
