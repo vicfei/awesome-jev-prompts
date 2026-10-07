@@ -6,9 +6,10 @@
     {"repo": "v-modal/awesome-jev-tools", "focus": "Tools list with inclusion criteria"},
     {"repo": "logicrw/awesome-jev-projects", "focus": "Ecosystem radar web app, auto GitHub sync"},
     {"repo": "AbdelStark/awesome-typesafe-jev", "focus": "Field guide with platform routing & evals"},
-    {"repo": "AnotiaWang/awesome-jev", "focus": "Classic minimal list, open replicas & benchmarks"},
+    {"repo": "AnotiaWang/awesome-decision-models", "focus": "Classic minimal list (renamed from awesome-jev), open replicas & benchmarks"},
     {"repo": "kydlikebtc/awesome-jev", "focus": "Machine-readable catalog by decision pattern"},
     {"repo": "cobanov/awesome-jev", "focus": "Curated list with dated review notes"},
-    {"repo": "walidboulanouar/awesome-jev-use-cases", "focus": "Demos ranked by social metrics, limits & cost"}
+    {"repo": "walidboulanouar/awesome-jev-use-cases", "focus": "Demos ranked by social metrics, limits & cost"},
+    {"repo": "yzfly/awesome-jev-zh", "focus": "Chinese-language curated list with an independent, skeptical voice"}
   ]
 }
