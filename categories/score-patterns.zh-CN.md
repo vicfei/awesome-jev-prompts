@@ -116,7 +116,7 @@ Score 接收 `instructions` + 作为**有序列表**的 `criteria`，定义每�
 **失效模式**
 - 段落含关键词但说的是另一个实体（"得州的巴黎" vs "法国的巴黎"）——旁边加一个实体匹配 Noul。
 
-**来源：** [Cookbook — classifying RAG passages](https://docs.typesafe.ai/cookbooks/classifying_rag_passages) · [Cookbook — rerank](https://docs.typesafe.ai/cookbooks/rerank_typesafe)
+**来源：** [Cookbook — classifying RAG passages](https://docs.typesafe.ai/cookbooks/classifying_rag_passages) · [Cookbook — rerank](https://docs.typesafe.ai/cookbooks/rerank_typesafe) · 社区实践：[hotchpotch/jev-reranker](https://github.com/hotchpotch/jev-reranker)、[WiktorB2004/llama-index-jev](https://github.com/WiktorB2004/llama-index-jev)
 
 ---
 

@@ -116,7 +116,7 @@ questions={
 **失效模式**
 - 同实体不同问题的段落拿 2 分混进来；相关性 criteria 要写"回答**这个**问题"，不是"关于**这个**主题"。
 
-**来源：** [Cookbook — classifying RAG passages](https://docs.typesafe.ai/cookbooks/classifying_rag_passages) · [Cookbook — rerank](https://docs.typesafe.ai/cookbooks/rerank_typesafe)
+**来源：** [Cookbook — classifying RAG passages](https://docs.typesafe.ai/cookbooks/classifying_rag_passages) · [Cookbook — rerank](https://docs.typesafe.ai/cookbooks/rerank_typesafe) · 社区实践：[hotchpotch/jev-reranker](https://github.com/hotchpotch/jev-reranker)、[erendikmenn/jev-rag-benchmark](https://github.com/erendikmenn/jev-rag-benchmark)
 
 ---
 

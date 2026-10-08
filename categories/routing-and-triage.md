@@ -114,7 +114,7 @@ questions={
 **Failure modes**
 - Same-entity-different-question passages score 2 and slip through; relevance criteria should say "answers **this** question", not "is about **this** topic".
 
-**Sources:** [Cookbook — classifying RAG passages](https://docs.typesafe.ai/cookbooks/classifying_rag_passages) · [Cookbook — rerank](https://docs.typesafe.ai/cookbooks/rerank_typesafe)
+**Sources:** [Cookbook — classifying RAG passages](https://docs.typesafe.ai/cookbooks/classifying_rag_passages) · [Cookbook — rerank](https://docs.typesafe.ai/cookbooks/rerank_typesafe) · Community: [hotchpotch/jev-reranker](https://github.com/hotchpotch/jev-reranker), [erendikmenn/jev-rag-benchmark](https://github.com/erendikmenn/jev-rag-benchmark)
 
 ---
 

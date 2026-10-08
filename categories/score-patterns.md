@@ -114,7 +114,7 @@ Score retrieved passages for how well they support the query before they enter t
 **Failure modes**
 - Passage contains the answer keywords but for a different entity ("Paris, Texas" vs "Paris, France") — add an entity-match Noul alongside.
 
-**Sources:** [Cookbook — classifying RAG passages](https://docs.typesafe.ai/cookbooks/classifying_rag_passages) · [Cookbook — rerank](https://docs.typesafe.ai/cookbooks/rerank_typesafe)
+**Sources:** [Cookbook — classifying RAG passages](https://docs.typesafe.ai/cookbooks/classifying_rag_passages) · [Cookbook — rerank](https://docs.typesafe.ai/cookbooks/rerank_typesafe) · Community: [hotchpotch/jev-reranker](https://github.com/hotchpotch/jev-reranker), [WiktorB2004/llama-index-jev](https://github.com/WiktorB2004/llama-index-jev)
 
 ---
 
