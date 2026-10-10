@@ -46,6 +46,6 @@ Run the Jev decision alongside the existing rule-based or LLM-based decision, lo
 ### Knowing when to escalate to System Two
 **Added:** 2026-09-28
 
-Jev is the fast, cheap judgment layer — not the last resort and not the whole brain. The healthy architecture is bicameral: reflexes (classify, route, gate) on Jev; deliberate reasoning (plan, draft, explain) on an LLM; handoffs triggered by Jev's own confidence signals. The official coding harness and several community harnesses are built exactly this way.
+Jev is the fast, cheap judgment layer — not the last resort and not the whole brain. The healthy architecture is bicameral: reflexes (classify, route, gate) on Jev; deliberate reasoning (plan, draft, explain) on an LLM; handoffs triggered by Jev's own confidence signals. The TypeSafeAI community harness and several other harnesses are built exactly this way.
 
 **Sources:** [TypeSafeAI/jev-harness ("the model proposes, Jev supplies evidence, code decides")](https://github.com/TypeSafeAI/jev-harness) · [AbdelStark/bicameral](https://github.com/AbdelStark/bicameral) · [Launch post](https://typesafe.ai/blog/introducing-system-one-models-and-jev)

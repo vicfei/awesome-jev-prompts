@@ -48,6 +48,6 @@
 ### 知道何时升级到 System Two
 **Added:** 2026-09-28
 
-Jev 是快而便宜的判断层——不是最后一道防线，也不是整个大脑。健康的架构是双院制：反射（分类、路由、门控）在 Jev；深思（计划、起草、解释）在 LLM；交接由 Jev 自己的置信信号触发。官方编码 harness 和多个社区 harness 都是这个结构。
+Jev 是快而便宜的判断层——不是最后一道防线，也不是整个大脑。健康的架构是双院制：反射（分类、路由、门控）在 Jev；深思（计划、起草、解释）在 LLM；交接由 Jev 自己的置信信号触发。TypeSafeAI 社区 harness 与多个其他 harness 都是这个结构。
 
 **来源：** [TypeSafeAI/jev-harness（"the model proposes, Jev supplies evidence, code decides"）](https://github.com/TypeSafeAI/jev-harness) · [AbdelStark/bicameral](https://github.com/AbdelStark/bicameral) · [发布文章](https://typesafe.ai/blog/introducing-system-one-models-and-jev)
