@@ -7,7 +7,7 @@
 [![Link check](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/link-check.yml/badge.svg)](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/link-check.yml)
 [![License: CC0](https://img.shields.io/badge/license-CC0-007ec6)](#license)
 
-**中文版（含全部 43 条中文译本）在[这里](README.zh-CN.md)。**
+**中文版（含全部 51 条中文译本）在[这里](README.zh-CN.md)。**
 
 Jev returns typed answers — **Choice**, **Score**, **Noul** — with probabilities, in 70–500 ms. It never writes text, so none of your prompt-engineering habits transfer. What transfers instead is **question design**: how you split a decision into atomic judgments, how you word option descriptions, where you set thresholds, and when you refuse to trust the number. This list collects the patterns that work — and the anti-patterns that quietly break production systems.
 
@@ -107,7 +107,7 @@ const result = await client.systemOne({
 
 *(Quick-start example adapted from [Anil-matcha/awesome-jev-by-typesafe](https://github.com/Anil-matcha/awesome-jev-by-typesafe), MIT.)*
 
-## The library — 43 entries in 8 categories
+## The library — 51 entries in 9 categories
 
 Every entry gives the question template, threshold/wiring guidance, known failure modes, and sources.
 
@@ -121,6 +121,7 @@ Every entry gives the question template, threshold/wiring guidance, known failur
 | [Context compaction](categories/context-compaction.md) | 3 | Keep-or-drop, summarize-or-quote, tool-result pruning |
 | [Anti-patterns](categories/anti-patterns.md) | 10 | The ten ways Jev questions go wrong, with fixes |
 | [Calibration & eval](categories/calibration-and-eval.md) | 5 | Thresholds from logs, versioned questions, shadow mode, System Two handoff |
+| [Embodied & multimodal](categories/embodied-multimodal-patterns.md) | 8 | Consult gating, capability sheets, mission contracts, multimodal state binding, per-axis control |
 
 **The one rule that generates most of the others:** *questions describe judgments; code owns composition, thresholds, and side effects.*
 
@@ -132,6 +133,7 @@ Every entry gives the question template, threshold/wiring guidance, known failur
 - **Sorting a stream of unstructured input** → [Routing & triage](categories/routing-and-triage.md)
 - **Judging another model's output** → [Guardrails & verification](categories/guardrails-and-verification.md)
 - **Deciding what stays in the context window** → [Context compaction](categories/context-compaction.md)
+- **Asking about screens, video, or robots** → [Embodied & multimodal](categories/embodied-multimodal-patterns.md)
 - **Before shipping any of the above** → [Anti-patterns](categories/anti-patterns.md), then [Calibration & eval](categories/calibration-and-eval.md)
 
 ## Verification policy
