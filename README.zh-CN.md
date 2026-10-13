@@ -76,6 +76,8 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 
 本清单的问题设计方法可跨 System One 模型迁移。值得关注的进展：
 
+- **2026-10-12 · 全模态竞速。** 视觉波已经拥挤——并且撞名了：[OmniJev](https://github.com/tinnel123666888/OmniJev)（全模态：图像/视频/屏幕/机器人场景，开放权重）、[shapsider/OmniJev](https://github.com/shapsider/OmniJev)（MuJoCo 具身工作台，Qwen3.5-9B + 校正头——我们具身模式的第四个独立印证）、[jev-omni.js](https://github.com/ai-ecoverse/jev-omni.js)（WebGPU 在浏览器里跑决策模型，DecisionBench 上与 fp32 对齐）加入了 [OneJev](https://github.com/OmniJev/OneJev)（163★）与 [Valen](https://github.com/Liuziyu77/Valen) 的行列。三个几乎同名的项目、尚无标准——引用时请确认名字指向的到底是哪个模型。多模态类型化决策的供给方越多，问题设计的消费方越多：[具身与多模态](categories/embodied-multimodal-patterns.zh-CN.md)分类的模式对它们全部适用。
+
 - **2026-10-12 · 第一批中文实测数字。** [jev-rag-zh-benchmark](https://github.com/vicfei/jev-rag-zh-benchmark)：Jev Score 在 T2Reranking 难负例上 **nDCG@5 0.546 vs BM25 0.413**（n=100、单次运行、锁定 `typesafe/jev-1.13-20260917`）；纯排序场景 Score 与 Noul 几乎打平；分离度 AUC≈0.715。本清单的 RAG 相关性与 Noul 阈值从此有了中文实测参照——按验证政策计 **measured** 级来源。
 
 - **2026-10-08 · 编码 Agent 工具链收敛。** harness 生态已经沉淀出一份合同：模型提议，Jev 回答窄化的类型问题，**代码组合裁定，host 授权执行**——没有任何实现允许 Jev 打补丁或授予权限（[TypeSafeAI/jev-harness](https://github.com/TypeSafeAI/jev-harness)，注意：独立于 TypeSafe AI 的社区组织；[PerryLink/jevcore](https://github.com/PerryLink/jevcore)）。反复出现的实践：离线 mock 优先开发、门控默认关闭、出口披露、每个 Noul 都写判定边界。模型调用正收敛到锁版本：[jev-permission-gate](https://github.com/madisonrickert/jev-permission-gate) 锁定 `jev-1.13.0`（阈值在该版本上调校，并做了双盲标注评估），还向老用户发出从 `jev-latest` 迁移的提示——正是[反模式 #7](categories/anti-patterns.zh-CN.md#7-信任-jev-latest-当阈值敏感时)的田野验证。价格参照：[jev-decision-gate](https://github.com/f-tiger/jev-decision-gate) 实测输入价格约为前沿聊天模型的 1/238。
