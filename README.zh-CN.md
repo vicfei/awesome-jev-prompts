@@ -76,6 +76,8 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 
 本清单的问题设计方法可跨 System One 模型迁移。值得关注的进展：
 
+- **2026-10-21 · 3 分钟从零训练的头追平 hosted Jev；蒸馏的反而不行。** [minimind-jev](https://github.com/vicfei/minimind-jev)（已公开）在冻结 bge-small-zh 上训练一个 66 万参数的决策头——笔记本 RTX 4060 训练 3 分钟、零 API 成本：nDCG@5 0.488，对 hosted Jev-1.13 的 0.546（n=100 配对 CI 含零，不可分），显著胜 BM25（+0.075）。有教益的负结果：把前沿教师的四级判断（其期望分 AUC 0.716 就在 Jev 同档）蒸馏进同一个头，反而**掉到 0.428**——纯蒸馏与混合监督三种配置一致。当你的指标已有二元 gold 标签时，直接监督胜过教师软标签。检查点：[cnfeichen/minimind-jev-v0.1](https://huggingface.co/cnfeichen/minimind-jev-v0.1)；教师判断已[作为数据集发布](https://huggingface.co/datasets/cnfeichen/t2reranking-4level-judgments)。对问题设计的含义：[RAG 相关性评分](categories/score-patterns.zh-CN.md#相关性评分rag)这对模式里"谁来给你的问题打分"，现在有了实测答案——数据集自己的标签，而不是教师评分尺。
+
 - **2026-10-12 · 全模态竞速。** 视觉波已经拥挤——并且撞名了：[OmniJev](https://github.com/tinnel123666888/OmniJev)（全模态：图像/视频/屏幕/机器人场景，开放权重）、[shapsider/OmniJev](https://github.com/shapsider/OmniJev)（MuJoCo 具身工作台，Qwen3.5-9B + 校正头——我们具身模式的第四个独立印证）、[jev-omni.js](https://github.com/ai-ecoverse/jev-omni.js)（WebGPU 在浏览器里跑决策模型，DecisionBench 上与 fp32 对齐）加入了 [OneJev](https://github.com/OmniJev/OneJev)（163★）与 [Valen](https://github.com/Liuziyu77/Valen) 的行列。三个几乎同名的项目、尚无标准——引用时请确认名字指向的到底是哪个模型。多模态类型化决策的供给方越多，问题设计的消费方越多：[具身与多模态](categories/embodied-multimodal-patterns.zh-CN.md)分类的模式对它们全部适用。
 
 - **2026-10-12 · 第一批中文实测数字。** [jev-rag-zh-benchmark](https://github.com/vicfei/jev-rag-zh-benchmark)：Jev Score 在 T2Reranking 难负例上 **nDCG@5 0.546 vs BM25 0.413**（n=100、单次运行、锁定 `typesafe/jev-1.13-20260917`）；纯排序场景 Score 与 Noul 几乎打平；分离度 AUC≈0.715。本清单的 RAG 相关性与 Noul 阈值从此有了中文实测参照——按验证政策计 **measured** 级来源。
