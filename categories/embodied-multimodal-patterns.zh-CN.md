@@ -27,7 +27,7 @@ def decision_needed(scene):
 **失效模式**
 - 每步都问会把预算烧在空气上；问得太稀会让缓存在最要命的时刻过期。两个旋钮都在代码里，与阈值一起接受审查。
 
-**来源：** [RomanSlack/jev-drone](https://github.com/RomanSlack/jev-drone)（`tactics.py`）
+**来源：** [RomanSlack/jev-drone](https://github.com/RomanSlack/jev-drone)（`tactics.py`）· 同一"预算+停止"形态出现在非具身域：[libingzheren/Jev-Mem](https://github.com/libingzheren/Jev-Mem)（[arXiv 2609.23986](https://arxiv.org/abs/2609.23986)）为每个问题分配检索搜索预算，并在每轮后用"证据是否足够"的 Noul 复查
 
 ---
 
