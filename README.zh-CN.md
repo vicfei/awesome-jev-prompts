@@ -76,6 +76,8 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 
 本清单的问题设计方法可跨 System One 模型迁移。值得关注的进展：
 
+- **2026-10-22 · 开源权重在中文基准上追平 hosted 模型。** [jev-rag-zh-benchmark](https://github.com/vicfei/jev-rag-zh-benchmark) 迎来首批开源权重成绩：[StartLux-Decision 27B AutoThink](https://github.com/StartLuxLabs/Startlux-Decision)（经 [bamboonode](https://bamboonode.dev/) 免费托管，同一 `/v1/systemone` 请求、同一冻结问题措辞）在 T2Reranking 难负例上 score-zh nDCG@5 **0.557** / noul-zh **0.540**——对 hosted Jev-1.13 配对 **+0.011 [−0.039, +0.060]**（统计打平、点估计略高），对 BM25 **+0.144 [+0.064, +0.227]**（显著）；其 noul 分离度 AUC 0.727 为本样本最高。中文重排的选型从此不再只是"hosted Jev 或没有"——带免费托管的开源权重已统计打平。阈值仍需按引擎单独拟合。
+
 - **2026-10-22 · 服务层收敛到 System One 线格式。** [vllm-jev](https://github.com/mode-io/vllm-jev)（668★）现已服务 24+ 个开源检查点（Laya、Kev、Decider、Open-Jev、JevK5……含 Clef），覆盖 Linux/Apple Silicon；其实验性 RadixFlow 调度器建立在一个正确的观察上——决策负载的打分走 **prefill**，共享前缀复用正是吞吐量所在。[StartLux](https://github.com/StartLuxLabs/Startlux-Decision)（1,183★，0.8B–27B，arXiv 2610.17309）自带 vLLM/llama.cpp/MLX 引擎、说同一种 `/v1/systemone` 格式，另有 27B 免费托管。对问题设计的含义："Jev 兼容"正在变成线格式属性而非厂商属性——本清单的模式适用于任何应答引擎，问题措辞才是可移植的部分。
 
 - **2026-10-21 · 3 分钟从零训练的头追平 hosted Jev；蒸馏的反而不行。** [minimind-jev](https://github.com/vicfei/minimind-jev)（已公开）在冻结 bge-small-zh 上训练一个 66 万参数的决策头——笔记本 RTX 4060 训练 3 分钟、零 API 成本：nDCG@5 0.488，对 hosted Jev-1.13 的 0.546（n=100 配对 CI 含零，不可分），显著胜 BM25（+0.075）。有教益的负结果：把前沿教师的四级判断（其期望分 AUC 0.716 就在 Jev 同档）蒸馏进同一个头，反而**掉到 0.428**——纯蒸馏与混合监督三种配置一致。当你的指标已有二元 gold 标签时，直接监督胜过教师软标签。检查点：[cnfeichen/minimind-jev-v0.1](https://huggingface.co/cnfeichen/minimind-jev-v0.1)；教师判断已[作为数据集发布](https://huggingface.co/datasets/cnfeichen/t2reranking-4level-judgments)。对问题设计的含义：[RAG 相关性评分](categories/score-patterns.zh-CN.md#相关性评分rag)这对模式里"谁来给你的问题打分"，现在有了实测答案——数据集自己的标签，而不是教师评分尺。
