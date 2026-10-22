@@ -25,7 +25,7 @@ def decision_needed(scene):
 **Failure modes**
 - Asking every step burns the budget on nothing; asking too rarely makes the cache stale exactly when it matters. Both knobs live in code, reviewed with the thresholds.
 
-**Sources:** [RomanSlack/jev-drone](https://github.com/RomanSlack/jev-drone) (`tactics.py`)
+**Sources:** [RomanSlack/jev-drone](https://github.com/RomanSlack/jev-drone) (`tactics.py`) · same budget-and-stop shape in a non-embodied domain: [libingzheren/Jev-Mem](https://github.com/libingzheren/Jev-Mem) ([arXiv 2609.23986](https://arxiv.org/abs/2609.23986)) allocates retrieval-search budgets per question and re-checks an "enough evidence" Noul after each round
 
 ---
 
