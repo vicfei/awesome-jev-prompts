@@ -2,6 +2,8 @@
 
 Composite pipelines: one Jev request carries several atomic questions (they are evaluated independently), and code composes the outcome. The launch post's "smart if-statement" territory — classify, route, score, branch.
 
+The same shape now runs at cluster scale: [vLLM Semantic Router](https://github.com/vllm-project/semantic-router) (6k★, self-described "programmable decision layer") routes each call across models, compute, and locations under a quality × latency × cost × compliance policy — triage with infrastructure budgets. **Community-observed**, the largest deployment of this category's pattern.
+
 Templates use the Python SDK (`python -m pip install typesafe-sdk`).
 
 ---
