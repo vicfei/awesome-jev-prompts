@@ -4,6 +4,8 @@
 
 组合式流水线：一次 Jev 请求携带多个原子问题（各自独立评估），代码负责组合结果。发布文章里"智能 if else"的领地——分类、路由、打分、分支。
 
+同一形态如今在集群规模运行：[vLLM Semantic Router](https://github.com/vllm-project/semantic-router)（6k★，自我定位"可编程决策层"）按 质量 × 延迟 × 成本 × 合规 策略为每次调用选择模型、算力与位置——带基础设施预算的分诊。**community-observed**，本分类模式的最大规模落地。
+
 模板使用 Python SDK（`python -m pip install typesafe-sdk`）。
 
 ---
