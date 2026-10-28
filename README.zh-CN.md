@@ -1,9 +1,10 @@
 # Awesome Jev Prompts（中文版）
 
-> 面向 [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)（TypeSafe AI 的 System One 模型）的问题模式库：经过验证的问题模板、反模式与校准实践。**在类型化决策的世界里，"问题设计"就是提示词工程。**
+> 面向**类型化决策模型**的问题模式库——[Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) 及一切 System One 兼容引擎（Clef、StartLux、d3、SGLang `/v1/decisions`、任何 `/v1/systemone` 端点）：经过验证的问题模板、反模式与校准实践。**在类型化决策的世界里，"问题设计"就是提示词工程——而且问题措辞是可移植的部分。**
 
 [![Stars](https://img.shields.io/github/stars/vicfei/awesome-jev-prompts?style=social&label=Star)](https://github.com/vicfei/awesome-jev-prompts/stargazers)
 [![Link check](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/link-check.yml/badge.svg)](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/link-check.yml)
+[![Tests](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/tests.yml/badge.svg)](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/tests.yml)
 [![License: CC0](https://img.shields.io/badge/license-CC0-007ec6)](LICENSE)
 
 **English version is [here](README.md).** 全部 51 条条目均提供[中文译本](#-模式库--9-个分类-51-条)（以英文版为准，同步于 2026-10-08）。
@@ -101,6 +102,35 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 - **2026-10-01 · 头部云厂商入场。** Cloudflare 发布 [Clef 与 Clef-flash](https://blog.cloudflare.com/clef-decision-models)：冻结 Qwen 底座（3.8-27B / 3.5-9B）+ 路由头 + rank-256 LoRA，prefill-only 两阶段注意力并行给 schema 选项打分；Apache 2.0 权重（[clef](https://huggingface.co/Cloudflare/clef)、[clef-flash](https://huggingface.co/Cloudflare/clef-flash)），且 Jev-API 兼容、可直接替换。训练用 label-smoothed 交叉熵 + Brier loss，RLCD 作为第二优化目标——相邻序数选项给部分分、参考惩罚抗分布漂移。目前登顶 Jev Decision Index，Clef-flash 中位延迟 ~38.8 ms（Jev 约 ~524 ms）。对问题设计的含义：Jev 兼容不再等于只能用 Jev——类型化的问题可以原样跨引擎迁移。
 - **2026-09-29 · 第一份独立学术评测。** [Evaluating and Benchmarking the System One Model Jev](https://arxiv.org/abs/2609.37647)（Deußer、Sparrenberg、Sifa）对 Jev v1.13.0 做 37 个公开数据集的零样本评测——346,009 次请求、总花费不到 $10：对 Qwen3.8-27B 27/37 胜、对 Gemma-4-E4B 37/37 全胜，Choice 概率校准足以支撑选择性预测。对本清单最有教益的负面发现：二分类概率相对固定 0.5 阈值表现不佳——调阈值后 UNFAIR-ToS micro-F1 从 0.50 升到 0.75，这正是[校准与评测](categories/calibration-and-eval.zh-CN.md)存在的理由。选项轮换与去题检查排除了浅层捷径。
 - **2026-09-24 · Jev 作为零样本对齐检测器。** [Just Ask Jev](https://arxiv.org/abs/2609.29429)（Guo 等）用类型化问题替代生成式裁判：单个通用问题在 RLCDAlignBench（10 类失败类型、44 个基准、5 个目标模型）上零样本 median AUROC 0.886，成本仅为 LLM-judge 裁判的 1/63，与参照裁判对人工标注的一致度持平。其设计教训本身就是一条模式：问题措辞影响甚微，而承载参照物的上下文字段——用户的信念、被注入的指令——影响巨大；失败是关系性的，要把"问什么"与"给什么看"分开。代码与数据：[sumleo/RLCDAlignBench](https://github.com/sumleo/RLCDAlignBench)。
+
+## 同一个问题，问遍每台引擎
+
+线格式正在收敛（见下方生态动态）：一套问题，多台引擎。同一个工单分诊三件套——`team`（Choice）、`urgent`（Noul）、`severity`（Score）——打在状态 `"I was charged twice for order #4411 and the app still shows it as unpaid."` 上：
+
+| 引擎 | 端点 / 接入 | 备注 |
+|---|---|---|
+| **Jev**（TypeSafe 托管） | `POST /v1/systemone`——[Python SDK](https://github.com/typesafe-ai/typesafe-sdk-python) 或裸 HTTP | 参考格式；也可走 OpenRouter（`typesafe/jev-1.13`，按输入 Mtok 计费、输出免费） |
+| **StartLux**（免费托管/自部署） | `POST /v1/systemone`——[bamboonode](https://bamboonode.dev/) 免费 27B AutoThink；自带 vLLM/llama.cpp/MLX 引擎 | Jev 兼容线格式；AutoThink 仅对不确定的问题触发推理（`think_mode`/`gate`） |
+| **SGLang**（任意聊天模型） | `POST /v1/decisions`——[决策模型文档](https://docs.sglang.io/docs/supported-models/decision_models) | 无需专用检查点：任何带 Jinja 模板的聊天模型；逐请求检查（答案须单 token）；官方验证 Qwen3.8-27B / Qwen3.5-35B-A3B |
+| **Clef**（Cloudflare） | Workers AI 上 Jev 兼容；Apache-2.0 权重（[clef](https://huggingface.co/Cloudflare/clef)、[clef-flash](https://huggingface.co/Cloudflare/clef-flash)） | 带视觉 + 64k 上下文；flash 中位 ~39ms |
+| **vllm-jev**（本地开源检查点） | `vllm-jev serve <model>` → `POST /v1/systemone`——[仓库](https://github.com/mode-io/vllm-jev) | 24+ 开源检查点（Laya、Kev、Decider…）；Linux/Mac；Windows CPU 路径 |
+
+```json
+{
+  "state": {"ticket": "I was charged twice for order #4411 and the app still shows it as unpaid."},
+  "questions": {
+    "team":     {"type": "choice", "instructions": "Which team should handle this ticket?",
+                 "criteria": {"billing": "Payments and refunds", "technical": "Software bugs",
+                              "unknown": "Not decidable from the ticket; escalate"}},
+    "urgent":   {"type": "noul", "instructions": "Does this need an answer today?",
+                 "criteria": {"true": "Page the on-call.", "false": "Queue for business hours."}},
+    "severity": {"type": "score", "instructions": "How bad is it for the customer?",
+                 "criteria": ["minor", "major", "critical"]}
+  }
+}
+```
+
+可移植性注记：各引擎在**选项上限**（单趟 A–Z 26 个是公共上界，超出走分组淘汰或拒收）、**none-of-the-above 处理**（显式附加选项 vs 隐藏检查）、**思考模式**（Jev 无；StartLux AutoThink 可选；SGLang 拒绝答案落在推理块内）与**校准漂移**上各不相同——在一台引擎上拟合的阈值不可直接迁移，按引擎重拟合（见[校准与评测](categories/calibration-and-eval.zh-CN.md)分类）。待其文档落地后收录：[d3](https://huggingface.co/vllm-sr)（vLLM Semantic Router）、[pplx-decider](https://huggingface.co/perplexity-ai)（Perplexity）。
 
 **与这些技能的配合方式**：① 在本库挑模式起草问题 → ② 用 [VBS2004/jev-questions-skill](https://github.com/VBS2004/jev-questions-skill) 的 `lint_questions.py` + `spread.py` 做静态与区分度检查（纯标准库、不调 API）→ ③ 拿不准该不该用 Jev 就跑 [abhisheksharma001/jev-skill](https://github.com/abhisheksharma001/jev-skill) 的 `fit_check.py`（确定性 go/no-go）→ ④ 或直接用 [jev-pipeline-skill](https://github.com/vicfei/jev-pipeline-skill) 一条命令串起来（可装为 Claude Code / Codex / OpenCode / ClawHub 技能）。
 

@@ -188,6 +188,35 @@ python scripts/lint_questions.py questions.json --json
 
 Errors (E\*) are violations; warnings (W\*) are judgment calls for the reviewer. Tests run in CI.
 
+## Ask the same question on every engine
+
+The wire format is converging (see the ecosystem notes below): one question set, many engines. The same ticket-triage trio — `team` (Choice), `urgent` (Noul), `severity` (Score) — against the state `"I was charged twice for order #4411 and the app still shows it as unpaid."`:
+
+| Engine | Endpoint / transport | Notes |
+|---|---|---|
+| **Jev** (TypeSafe, hosted) | `POST /v1/systemone` — [Python SDK](https://github.com/typesafe-ai/typesafe-sdk-python) or plain HTTP | The reference format; also via OpenRouter (`typesafe/jev-1.13`, per-Mtok pricing, output free) |
+| **StartLux** (hosted free / self-host) | `POST /v1/systemone` — [bamboonode](https://bamboonode.dev/) hosts 27B AutoThink free; own vLLM/llama.cpp/MLX engine | Jev-compatible wire format; AutoThink reasons only on uncertain questions (`think_mode`/`gate`) |
+| **SGLang** (any chat model) | `POST /v1/decisions` — [decision models docs](https://docs.sglang.io/docs/supported-models/decision_models) | No special checkpoint: any Jinja-template chat model; per-request checks (single-token labels); validated on Qwen3.8-27B / Qwen3.5-35B-A3B |
+| **Clef** (Cloudflare) | Jev-compatible on Workers AI; Apache-2.0 weights ([clef](https://huggingface.co/Cloudflare/clef), [clef-flash](https://huggingface.co/Cloudflare/clef-flash)) | Vision + 64k context; flash median ~39ms |
+| **vllm-jev** (local, open checkpoints) | `vllm-jev serve <model>` → `POST /v1/systemone` — [repo](https://github.com/mode-io/vllm-jev) | 24+ open checkpoints (Laya, Kev, Decider…); Linux/Mac; CPU paths on Windows |
+
+```json
+{
+  "state": {"ticket": "I was charged twice for order #4411 and the app still shows it as unpaid."},
+  "questions": {
+    "team":     {"type": "choice", "instructions": "Which team should handle this ticket?",
+                 "criteria": {"billing": "Payments and refunds", "technical": "Software bugs",
+                              "unknown": "Not decidable from the ticket; escalate"}},
+    "urgent":   {"type": "noul", "instructions": "Does this need an answer today?",
+                 "criteria": {"true": "Page the on-call.", "false": "Queue for business hours."}},
+    "severity": {"type": "score", "instructions": "How bad is it for the customer?",
+                 "criteria": ["minor", "major", "critical"]}
+  }
+}
+```
+
+Portability notes: engines differ in **option caps** (26 letters per single pass is the common A–Z bound; beyond it engines knock out in groups or reject), **none-of-the-above handling** (opt-in extra option vs hidden check), **thinking modes** (Jev none; StartLux AutoThink optional; SGLang refuses inside reasoning blocks), and **calibration drift** — thresholds fitted on one engine do not transfer; re-fit per engine (the [Calibration & eval](categories/calibration-and-eval.md) category). Coming as their request formats land in docs: [d3](https://huggingface.co/vllm-sr) (vLLM Semantic Router), [pplx-decider](https://huggingface.co/perplexity-ai) (Perplexity).
+
 ## Using this with the skills
 
 The pattern library is the drafting layer of a small toolbox — the community skills cover the neighboring steps:
