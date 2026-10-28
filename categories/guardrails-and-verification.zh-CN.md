@@ -144,3 +144,26 @@ if conf < CONF_FLOOR or top_prob < PROB_FLOOR:
 - 全都升级（下限太高）会让运营学会无视队列——用真实日志调到升级率匹配实际人力。
 
 **来源：** [官方文档 — confidence](https://docs.typesafe.ai/confidence) · [Cookbook — classification using confidence](https://docs.typesafe.ai/cookbooks/classification_using_confidence)
+---
+
+### 信号-噪声筛选
+**原语：** Noul · **收录：** 2026-10-28 · **状态：** community-observed
+
+在交易 Agent 管线中，一道 Noul 门在昂贵的分析师读到原始信息（社交帖子、新闻标题、公告）之前过滤它——这是关于这只股票的真信号，还是噪声？这是 RAG 段落过滤的护栏版，应用于金融信号流。
+
+```python
+"worth_analyst": Noul(
+    instructions="Does this social media post contain a specific, checkable claim about the company that would affect an investment decision?",
+    criteria={"true": "Route to the analyst for evaluation.",
+              "false": "Discard. Do not wake the analyst for hype, memes, or vague sentiment."})
+```
+
+**接线与阈值**
+- state 必须把 ticker 上下文和帖子文本放在分开的标签字段里——模型判断的是关系，不是散文。
+- 阈值偏向误放（多放少丢）：漏掉一个信号损失 alpha；放过一条表情包只损失一个分析周期。
+- 与严重性 Score 组合做两级过滤：Noul 门控"是不是信号？"，Score 评级"多重要？"
+
+**失败模式**
+- 模仿真分析的协同虚假帖子——在同一次请求里配一个账户可信度 Noul。
+
+**来源：** [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) v0.5.1+（可选 Jev 社交帖子筛选，117k★）

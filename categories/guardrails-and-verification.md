@@ -198,3 +198,26 @@ injection = Noul(
 **Sources:** [Gaurav-Gosain/jev-sec-bench](https://github.com/Gaurav-Gosain/jev-sec-bench) (blind prompt-injection and vulnerable-code detection benches)
 
 **Sources:** [Docs — confidence](https://docs.typesafe.ai/confidence) · [Cookbook — classification using confidence](https://docs.typesafe.ai/cookbooks/classification_using_confidence)
+---
+
+### Signal-vs-noise screening
+**Primitive:** Noul · **Added:** 2026-10-28 · **Status:** community-observed
+
+In trading-agent pipelines, a Noul gate filters raw information (social posts, headlines, filings) before expensive analysts read it — is this a genuine signal about the stock, or noise? This is the guardrail version of RAG passage filtering, applied to financial signal streams.
+
+```python
+"worth_analyst": Noul(
+    instructions="Does this social media post contain a specific, checkable claim about the company that would affect an investment decision?",
+    criteria={"true": "Route to the analyst for evaluation.",
+              "false": "Discard. Do not wake the analyst for hype, memes, or vague sentiment."})
+```
+
+**Wiring & thresholds**
+- State must carry the ticker context and the post text in separate labeled fields — the model judges the relationship, not the prose.
+- Threshold leans toward false positives (pass more, discard less): a missed signal costs alpha; a passed meme costs one analyst cycle.
+- Batch with a severity Score for two-stage filtering: Noul gates "is this signal?", Score grades "how material?"
+
+**Failure modes**
+- Coordinated inauthentic posts that mimic genuine analysis — pair with an account-credibility Noul in the same request.
+
+**Sources:** [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) v0.5.1+ (optional Jev screening of social posts, 117k★)

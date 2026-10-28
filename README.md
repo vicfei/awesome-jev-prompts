@@ -108,7 +108,7 @@ const result = await client.systemOne({
 
 *(Quick-start example adapted from [Anil-matcha/awesome-jev-by-typesafe](https://github.com/Anil-matcha/awesome-jev-by-typesafe), MIT.)*
 
-## The library — 57 entries in 10 categories
+## The library — 60 entries in 10 categories
 
 Every entry gives the question template, threshold/wiring guidance, known failure modes, and sources.
 
@@ -151,6 +151,8 @@ Every entry cites its sources, and sources come in three kinds — read them bef
 ## Ecosystem notes
 
 The question-design approach in this list transfers across System One models. Notable developments:
+
+- **2026-10-28 — decision models enter the trading-agent mainstream.** [TradingAgents](https://github.com/TauricResearch/TradingAgents) (117k★, multi-agent LLM financial trading, arXiv:2412.20138) ships optional Jev screening of social posts (v0.5.1): a Noul gate deciding whether a post is signal or noise before analysts read it. [ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) (64k★, AI hedge fund team) lists TypeSafe (Jev) as a first-class model provider for its investor agents — the same tier as Anthropic, OpenAI, and DeepSeek. Combined 181k★ of trading infrastructure now treats decision models as a native component: LLM agents propose, Jev judges, code composes the trade. Design impact: the [signal-vs-noise screening](categories/guardrails-and-verification.md#signal-vs-noise-screening) and [research conviction scoring](categories/score-patterns.md#research-conviction-scoring) patterns below are the question-design layer those integrations need.
 
 - **2026-10-27 — hyperscalers arrive; decision models become a category.** Five weeks after Jev's launch, the category has a market name and entrants at every tier. First-party verified: AWS open-sourced [Strands Decider 2B](https://huggingface.co/StrandsAgents) (weights, training data and scripts), and [Perplexity shipped pplx-decider](https://huggingface.co/perplexity-ai) (27B + flash, open weights). Per [Kai Waehner's category timeline](https://www.kai-waehner.de/blog/2026/10/20/how-decision-models-became-a-new-ai-category-after-jev), the wave also includes OpenAI's Decisions API (GPT-6 Luna behind a decision interface), Microsoft Decision-1 (Qwen3.5-9B post-trained), Liquid d1, and Snowflake Decision — while TypeSafe raised $870M at a $7.5B valuation. The telling detail for this list: **the request schema the fast followers copied is TypeSafe's** — question design is now a cross-vendor skill, and with every vendor winning on its own benchmark, independent protocols are where comparisons survive. Design impact: the patterns here apply to Decision-1, pplx-decider, and whatever ships next; thresholds stay per-engine.
 
