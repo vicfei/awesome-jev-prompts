@@ -8,6 +8,30 @@ Templates use the Python SDK (`python -m pip install typesafe-sdk`).
 
 ---
 
+### Confidence-gated reasoning
+**Primitive:** Composite (Noul gate → expensive path) · **Added:** 2026-10-28 · **Status:** community-observed
+
+Route each decision by the model's own confidence: answer directly when confident, trigger explicit reasoning only when uncertain. This is the AutoThink pattern — StartLux 27B AutoThink ships it natively (`think_mode: "auto"`, `gate: 0.6`); OpenAI's Decisions API applies the same principle (GPT-6 Luna reasons only on hard cases).
+
+```python
+# The gate is a threshold on the decision model's own confidence:
+answer = engine.ask(state, questions)
+if answer.confidence < THINK_GATE:
+    answer = engine.ask(state, questions, think_mode="deep")   # expensive path
+# Above the gate: one forward pass, no reasoning tokens.
+```
+
+**Wiring & thresholds**
+- The gate threshold is per task: 0.6 is StartLux's default; a security gate might use 0.8, a ranking pre-filter 0.4.
+- Budget the expensive path: StartLux caps reasoning at `think_budget` tokens; without a cap, uncertain inputs burn the margin saved by confident ones.
+- The confidence signal comes from the same forward pass — no separate uncertainty model needed.
+
+**Failure modes**
+- Gate too low: reasoning fires on easy cases, eating the cost advantage. Gate too high: wrong answers ship without review — tune from logged (confidence, correctness) pairs.
+- Not all engines support thinking modes (Jev has none); on those, the pattern degenerates to routing to a different (stronger, more expensive) model — same threshold logic.
+
+**Sources:** [StartLux AutoThink](https://github.com/StartLuxLabs/Startlux-Decision) (`think_mode`/`gate`/`think_budget` API) · [OpenAI Decisions API](https://www.kai-waehner.de/blog/2026/10/20/how-decision-models-became-a-new-ai-category-after-jev) (per Waehner's timeline: "trading latency for accuracy on hard cases")
+
 ### Inbox / email triage
 **Primitive:** Choice + Score + Noul · **Added:** 2026-09-28
 

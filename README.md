@@ -108,7 +108,7 @@ const result = await client.systemOne({
 
 *(Quick-start example adapted from [Anil-matcha/awesome-jev-by-typesafe](https://github.com/Anil-matcha/awesome-jev-by-typesafe), MIT.)*
 
-## The library — 51 entries in 9 categories
+## The library — 57 entries in 10 categories
 
 Every entry gives the question template, threshold/wiring guidance, known failure modes, and sources.
 
@@ -122,7 +122,8 @@ Every entry gives the question template, threshold/wiring guidance, known failur
 | [Context compaction](categories/context-compaction.md) | 3 | Keep-or-drop, summarize-or-quote, tool-result pruning |
 | [Anti-patterns](categories/anti-patterns.md) | 10 | The ten ways Jev questions go wrong, with fixes |
 | [Calibration & eval](categories/calibration-and-eval.md) | 5 | Thresholds from logs, versioned questions, shadow mode, System Two handoff |
-| [Embodied & multimodal](categories/embodied-multimodal-patterns.md) | 8 | Consult gating, capability sheets, mission contracts, multimodal state binding, per-axis control |
+| [Embodied & multimodal](categories/embodied-multimodal-patterns.md) |
+| [Structured-state patterns](categories/structured-state-patterns.md) | When your state is a table: tabular FM routing, column semantics, cross-paradigm calibration | 3 | 8 | Consult gating, capability sheets, mission contracts, multimodal state binding, per-axis control |
 
 **The one rule that generates most of the others:** *questions describe judgments; code owns composition, thresholds, and side effects.*
 
