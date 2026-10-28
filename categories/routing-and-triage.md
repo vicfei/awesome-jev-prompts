@@ -170,3 +170,32 @@ A firehose of mixed documents (scans, exports, forwards) needs to land in N buck
 - Cross-category hybrids (an HR contract) — pick the *processing* owner ("who acts on it"), not the *topic*; pipelines are about actions.
 
 **Sources:** [Docs — use-case map](https://docs.typesafe.ai/concepts/use-case-map) · [Docs — state](https://docs.typesafe.ai/concepts/state)
+---
+
+### Market regime routing
+**Primitive:** Choice · **Added:** 2026-10-28 · **Status:** derived
+
+Classify the current market regime once per period, then route all downstream strategy calls through that regime's playbook. The Choice is cheap (one call), but it gates expensive model-selection, position-sizing, and risk-parameter decisions.
+
+```python
+"regime": Choice(
+    instructions="Which market regime best describes the current environment?",
+    criteria={
+        "trending_bull": "Sustained upward movement with expanding breadth; momentum strategies favored.",
+        "trending_bear": "Sustained decline with contracting breadth; capital preservation favored.",
+        "range_bound": "Sideways with no sustained directional bias; mean-reversion strategies favored.",
+        "high_volatility": "Large swings in either direction; reduce position sizes, widen stops.",
+        "regime_unclear": "Signals conflict; default to smallest positions until clarity emerges.",
+    })
+```
+
+**Wiring & thresholds**
+- State should carry a compact market snapshot: index returns over multiple horizons, breadth measures, volatility indicators — not the full time series.
+- The "regime_unclear" escape option is load-bearing: forcing a regime call when signals conflict produces false confidence that propagates to every downstream decision.
+- Ask once per rebalance period, not per trade — the regime call is a strategic gate, not a tick-level signal.
+
+**Failure modes**
+- Regime lag: by the time the model is confident in a new regime, the transition is over. Accept the lag; the value is consistency (not being in the wrong playbook), not foresight.
+- Over-granular regimes (six-plus): each added regime reduces per-class sample size and increases misclassification cost. Four to five is the practical cap.
+
+**Sources:** derived from the multi-agent architecture in [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) and [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading)

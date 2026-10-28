@@ -143,3 +143,31 @@ Turn unstructured requests into an ordered queue number so your scheduler stops 
 - Rubric levels leak business rules ("VIP customers are always 3") — tier belongs in code, only the human-urgency judgment belongs in the question.
 
 **Sources:** [Docs — patterns](https://docs.typesafe.ai/patterns) · [Docs — use-case map](https://docs.typesafe.ai/concepts/use-case-map)
+---
+
+### Research conviction scoring
+**Primitive:** Score · **Added:** 2026-10-28 · **Status:** derived
+
+Rate how strongly a piece of evidence (research report, earnings call, news event) supports a specific investment thesis. The rubric separates "the source is credible" from "the evidence supports the thesis" — two judgments that traditional research notes conflate.
+
+```python
+"conviction": Score(
+    instructions="How strongly does this evidence support the stated investment thesis?",
+    criteria=[
+        "Contradicts: the evidence actively undermines the thesis.",
+        "Neutral: the evidence is relevant but does not move the thesis either way.",
+        "Supports: the evidence is consistent with and mildly supportive of the thesis.",
+        "Confirms: the evidence directly validates the core mechanism of the thesis.",
+    ])
+```
+
+**Wiring & thresholds**
+- State carries three labeled fields: the thesis (one sentence, written before reading the evidence), the evidence summary, and the source credibility Noul — separate judgments, one request.
+- Position sizing can key off the conviction level: below "supports" = no action, "supports" = initiate, "confirms" = add.
+- The rubric is thesis-relative, not source-relative — a highly credible source can still be "neutral" for a specific thesis.
+
+**Failure modes**
+- Mixing source credibility into the conviction score: a credible source saying something irrelevant scores "neutral", not "confirms" — keep the two as separate questions.
+- Thesis drift: if the thesis statement changes after reading the evidence (to fit it), the score is meaningless — write the thesis first, freeze it, then ask.
+
+**Sources:** derived from the ai-hedge-fund investor-agent pattern ([virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund), 64k★)

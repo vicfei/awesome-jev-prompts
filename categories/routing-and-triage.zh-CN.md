@@ -175,3 +175,32 @@ questions={
 - 跨类别混合体（HR 合同）——选*处理*归属（"谁对它行动"），不选*主题*；流水线关乎行动。
 
 **来源：** [官方文档 — use-case map](https://docs.typesafe.ai/concepts/use-case-map) · [官方文档 — state](https://docs.typesafe.ai/concepts/state)
+---
+
+### 市场状态路由
+**原语：** Choice · **收录：** 2026-10-28 · **状态：** derived
+
+每周期做一次市场状态分类，然后把下游所有策略调用路由到该状态对应的操作手册。Choice 便宜（一次调用），但它门控着昂贵的模型选择、仓位和风险参数决策。
+
+```python
+"regime": Choice(
+    instructions="Which market regime best describes the current environment?",
+    criteria={
+        "trending_bull": "Sustained upward movement with expanding breadth; momentum strategies favored.",
+        "trending_bear": "Sustained decline with contracting breadth; capital preservation favored.",
+        "range_bound": "Sideways with no sustained directional bias; mean-reversion strategies favored.",
+        "high_volatility": "Large swings in either direction; reduce position sizes, widen stops.",
+        "regime_unclear": "Signals conflict; default to smallest positions until clarity emerges.",
+    })
+```
+
+**接线与阈值**
+- state 应携带紧凑的市场快照：多周期指数收益、广度指标、波动率——不要完整时间序列。
+- "regime_unclear" 逃逸选项是承重墙：信号矛盾时强制分类产生伪信心，会传播到每个下游决策。
+- 每再平衡周期问一次，不是每笔交易——状态分类是战略门控，不是 tick 级信号。
+
+**失败模式**
+- 状态滞后：模型确信新状态时，切换已经结束了。接受滞后；价值在于一致性（不在错误的操作手册里），不在于预见。
+- 状态过细（六个以上）：每多一类就减少单类样本量、增加误分类成本。四到五个实际上限。
+
+**来源：** 推导自 [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) 和 [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) 的多 Agent 架构

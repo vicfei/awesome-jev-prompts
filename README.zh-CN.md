@@ -7,7 +7,7 @@
 [![Tests](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/tests.yml/badge.svg)](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/tests.yml)
 [![License: CC0](https://img.shields.io/badge/license-CC0-007ec6)](LICENSE)
 
-**English version is [here](README.md).** 全部 57 条条目均提供[中文译本](#-模式库--9-个分类-51-条)（以英文版为准，同步于 2026-10-08）。
+**English version is [here](README.md).** 全部 60 条条目均提供[中文译本](#-模式库--9-个分类-51-条)（以英文版为准，同步于 2026-10-08）。
 
 Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（评分）、**Noul**（0–1 概率判断）——附带概率，70–500 毫秒内出结果。它不生成任何文本，所以你在 LLM 上积累的提示词技巧几乎全部失效。真正起作用的是**问题设计**：怎么把一个决策拆成原子判断、选项描述怎么措辞、阈值定在哪、什么时候不该信任那个数字。本库收录实践中有效的模式，以及悄悄毁掉生产系统的反模式。
 
@@ -36,7 +36,7 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 
 见 [README.md 快速上手](README.md#quick-start)（Python / TypeScript 双示例）。
 
-## 模式库 — 10 个分类 57 条
+## 模式库 — 10 个分类 60 条
 
 | 分类 | 条数 | 覆盖内容 |
 |---|---|---|
@@ -77,6 +77,8 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 ## 生态动态
 
 本清单的问题设计方法可跨 System One 模型迁移。值得关注的进展：
+
+- **2026-10-28 · 决策模型进入交易 Agent 主流。** [TradingAgents](https://github.com/TauricResearch/TradingAgents)（117k★，多 Agent LLM 金融交易，arXiv:2412.20138）从 v0.5.1 起提供可选的 Jev 社交帖子筛选：一道 Noul 门控决定帖子是信号还是噪声，过了才给分析师看。[ai-hedge-fund](https://github.com/virattt/ai-hedge-fund)（64k★，AI 对冲基金团队）把 TypeSafe (Jev) 列为投资人 Agent 的一等模型提供商——与 Anthropic、OpenAI、DeepSeek 同级。合计 181k★ 的交易基础设施现在把决策模型当原生组件：LLM Agent 提议，Jev 判断，代码组合交易。对问题设计的含义：下方[信号-噪声筛选](categories/guardrails-and-verification.zh-CN.md#信号-噪声筛选)和[研报确信度评分](categories/score-patterns.zh-CN.md#研报确信度评分)模式正是这些接入所需要的问题设计层。
 
 - **2026-10-27 · 云大厂进场，决策模型成为正式品类。** Jev 发布五周后，这个品类有了市场名和全梯队的入场者。一手核实：AWS 开源了 [Strands Decider 2B](https://huggingface.co/StrandsAgents)（权重、训练数据与脚本齐全），[Perplexity 发了 pplx-decider](https://huggingface.co/perplexity-ai)（27B + flash，开放权重）。据 [Kai Waehner 的品类时间线](https://www.kai-waehner.de/blog/2026/10/20/how-decision-models-became-a-new-ai-category-after-jev)，这波还包括 OpenAI 的 Decisions API（GPT-6 Luna 套决策接口）、Microsoft Decision-1（Qwen3.5-9B 后训练）、Liquid d1、Snowflake Decision——同期 TypeSafe 以 75 亿美元估值融资 8.7 亿。对本清单最有指示性的细节：**快速跟随者抄的请求 schema 是 TypeSafe 的**——问题设计从此是跨厂商技能；而人人都是自家基准第一的乱象里，独立协议才是经得起比较的地方。对问题设计的含义：这里的模式适用于 Decision-1、pplx-decider 和接下来出场的任何模型；阈值仍按引擎单独拟合。
 

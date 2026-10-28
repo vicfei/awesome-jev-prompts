@@ -145,3 +145,31 @@ Score 接收 `instructions` + 作为**有序列表**的 `criteria`，定义每�
 - 评分等级掺入业务规则（"VIP 永远 3 分"）——档位归代码，问题只判人的紧迫程度。
 
 **来源：** [官方文档 — patterns](https://docs.typesafe.ai/patterns) · [官方文档 — use-case map](https://docs.typesafe.ai/concepts/use-case-map)
+---
+
+### 研报确信度评分
+**原语：** Score · **收录：** 2026-10-28 · **状态：** derived
+
+给一条证据（研报、电话会、新闻事件）对某个特定投资论点的支持力度评级。评分尺把"来源可信"和"证据支持论点"分成两个判断——传统研报摘要把这两者混在一起。
+
+```python
+"conviction": Score(
+    instructions="How strongly does this evidence support the stated investment thesis?",
+    criteria=[
+        "Contradicts: the evidence actively undermines the thesis.",
+        "Neutral: the evidence is relevant but does not move the thesis either way.",
+        "Supports: the evidence is consistent with and mildly supportive of the thesis.",
+        "Confirms: the evidence directly validates the core mechanism of the thesis.",
+    ])
+```
+
+**接线与阈值**
+- state 携带三个标签字段：论点（一句话，读证据**之前**写好）、证据摘要、来源可信度 Noul——分开的判断，一次请求。
+- 仓位可以按确信度级别操作：低于"supports"不动手，"supports"建仓，"confirms"加仓。
+- 评分尺是相对于论点的，不相对于来源——一个高度可信的来源说了不相关的话也只评"neutral"。
+
+**失败模式**
+- 把来源可信度混进确信度评分：可信来源说了不相关的话应评"neutral"不是"confirms"——保持两个独立问题。
+- 论点漂移：如果读完证据后改论点（去迎合证据），评分无意义——先写论点、冻结、再问。
+
+**来源：** 推导自 ai-hedge-fund 投资人 Agent 模式（[virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund)，64k★）
