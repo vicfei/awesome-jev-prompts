@@ -137,6 +137,10 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 
 **与这些技能的配合方式**：① 在本库挑模式起草问题 → ② 用 [VBS2004/jev-questions-skill](https://github.com/VBS2004/jev-questions-skill) 的 `lint_questions.py` + `spread.py` 做静态与区分度检查（纯标准库、不调 API）→ ③ 拿不准该不该用 Jev 就跑 [abhisheksharma001/jev-skill](https://github.com/abhisheksharma001/jev-skill) 的 `fit_check.py`（确定性 go/no-go）→ ④ 或直接用 [jev-pipeline-skill](https://github.com/vicfei/jev-pipeline-skill) 一条命令串起来（可装为 Claude Code / Codex / OpenCode / ClawHub 技能）。
 
+## 相关
+
+- [awesome-ai-quant](https://github.com/vicfei/awesome-ai-quant)——AI 工程师进量化金融的桥梁；覆盖交易 Agent、因子挖掘，以及本清单金融模式条目所记录的决策模型×金融交叉。
+
 ## 官方资源
 
 - [文档](https://docs.typesafe.ai/) — [原语](https://docs.typesafe.ai/primitives) · [模式](https://docs.typesafe.ai/patterns) · [置信度](https://docs.typesafe.ai/confidence) · [状态](https://docs.typesafe.ai/concepts/state) · [用例地图](https://docs.typesafe.ai/concepts/use-case-map) · [快速开始](https://docs.typesafe.ai/introduction/quickstart)
