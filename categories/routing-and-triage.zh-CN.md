@@ -10,6 +10,33 @@
 
 ---
 
+### 置信门控推理
+**原语：** Composite（Noul 门 → 贵路径）· **收录：** 2026-10-28 · **状态：** community-observed
+
+按模型自身的置信度路由每个决策：置信时直接回答，不确定时才触发显式推理。这就是 AutoThink 模式——StartLux 27B AutoThink 原生支持（`think_mode: "auto"`、`gate: 0.6`）；OpenAI 的 Decisions API 同理（GPT-6 Luna 只在难例上推理）。
+
+```python
+# 门控阈值设在决策模型自身的置信度上：
+answer = engine.ask(state, questions)
+if answer.confidence < THINK_GATE:
+    answer = engine.ask(state, questions, think_mode="deep")   # 贵路径
+# 高于门控：一次前向，零推理 token。
+```
+
+**接线与阈值**
+- 门控阈值按任务定：0.6 是 StartLux 默认；安全门可能用 0.8，排序预过滤可能 0.4。
+- 给贵路径设预算：StartLux 用 `think_budget` 封顶推理 token；不封顶的话，难例会烧掉易例省下的成本。
+- 置信信号来自同一次前向——不需要单独的不确定性模型。
+
+**失败模式**
+- 门控太低：易例也触发推理，成本优势被吃掉。门控太高：错误答案不经审查直接出——从日志 (置信度, 正确性) 对上调试。
+- 不是所有引擎都支持思考模式（Jev 没有）；在那些引擎上，模式退化为路由到另一个（更强、更贵的）模型——门控逻辑相同。
+
+**来源：** [StartLux AutoThink](https://github.com/StartLuxLabs/Startlux-Decision)（`think_mode`/`gate`/`think_budget` API）· [OpenAI Decisions API](https://www.kai-waehner.de/blog/2026/10/20/how-decision-models-became-a-new-ai-category-after-jev)（按 Waehner 时间线："用延迟换难例准确率"）
+
+
+---
+
 ### 收件箱 / 邮件分诊
 **Primitive:** Choice + Score + Noul · **Added:** 2026-09-28
 

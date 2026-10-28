@@ -7,7 +7,7 @@
 [![Tests](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/tests.yml/badge.svg)](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/tests.yml)
 [![License: CC0](https://img.shields.io/badge/license-CC0-007ec6)](LICENSE)
 
-**English version is [here](README.md).** 全部 51 条条目均提供[中文译本](#-模式库--9-个分类-51-条)（以英文版为准，同步于 2026-10-08）。
+**English version is [here](README.md).** 全部 57 条条目均提供[中文译本](#-模式库--9-个分类-51-条)（以英文版为准，同步于 2026-10-08）。
 
 Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（评分）、**Noul**（0–1 概率判断）——附带概率，70–500 毫秒内出结果。它不生成任何文本，所以你在 LLM 上积累的提示词技巧几乎全部失效。真正起作用的是**问题设计**：怎么把一个决策拆成原子判断、选项描述怎么措辞、阈值定在哪、什么时候不该信任那个数字。本库收录实践中有效的模式，以及悄悄毁掉生产系统的反模式。
 
@@ -36,7 +36,7 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 
 见 [README.md 快速上手](README.md#quick-start)（Python / TypeScript 双示例）。
 
-## 模式库 — 9 个分类 51 条
+## 模式库 — 10 个分类 57 条
 
 | 分类 | 条数 | 覆盖内容 |
 |---|---|---|
@@ -48,7 +48,8 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 | [上下文压缩](categories/context-compaction.zh-CN.md) | 3 | 保留或丢弃、摘要或原文、工具结果裁剪 |
 | [反模式](categories/anti-patterns.zh-CN.md) | 10 | Jev 问题十种常见的翻车方式与修复方法 |
 | [校准与评估](categories/calibration-and-eval.zh-CN.md) | 5 | 从日志定阈值、问题版本化、影子模式、何时交给 System Two |
-| [具身与多模态](categories/embodied-multimodal-patterns.zh-CN.md) | 8 | 咨询门控、能力表、任务合同、多模态状态绑定、逐轴控制 |
+| [具身与多模态](categories/embodied-multimodal-patterns.zh-CN.md) |
+| [结构化状态模式](categories/structured-state-patterns.zh-CN.md) | 状态是表时的路由、列语义、跨范式校准 | 3 | 8 | 咨询门控、能力表、任务合同、多模态状态绑定、逐轴控制 |
 
 **一条衍生出大半规则的元规则：** *问题只描述判断；组合、阈值与副作用归代码。*
 
