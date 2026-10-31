@@ -120,3 +120,25 @@ Noul 只接收 `instructions`，返回 0 到 1 之间的数。把它读作"陈�
 - 用它掩盖 bug：同一错误持续 0.9 重试说明你的失败分类法错了，不是需要更多重试。
 
 **来源：** [TypeSafeAI/jev-harness](https://github.com/TypeSafeAI/jev-harness) · [官方文档 — patterns](https://docs.typesafe.ai/patterns)
+
+
+---
+
+### 标签翻转自检
+**原语：** Composite（验证）· **收录：** 2026-11-01 · **状态：** community-observed
+
+把 Noul 问题的 true/false 标签互换，重新测一遍。如果准确率崩塌或无意义地翻转，说明信号在问题措辞里而不在证据里——模型在匹配文字，不在判断状态。
+
+这个检查由一场领域批评推广（据 [Kai Waehner 的品类时间线](https://www.kai-waehner.de/blog/2026/10/20/how-decision-models-became-a-new-ai-category-after-jev)报道，厂商演示中互换 yes/no 标签后报告的准确率崩塌）。跑一次很便宜（多一轮评估），能在措辞依赖上线前抓住它。
+
+```python
+# 在评估工具里，同一测试集跑两遍：
+answer_normal = engine.ask(state, {"q": Noul("Is this claim supported?", criteria=normal_criteria)})
+answer_flipped = engine.ask(state, {"q": Noul("Is this claim unsupported?", criteria=flipped_criteria)})
+# 如果 accuracy(normal) + accuracy(flipped) ≈ 100%，
+# 模型在读标签，不在读证据。
+```
+
+**接线**：在问题设计阶段跑一次，不在生产跑。如果检查失败，重写 criteria 让每个选项的描述陈述可观察条件，而不是标签词。
+
+**来源：** community-observed，据 [Waehner 时间线](https://www.kai-waehner.de/blog/2026/10/20/how-decision-models-became-a-new-ai-category-after-jev)（批评本身无独立出版物）；Guardrails 的[对齐失败筛选](guardrails-and-verification.zh-CN.md#alignment-failure-screening)模式应用了同一原则（把问什么与给什么看分开）。

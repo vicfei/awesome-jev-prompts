@@ -1,24 +1,36 @@
 # Awesome Jev Prompts
 
-> A curated library of question patterns, anti-patterns, and calibration notes for Jev, TypeSafe AI's System One model for typed decisions (Choice / Score / Noul). Question design is the prompt engineering of typed decisions.
+> A curated library of 60 question patterns, anti-patterns, and calibration notes for typed decision models — Jev and every System One-compatible engine (Clef, StartLux, d3, SGLang). Question design is the prompt engineering of typed decisions — and question wording is the portable part.
 
-Facts: Jev 1.13 (`jev-latest` alias), POST https://api.typesafe.ai/v1/systemone, $0.042/1M input tokens (output free), 64k context (32k state + longest question), 250k tokens/sec, 1,200 req/min, text-only, Choice cardinality capped at 255. Core rule: questions describe judgments; code owns composition, thresholds, and side effects.
+Facts: Jev 1.14 is the latest release; POST https://api.typesafe.ai/v1/systemone, $0.042/1M input tokens (output free), 64k context (32k state + longest question), 250k tokens/sec, 1,200 req/min, text-only. Multiple compatible engines exist: Clef (Cloudflare, Apache-2.0), StartLux (open weights, free 27B hosting), SGLang /v1/decisions (any Jinja-template chat model), vllm-jev (local, 24+ open checkpoints). Core rule: questions describe judgments; code owns composition, thresholds, and side effects.
 
-## Index
+## Tools
 
-- [Awesome Jev Prompts (README)](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/README.md): intro, primitives, quick facts, quick start, official resources
-- [中文版 README](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/README.zh-CN.md)
-- [Choice patterns](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/choice-patterns.md): intent routing, tool selection, model routing, best-of-N, document classification, skill routing
+- [Question linter](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/scripts/lint_questions.py): stdlib-only linter checking atomicity, option-count limits (26 A-Z wire cap), rubric bounds (2-10 levels), escape options, operational Noul boundaries. Exit 1 on errors.
+- [Engine Cookbook](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/README.md#ask-the-same-question-on-every-engine): one question trio rendered across 5 verified engines (Jev, StartLux, SGLang, Clef, vllm-jev) with portability notes on option caps, none-of-the-above, thinking modes, and calibration drift.
+
+## Index — 10 categories, 60 entries
+
+- [Choice patterns](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/choice-patterns.md): intent routing, tool selection, model routing, best-of-N, document classification, skill routing, research conviction scoring
 - [Score patterns](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/score-patterns.md): severity rubrics, quality gates, moderation, RAG relevance, priority queues
 - [Noul patterns](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/noul-patterns.md): policy checks, duplicate detection, citation checks, human escalation, retry control
-- [Routing & triage](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/routing-and-triage.md): inbox triage, ticket queues, RAG filtering, document streams
-- [Guardrails & verification](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/guardrails-and-verification.md): LLM output guardrails, jailbreak detection, structured-output validation, code review gates
+- [Routing & triage](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/routing-and-triage.md): inbox triage, ticket queues, RAG filtering, document streams, confidence-gated reasoning (AutoThink), market regime routing
+- [Guardrails & verification](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/guardrails-and-verification.md): LLM output guardrails, jailbreak detection, structured-output validation, code review gates, alignment-failure screening, injection-screening gate, signal-vs-noise screening
 - [Context compaction](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/context-compaction.md): keep-or-drop, summarize-or-quote, tool-result pruning
-- [Anti-patterns](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/anti-patterns.md): the ten ways Jev questions go wrong, with fixes
+- [Anti-patterns](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/anti-patterns.md): the ways Jev questions go wrong, with fixes
 - [Calibration & eval](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/calibration-and-eval.md): thresholds from logged distributions, versioned questions, consistency checks, shadow mode, System Two handoff
 - [Embodied & multimodal](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/embodied-multimodal-patterns.md): consult gating, capability sheets in state, mission contracts, schema-aware criteria, consequence-bounded Noul, multimodal state binding, per-axis control, evidence-not-instructions clauses
+- [Structured-state patterns](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/structured-state-patterns.md): column semantics in state, tabular FM as cheap gate, cross-paradigm calibration
+
+## Ecosystem notes
+
+Dated, link-checked entries tracking the decision-model ecosystem: hyperscaler arrivals (OpenAI, Microsoft, AWS, Perplexity), open-weights parity on Chinese benchmarks, serving-layer convergence on /v1/systemone, trading-agent adoption (TradingAgents 117k★, ai-hedge-fund 64k★), JevAny multi-backbone infrastructure.
 
 ## Optional
 
 - [Official docs](https://docs.typesafe.ai/): primitives, patterns, confidence, state, cookbooks
 - [Launch post](https://typesafe.ai/blog/introducing-system-one-models-and-jev): introducing System One models and Jev
+- [jev-rag-zh-benchmark](https://github.com/vicfei/jev-rag-zh-benchmark): reproducible Chinese reranking benchmark, DOI 10.5281/zenodo.23322277
+- [minimind-jev](https://github.com/vicfei/minimind-jev): train your own tiny Jev — from-scratch tutorial with measured results
+- [awesome-ai-quant](https://github.com/vicfei/awesome-ai-quant): the bridge from AI engineering to quantitative finance
+- [中文版 README](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/README.zh-CN.md)

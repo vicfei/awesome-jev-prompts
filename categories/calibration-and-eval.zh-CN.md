@@ -51,3 +51,18 @@
 Jev 是快而便宜的判断层——不是最后一道防线，也不是整个大脑。健康的架构是双院制：反射（分类、路由、门控）在 Jev；深思（计划、起草、解释）在 LLM；交接由 Jev 自己的置信信号触发。TypeSafeAI 社区 harness 与多个其他 harness 都是这个结构。
 
 **来源：** [TypeSafeAI/jev-harness（"the model proposes, Jev supplies evidence, code decides"）](https://github.com/TypeSafeAI/jev-harness) · [AbdelStark/bicameral](https://github.com/AbdelStark/bicameral) · [发布文章](https://typesafe.ai/blog/introducing-system-one-models-and-jev)
+
+
+---
+
+### 实测参照点（2026-10-22 至 2026-10-29）
+**原语：** Composite（参照）· **收录：** 2026-11-01 · **状态：** measured
+
+来自 [jev-rag-zh-benchmark](https://github.com/vicfei/jev-rag-zh-benchmark) 和 [minimind-jev](https://github.com/vicfei/minimind-jev) 训练弧线的已发布测量，可用作校准锚点：
+
+- **排序 ≠ 校准**：同样 100 查询的中文重排样本上，一个模型可以有更高的分离 AUC 但更低的 nDCG（minimind-jev v0.3-lite：AUC 0.647 > v0.1 的 0.630，但 nDCG@5 0.440 < 0.488）。排序奖励把唯一正例排高；AUC 奖励全部候选的两两有序。不同的问题，不同的指标。
+- **二元阈值病灶**：Deußer 等（[arXiv:2609.37647](https://arxiv.org/abs/2609.37647)）报告 Jev 的二元概率相对固定 0.5 截止表现不佳——调阈值后 UNFAIR-ToS micro-F1 从 0.50 升到 0.75。这是本分类一直教的模式的已发表版本：在你自己的日志分布上拟合阈值，不要用通用默认值。
+- **温度校准便宜且被低估**：在留出集上单参数拟合（LBFGS，秒级）可测地改善概率质量而不动排序。[minimind-jev 脚本](https://github.com/vicfei/minimind-jev/blob/main/scripts/train.py)有参考实现。
+- **StartLux-27B noul 分离 AUC 0.727**——该基准上实测最高，高于 hosted Jev 1.13（0.718）。开源权重在校准敏感指标上已追平或超过托管模型。
+
+**来源：** [jev-rag-zh-benchmark 结果](https://github.com/vicfei/jev-rag-zh-benchmark/blob/main/results/s1-startlux_report.md) · [Deußer et al.](https://arxiv.org/abs/2609.37647) · [minimind-jev 蒸馏笔记](https://github.com/vicfei/minimind-jev/blob/main/docs/DISTILLATION-NOTES.md)

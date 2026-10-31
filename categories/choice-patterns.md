@@ -172,3 +172,17 @@ Route a user turn to the matching agent skill or expert package before loading p
 - Two skills with near-identical triggers split probability and stall; merge or add disambiguating criteria.
 
 **Sources:** [typesafe-ai/skills](https://github.com/typesafe-ai/skills) · [Docs — agent skill](https://docs.typesafe.ai/agent-skill)
+
+
+---
+
+### Wire-format option limits
+**Primitive:** Composite (constraint) · **Added:** 2026-11-01 · **Status:** documented
+
+The 26-letter single-pass limit (A–Z) is a wire-format constraint shared across engines, not a design guideline. Beyond 26 options, engines either knock out in groups (vllm-jev: near-equal groups of ≤25 per pass, top-3 per group to a final round) or reject the request outright (JevAny caps at 64).
+
+**Readout interaction**: JevAny's [Pointer readout](https://github.com/SimpleJev/JevAny) (attention from input to candidate positions) tolerates multi-token option descriptions; Direct-token readout (last-position logit, the inner-Jev / SGLang route) prefers terse single-token labels. Check your engine's readout before porting questions — the same wording can work on one and fail on the other.
+
+**Practical guidance**: design within 26 for portability; if your domain genuinely needs more, use a hierarchical Choice (coarse category → sub-choice) rather than relying on engine-specific knockout behavior.
+
+**Sources:** [vllm-jev README](https://github.com/mode-io/vllm-jev) (knockout description) · [JevAny benchmarks](https://simplejev.org/JevAny/index.html#benchmarks) (Pointer vs Direct-token) · [StartLux API](https://github.com/StartLuxLabs/Startlux-Decision/blob/main/docs/api.md) (choice list handling)
