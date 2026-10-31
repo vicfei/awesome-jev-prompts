@@ -98,3 +98,24 @@ Noul 返回陈述为真的概率。**0.5 是不确定，不是中等分。** 不
 Jev 不是权限系统、输入校验器或人工审核员。它可以把请求*路由*到权限检查；不能*成为*权限检查。校准描述的是群体而非单次输出——任何单次输出都不配得到盲信。
 
 **来源：** [Anil-matcha/awesome-jev-by-typesafe（"What Jev is not"）](https://github.com/Anil-matcha/awesome-jev-by-typesafe) · [官方文档 — confidence](https://docs.typesafe.ai/confidence)
+
+
+## 11. 标签词依赖
+
+**反模式：** 模型读问题里的 true/false 标签词，而不是 state 里的证据。互换标签后答案翻转或崩塌。
+
+**为什么发生：** 标签词（supported、correct、true）在训练数据中与答案统计关联，模型学到捷径而不是真的判断 state。
+
+**修复：** criteria 陈述每个标签的可观察条件，不是标签词本身。设计阶段跑一次[标签翻转自检](noul-patterns.zh-CN.md#标签翻转自检)。
+
+```python
+# 坏：标签词携带信号
+Noul("Is this claim true?")
+
+# 好：criteria 陈述可观察条件
+Noul("Is this claim supported by the cited evidence?",
+     criteria={"true": "The evidence contains a fact that directly confirms the claim.",
+               "false": "The evidence is absent, tangential, or contradicts the claim."})
+```
+
+**来源：** community-observed，据 [Waehner 时间线](https://www.kai-waehner.de/blog/2026/10/20/how-decision-models-became-a-new-ai-category-after-jev)报道的标签翻转批评

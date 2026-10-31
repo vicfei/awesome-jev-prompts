@@ -118,3 +118,25 @@ Should we retry the failed LLM/tool call, or is the failure permanent? Saves bud
 - Using it to mask bugs: persistent 0.9-retry on the same error means your failure taxonomy is wrong, not that you need more retries.
 
 **Sources:** [TypeSafeAI/jev-harness](https://github.com/TypeSafeAI/jev-harness) · [Docs — patterns](https://docs.typesafe.ai/patterns)
+
+
+---
+
+### Label-flip self-check
+**Primitive:** Composite (validation) · **Added:** 2026-11-01 · **Status:** community-observed
+
+Swap the true/false labels in your Noul question and re-measure. If accuracy collapses or flips meaninglessly, the question wording was carrying the signal, not the evidence — the model was pattern-matching the words, not judging the state.
+
+This check was popularized by a field critique (reported by [Kai Waehner's category timeline](https://www.kai-waehner.de/blog/2026/10/20/how-decision-models-became-a-new-ai-category-after-jev)) showing vendor demos where yes/no label swaps broke reported accuracy. It is cheap to run (one extra evaluation pass) and catches wording-dependency before it ships.
+
+```python
+# In your eval harness, run the same test set twice:
+answer_normal = engine.ask(state, {"q": Noul("Is this claim supported?", criteria=normal_criteria)})
+answer_flipped = engine.ask(state, {"q": Noul("Is this claim unsupported?", criteria=flipped_criteria)})
+# If accuracy(answer_normal) + accuracy(answer_flipped) ≈ 100%,
+# the model is reading the label, not the evidence.
+```
+
+**Wiring**: run once during question design, not in production. If the check fails, rewrite criteria so each option's description states the observable condition, not the label word.
+
+**Sources:** community-observed via [Waehner's timeline](https://www.kai-waehner.de/blog/2026/10/20/how-decision-models-became-a-new-ai-category-after-jev) (the critique itself has no standalone publication); the [alignment-failure screening](guardrails-and-verification.md#alignment-failure-screening) pattern in Guardrails applies the same principle (separate what you ask from what you show).

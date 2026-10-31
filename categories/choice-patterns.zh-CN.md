@@ -174,3 +174,17 @@ Choice 接收 `instructions` + 一个 `选项 → 描述` 的 `criteria` 字典�
 - 两个触发条件几乎相同的技能会分裂概率并卡住；合并它们，或补充消歧 criteria。
 
 **来源：** [typesafe-ai/skills](https://github.com/typesafe-ai/skills) · [官方文档 — agent skill](https://docs.typesafe.ai/agent-skill)
+
+
+---
+
+### 线格式选项上限
+**原语：** Composite（约束）· **收录：** 2026-11-01 · **状态：** documented
+
+26 个字母（A–Z）的单趟上限是跨引擎共享的线格式约束，不是设计建议。超过 26 个选项后，引擎要么分组淘汰（vllm-jev：每趟 ≤25 个近似组，每组前 3 进决赛），要么直接拒收（JevAny 上限 64）。
+
+**读取方式交互**：JevAny 的 [Pointer 读取](https://github.com/SimpleJev/JevAny)（从输入指向候选选项位置的注意力）容忍多 token 选项描述；Direct-token 读取（末位 logit，inner-Jev / SGLang 路线）偏好简短单 token 标签。迁移问题前先查引擎用哪种读取——同一措辞可以在一个上正常工作、在另一个上失败。
+
+**实用建议**：为可移植性设计在 26 个以内；如果领域确实需要更多，用分层 Choice（粗分类→子选择）而不是依赖特定引擎的淘汰行为。
+
+**来源：** [vllm-jev README](https://github.com/mode-io/vllm-jev)（淘汰描述）· [JevAny 基准](https://simplejev.org/JevAny/index.html#benchmarks)（Pointer vs Direct-token）· [StartLux API](https://github.com/StartLuxLabs/Startlux-Decision/blob/main/docs/api.md)（choice 列表处理）

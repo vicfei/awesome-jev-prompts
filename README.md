@@ -12,6 +12,17 @@
 
 Jev returns typed answers — **Choice**, **Score**, **Noul** — with probabilities, in 70–500 ms. It never writes text, so none of your prompt-engineering habits transfer. What transfers instead is **question design**: how you split a decision into atomic judgments, how you word option descriptions, where you set thresholds, and when you refuse to trust the number. This list collects the patterns that work — and the anti-patterns that quietly break production systems.
 
+
+## Contents
+
+- [Lint your questions](#lint-your-questions)
+- [Ask the same question on every engine](#ask-the-same-question-on-every-engine)
+- [Using this with the skills](#using-this-with-the-skills)
+- [Ecosystem notes](#ecosystem-notes)
+- [Official resources](#official-resources)
+- [Related](#related)
+- [Related lists](#related-lists)
+
 ## What is Jev?
 
 A "System One" model (the fast-thinking reference is Kahneman's): unstructured state in, typed probabilistic decisions out. It gives up string generation for type-safe, calibrated outputs, which makes it two orders of magnitude faster and cheaper than chat models on judgment-shaped work.
@@ -108,7 +119,7 @@ const result = await client.systemOne({
 
 *(Quick-start example adapted from [Anil-matcha/awesome-jev-by-typesafe](https://github.com/Anil-matcha/awesome-jev-by-typesafe), MIT.)*
 
-## The library — 60 entries in 10 categories
+## The library — 63 entries in 10 categories
 
 Every entry gives the question template, threshold/wiring guidance, known failure modes, and sources.
 

@@ -96,3 +96,24 @@ The core rule: **questions describe judgments; code owns composition, thresholds
 Jev is not an authorization system, an input validator, or a human reviewer. It can *route* a request toward a permission check; it must not *be* the permission check. Calibration describes groups, not individual answers — no individual output deserves blind trust.
 
 **Sources:** [Anil-matcha/awesome-jev-by-typesafe ("What Jev is not")](https://github.com/Anil-matcha/awesome-jev-by-typesafe) · [Docs — confidence](https://docs.typesafe.ai/confidence)
+
+
+## 11. Label-word reliance
+
+**Anti-pattern:** the model reads the true/false label word in the question, not the evidence in the state. Swapping labels flips or breaks the answer.
+
+**Why it happens:** label words ("supported", "correct", "true") are statistically associated with their answers in training data. The model learns the shortcut instead of actually judging the state.
+
+**Fix:** write criteria that state the observable condition for each label, not the label word itself. Run a [label-flip self-check](noul-patterns.md#label-flip-self-check) during design: swap labels, re-measure.
+
+```python
+# Bad: the label word carries the signal
+Noul("Is this claim true?")
+
+# Better: criteria state observable conditions
+Noul("Is this claim supported by the cited evidence?",
+     criteria={"true": "The evidence contains a fact that directly confirms the claim.",
+               "false": "The evidence is absent, tangential, or contradicts the claim."})
+```
+
+**Sources:** community-observed via the label-flip critique in [Waehner's timeline](https://www.kai-waehner.de/blog/2026/10/20/how-decision-models-became-a-new-ai-category-after-jev)
