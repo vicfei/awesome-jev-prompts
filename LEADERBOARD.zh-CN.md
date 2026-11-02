@@ -8,41 +8,41 @@
 
 | # | 项目 | 简介 | 星数 | 周增量 |
 |---|---|---|---:|---:|
-| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | TradingAgents: Multi-Agents LLM Financial Trading Framework | 119,669 | — |
-| 2 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | An AI Hedge Fund Team | 64,427 | — |
-| 3 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | "Vibe-Trading: Your Personal Trading Agent" | 37,403 | — |
-| 4 | [vllm-project/semantic-router](https://github.com/vllm-project/semantic-router) | An open, programmable decision layer for models and compute. | 6,369 | — |
-| 5 | [typesafe-ai/skills](https://github.com/typesafe-ai/skills) | Agent skills for building with TypeSafe's System One API | 2,863 | — |
-| 6 | [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | A curated list of public projects, integrations, and discussions built… | 2,524 | — |
-| 7 | [StartLuxLabs/Startlux-Decision](https://github.com/StartLuxLabs/Startlux-Decision) | Open decision models from 0.8B to 27B: a calibrated probability for eve… | 1,633 | — |
-| 8 | [heyjunpenn/awesome-jev](https://github.com/heyjunpenn/awesome-jev) | A verified, community-maintained catalog of 992 open-source projects bu… | 1,020 | — |
-| 9 | [mode-io/vllm-jev](https://github.com/mode-io/vllm-jev) | Native vLLM serving for Jev decision models | 917 | — |
-| 10 | [Liuziyu77/Valen](https://github.com/Liuziyu77/Valen) | Open, lightweight multimodal decision models for text, images, and vide… | 898 | — |
+| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | TradingAgents: Multi-Agents LLM Financial Trading Framework | 119,844 | — |
+| 2 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | An AI Hedge Fund Team | 64,432 | — |
+| 3 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | "Vibe-Trading: Your Personal Trading Agent" | 37,446 | — |
+| 4 | [vllm-project/semantic-router](https://github.com/vllm-project/semantic-router) | An open, programmable decision layer for models and compute. | 6,375 | — |
+| 5 | [typesafe-ai/skills](https://github.com/typesafe-ai/skills) | Agent skills for building with TypeSafe's System One API | 2,864 | — |
+| 6 | [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | A curated list of public projects, integrations, and discussions built… | 2,526 | — |
+| 7 | [StartLuxLabs/Startlux-Decision](https://github.com/StartLuxLabs/Startlux-Decision) | Open decision models from 0.8B to 27B: a calibrated probability for eve… | 1,637 | — |
+| 8 | [heyjunpenn/awesome-jev](https://github.com/heyjunpenn/awesome-jev) | A verified, community-maintained catalog of 992 open-source projects bu… | 1,021 | — |
+| 9 | [mode-io/vllm-jev](https://github.com/mode-io/vllm-jev) | Native vLLM serving for Jev decision models | 923 | — |
+| 10 | [Liuziyu77/Valen](https://github.com/Liuziyu77/Valen) | Open, lightweight multimodal decision models for text, images, and vide… | 899 | — |
 | 11 | [v-modal/awesome-jev-tools](https://github.com/v-modal/awesome-jev-tools) | A curated list of tools built for Jev — TypeSafe AI's System One model… | 754 | — |
-| 12 | [logicrw/awesome-jev-projects](https://github.com/logicrw/awesome-jev-projects) | Awesome Jev: source-backed open-source ecosystem radar, plain-language… | 708 | — |
+| 12 | [logicrw/awesome-jev-projects](https://github.com/logicrw/awesome-jev-projects) | Awesome Jev: source-backed open-source ecosystem radar, plain-language… | 711 | — |
 | 13 | [AnotiaWang/awesome-decision-models](https://github.com/AnotiaWang/awesome-decision-models) | A curated list of decision models (System One / typed decision models):… | 681 | — |
 | 14 | [wuyoscar/jev-skill](https://github.com/wuyoscar/jev-skill) | An awesome collection of Jev use cases, workflows, and agent skills. | 662 | — |
-| 15 | [AbdelStark/awesome-typesafe-jev](https://github.com/AbdelStark/awesome-typesafe-jev) | Awesome Jev: a source-backed field guide to TypeSafe's System One model… | 613 | — |
+| 15 | [AbdelStark/awesome-typesafe-jev](https://github.com/AbdelStark/awesome-typesafe-jev) | Awesome Jev: a source-backed field guide to TypeSafe's System One model… | 614 | — |
 | 16 | [kydlikebtc/awesome-jev](https://github.com/kydlikebtc/awesome-jev) | 1207 public resources for Jev, TypeSafe AI's System One decision model,… | 596 | — |
 | 17 | [cobanov/awesome-jev](https://github.com/cobanov/awesome-jev) | A curated, source-backed list of projects built with Jev, TypeSafe AI's… | 587 | — |
 | 18 | [walidboulanouar/awesome-jev-use-cases](https://github.com/walidboulanouar/awesome-jev-use-cases) | Awesome list of TypeSafe AI Jev use cases: 74 demos ranked by likes, 15… | 475 | — |
-| 19 | [typesafe-ai/system-one-adapter-python](https://github.com/typesafe-ai/system-one-adapter-python) | Drop-in TypeSafeClient replacement backed by LLM APIs | 406 | — |
+| 19 | [typesafe-ai/system-one-adapter-python](https://github.com/typesafe-ai/system-one-adapter-python) | Drop-in TypeSafeClient replacement backed by LLM APIs | 407 | — |
 | 20 | [ekzhang/openjev-sglang](https://github.com/ekzhang/openjev-sglang) | Jev-compatible API endpoint based on open models (prefill-only) | 333 | — |
 | 21 | [FBddcz/embodied-jev](https://github.com/FBddcz/embodied-jev) | EmbodiedJev: MuJoCo robot decision workbench with MiniCPM5-2B, Jev and… | 331 | — |
 | 22 | [typesafe-ai/typesafe-sdk-python](https://github.com/typesafe-ai/typesafe-sdk-python) | The official Python library for the TypeSafe API | 307 | — |
-| 23 | [RomanSlack/jev-drone](https://github.com/RomanSlack/jev-drone) | Camera-only autonomous drone in MuJoCo with a small judgment model (Typ… | 297 | — |
+| 23 | [RomanSlack/jev-drone](https://github.com/RomanSlack/jev-drone) | Camera-only autonomous drone in MuJoCo with a small judgment model (Typ… | 298 | — |
 | 24 | [typesafe-ai/typesafe-sdk-js](https://github.com/typesafe-ai/typesafe-sdk-js) | The official TypeScript/JavaScript library for the TypeSafe API | 285 | — |
-| 25 | [libingzheren/Jev-Mem](https://github.com/libingzheren/Jev-Mem) | Jev-Mem: System-One Controlled Agentic Memory | 253 | — |
+| 25 | [libingzheren/Jev-Mem](https://github.com/libingzheren/Jev-Mem) | Jev-Mem: System-One Controlled Agentic Memory | 254 | — |
 | 26 | [fatwang2/awesome-jev](https://github.com/fatwang2/awesome-jev) | A source-backed Jev project directory with a reusable Jev-only GitHub r… | 234 | — |
-| 27 | [OmniJev/OneJev](https://github.com/OmniJev/OneJev) | 🚀🚀 A multimodal System One decision model that gives calibrated answers… | 217 | — |
-| 28 | [tinnel123666888/OmniJev](https://github.com/tinnel123666888/OmniJev) | — | 171 | — |
+| 27 | [OmniJev/OneJev](https://github.com/OmniJev/OneJev) | 🚀🚀 A multimodal System One decision model that gives calibrated answers… | 219 | — |
+| 28 | [tinnel123666888/OmniJev](https://github.com/tinnel123666888/OmniJev) | — | 173 | — |
 | 29 | [SimpleJev/JevAny](https://github.com/SimpleJev/JevAny) | Open infrastructure for training, evaluating, and deploying System 1 de… | 129 | — |
 | 30 | [PerryLink/jevcore](https://github.com/PerryLink/jevcore) | TypeSafe Jev for DeepSeek Harness, the Model Context Protocol, and plai… | 104 | — |
 | 31 | [yzfly/awesome-jev-zh](https://github.com/yzfly/awesome-jev-zh) | Jev / TypeSafe System One 中文精选列表：官方资料、SDK、爆款应用、Agent 工具、开源复现与独立评测，附中文上手… | 89 | — |
 | 32 | [spring-ai-community/spring-ai-typesafe](https://github.com/spring-ai-community/spring-ai-typesafe) | A Java SDK for the TypeSafe AI JEV API, & Spring AI TypeSafe integratio… | 62 | — |
 | 33 | [hotchpotch/jev-reranker](https://github.com/hotchpotch/jev-reranker) | Jev-powered relevance filtering and reranking for RAG in Python. | 50 | — |
 | 34 | [TypeSafeAI/jev-harness](https://github.com/TypeSafeAI/jev-harness) | A custom coding harness for TypeSafe AI's Jev: an LLM proposes, Jev ans… | 38 | — |
-| 35 | [madisonrickert/jev-permission-gate](https://github.com/madisonrickert/jev-permission-gate) | A Claude Code mod that uses TypeSafe's Jev to decide auto mode tool cal… | 32 | — |
+| 35 | [madisonrickert/jev-permission-gate](https://github.com/madisonrickert/jev-permission-gate) | A Claude Code mod that uses TypeSafe's Jev to decide auto mode tool cal… | 33 | — |
 | 36 | [sumleo/RLCDAlignBench](https://github.com/sumleo/RLCDAlignBench) | RLCDAlignBench: 44 alignment-failure detection benchmarks and code for… | 31 | — |
 | 37 | [kenhuangus/jev-usecases](https://github.com/kenhuangus/jev-usecases) | Production TypeSafe Jev (System One) use-case harnesses with confidence… | 27 | — |
 | 38 | [shapsider/OmniJev](https://github.com/shapsider/OmniJev) | OmniJev — multimodal finite-choice decision interface and MuJoCo embodi… | 22 | — |

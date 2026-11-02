@@ -4,10 +4,10 @@
     "hist": [
       [
         "2026-11-02",
-        613
+        614
       ]
     ],
-    "stars": 613
+    "stars": 614
   },
   "AbdelStark/bicameral": {
     "desc": "Hybrid coding harness: System 2 writes, System 1 (Jev) runs reflexes.",
@@ -84,10 +84,10 @@
     "hist": [
       [
         "2026-11-02",
-        37403
+        37446
       ]
     ],
-    "stars": 37403
+    "stars": 37446
   },
   "JoacoMarc/jev-harness-router": {
     "desc": "Per-turn router for agent harnesses: one 350ms Jev call picks the model tier, effort, tools and skill, behind a hard deadline with a regex fallback. Claude Agent SDK adapter included.",
@@ -104,20 +104,20 @@
     "hist": [
       [
         "2026-11-02",
-        898
+        899
       ]
     ],
-    "stars": 898
+    "stars": 899
   },
   "OmniJev/OneJev": {
     "desc": "🚀🚀 A multimodal System One decision model that gives calibrated answers to typed questions about screens, photos, video and text in one forward pass.",
     "hist": [
       [
         "2026-11-02",
-        217
+        219
       ]
     ],
-    "stars": 217
+    "stars": 219
   },
   "PPRAMANIK62/yc-jev-bench": {
     "desc": "Can Jev replace an LLM reranker? A benchmark of TypeSafe's Jev vs Claude Haiku and BGE on natural-language search over all 6,245 YC companies, with a live search demo.",
@@ -154,10 +154,10 @@
     "hist": [
       [
         "2026-11-02",
-        297
+        298
       ]
     ],
-    "stars": 297
+    "stars": 298
   },
   "SimpleJev/JevAny": {
     "desc": "Open infrastructure for training, evaluating, and deploying System 1 decision models across language and multimodal backbones.",
@@ -174,20 +174,20 @@
     "hist": [
       [
         "2026-11-02",
-        1633
+        1637
       ]
     ],
-    "stars": 1633
+    "stars": 1637
   },
   "TauricResearch/TradingAgents": {
     "desc": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
     "hist": [
       [
         "2026-11-02",
-        119669
+        119844
       ]
     ],
-    "stars": 119669
+    "stars": 119844
   },
   "TypeSafeAI/jev-harness": {
     "desc": "A custom coding harness for TypeSafe AI's Jev: an LLM proposes, Jev answers narrow questions, code decides, every step leaves a receipt.",
@@ -304,10 +304,10 @@
     "hist": [
       [
         "2026-11-02",
-        1020
+        1021
       ]
     ],
-    "stars": 1020
+    "stars": 1021
   },
   "hotchpotch/jev-reranker": {
     "desc": "Jev-powered relevance filtering and reranking for RAG in Python.",
@@ -344,40 +344,40 @@
     "hist": [
       [
         "2026-11-02",
-        253
+        254
       ]
     ],
-    "stars": 253
+    "stars": 254
   },
   "logicrw/awesome-jev-projects": {
     "desc": "Awesome Jev: source-backed open-source ecosystem radar, plain-language project discovery, and automatic GitHub sync",
     "hist": [
       [
         "2026-11-02",
-        708
+        711
       ]
     ],
-    "stars": 708
+    "stars": 711
   },
   "madisonrickert/jev-permission-gate": {
     "desc": "A Claude Code mod that uses TypeSafe's Jev to decide auto mode tool calls. 2x faster than the built-in classifier on the calls it decides.",
     "hist": [
       [
         "2026-11-02",
-        32
+        33
       ]
     ],
-    "stars": 32
+    "stars": 33
   },
   "mode-io/vllm-jev": {
     "desc": "Native vLLM serving for Jev decision models",
     "hist": [
       [
         "2026-11-02",
-        917
+        923
       ]
     ],
-    "stars": 917
+    "stars": 923
   },
   "shapsider/OmniJev": {
     "desc": "OmniJev — multimodal finite-choice decision interface and MuJoCo embodied workbench: trajectory replays, decision probes, benchmark panels, 60s walkthrough.",
@@ -414,30 +414,30 @@
     "hist": [
       [
         "2026-11-02",
-        171
+        173
       ]
     ],
-    "stars": 171
+    "stars": 173
   },
   "typesafe-ai/skills": {
     "desc": "Agent skills for building with TypeSafe's System One API",
     "hist": [
       [
         "2026-11-02",
-        2863
+        2864
       ]
     ],
-    "stars": 2863
+    "stars": 2864
   },
   "typesafe-ai/system-one-adapter-python": {
     "desc": "Drop-in TypeSafeClient replacement backed by LLM APIs",
     "hist": [
       [
         "2026-11-02",
-        406
+        407
       ]
     ],
-    "stars": 406
+    "stars": 407
   },
   "typesafe-ai/typesafe-sdk-js": {
     "desc": "The official TypeScript/JavaScript library for the TypeSafe API",
@@ -514,20 +514,20 @@
     "hist": [
       [
         "2026-11-02",
-        64427
+        64432
       ]
     ],
-    "stars": 64427
+    "stars": 64432
   },
   "vllm-project/semantic-router": {
     "desc": "An open, programmable decision layer for models and compute.",
     "hist": [
       [
         "2026-11-02",
-        6369
+        6375
       ]
     ],
-    "stars": 6369
+    "stars": 6375
   },
   "walidboulanouar/awesome-jev-use-cases": {
     "desc": "Awesome list of TypeSafe AI Jev use cases: 74 demos ranked by likes, 150+ GitHub repos, limits, cost and API examples. CC0",
@@ -574,10 +574,10 @@
     "hist": [
       [
         "2026-11-02",
-        2524
+        2526
       ]
     ],
-    "stars": 2524
+    "stars": 2526
   },
   "yzfly/awesome-jev-zh": {
     "desc": "Jev / TypeSafe System One 中文精选列表：官方资料、SDK、爆款应用、Agent 工具、开源复现与独立评测，附中文上手指南，每日自动收录 GitHub 热门项目。",
