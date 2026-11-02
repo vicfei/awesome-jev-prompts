@@ -1,4 +1,4 @@
-name: Sync stars
+name: Sync stars & leaderboard
 
 on:
   schedule:
@@ -20,10 +20,14 @@ jobs:
         run: python scripts/sync_stars.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build project leaderboard
+        run: python scripts/leaderboard.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit updated metadata
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md data/star-cache.json
-          git diff --cached --quiet || git commit -m "chore: sync star counts and last-checked [skip ci]"
+          git add README.md data/star-cache.json data/leaderboard-history.json LEADERBOARD.md LEADERBOARD.zh-CN.md
+          git diff --cached --quiet || git commit -m "chore: sync star counts and leaderboard [skip ci]"
           git push

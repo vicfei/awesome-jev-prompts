@@ -7,6 +7,7 @@ Facts: Jev 1.14 is the latest release; POST https://api.typesafe.ai/v1/systemone
 ## Tools
 
 - [Question linter](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/scripts/lint_questions.py): stdlib-only linter checking atomicity, option-count limits (26 A-Z wire cap), rubric bounds (2-10 levels), escape options, operational Noul boundaries. Exit 1 on errors.
+- [Project leaderboard](https://github.com/vicfei/awesome-jev-prompts/blob/main/LEADERBOARD.md): every GitHub project referenced in this list, ranked by total stars and weekly star change, refreshed daily by CI.
 - [Engine Cookbook](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/README.md#ask-the-same-question-on-every-engine): one question trio rendered across 5 verified engines (Jev, StartLux, SGLang, Clef, vllm-jev) with portability notes on option caps, none-of-the-above, thinking modes, and calibration drift.
 
 ## Index — 10 categories, 60 entries
