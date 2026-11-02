@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606A"/>
+    </marker>
+  </defs>
+
+  <rect x="4" y="4" width="952" height="472" rx="14" fill="#F6F8FA" stroke="#C6CDD5" stroke-width="1.5"/>
+
+  <rect x="290" y="16" width="380" height="44" rx="10" fill="#1B2A4A"/>
+  <text x="480" y="43" text-anchor="middle" font-size="14.5" font-weight="700" fill="#FFFFFF">What shape is your decision?</text>
+
+  <line x1="480" y1="60" x2="180" y2="96" stroke="#57606A" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="480" y1="60" x2="480" y2="96" stroke="#57606A" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="480" y1="60" x2="780" y2="96" stroke="#57606A" stroke-width="1.6" marker-end="url(#arr)"/>
+
+  <!-- CHOICE -->
+  <rect x="44" y="98" width="272" height="196" rx="12" fill="#FFFFFF" stroke="#C6CDD5" stroke-width="1.5"/>
+  <text x="180" y="126" text-anchor="middle" font-size="11.5" font-style="italic" fill="#57606A">Pick one option from</text>
+  <text x="180" y="142" text-anchor="middle" font-size="11.5" font-style="italic" fill="#57606A">a set you control</text>
+  <rect x="110" y="162" width="140" height="36" rx="9" fill="#F2B33D"/>
+  <text x="180" y="185" text-anchor="middle" font-size="15" font-weight="800" fill="#1B2A4A">CHOICE</text>
+  <text x="180" y="228" text-anchor="middle" font-size="11" fill="#57606A">intent · tool &amp; model routing</text>
+  <text x="180" y="246" text-anchor="middle" font-size="11" fill="#57606A">best-of-N · document types</text>
+  <text x="180" y="276" text-anchor="middle" font-size="10.5" fill="#8B949E">returns: option + probability</text>
+
+  <!-- SCORE -->
+  <rect x="344" y="98" width="272" height="196" rx="12" fill="#FFFFFF" stroke="#C6CDD5" stroke-width="1.5"/>
+  <text x="480" y="126" text-anchor="middle" font-size="11.5" font-style="italic" fill="#57606A">Grade intensity or</text>
+  <text x="480" y="142" text-anchor="middle" font-size="11.5" font-style="italic" fill="#57606A">quality on a scale</text>
+  <rect x="410" y="162" width="140" height="36" rx="9" fill="#F2B33D"/>
+  <text x="480" y="185" text-anchor="middle" font-size="15" font-weight="800" fill="#1B2A4A">SCORE</text>
+  <text x="480" y="228" text-anchor="middle" font-size="11" fill="#57606A">severity · quality gates</text>
+  <text x="480" y="246" text-anchor="middle" font-size="11" fill="#57606A">moderation · relevance</text>
+  <text x="480" y="276" text-anchor="middle" font-size="10.5" fill="#8B949E">returns: level + probability</text>
+
+  <!-- NOUL -->
+  <rect x="644" y="98" width="272" height="196" rx="12" fill="#FFFFFF" stroke="#C6CDD5" stroke-width="1.5"/>
+  <text x="780" y="126" text-anchor="middle" font-size="11.5" font-style="italic" fill="#57606A">Is this true / does it violate /</text>
+  <text x="780" y="142" text-anchor="middle" font-size="11.5" font-style="italic" fill="#57606A">are these the same?</text>
+  <rect x="710" y="162" width="140" height="36" rx="9" fill="#F2B33D"/>
+  <text x="780" y="185" text-anchor="middle" font-size="15" font-weight="800" fill="#1B2A4A">NOUL</text>
+  <text x="780" y="228" text-anchor="middle" font-size="11" fill="#57606A">policy · dedup · citation</text>
+  <text x="780" y="246" text-anchor="middle" font-size="11" fill="#57606A">escalation · retry control</text>
+  <text x="780" y="276" text-anchor="middle" font-size="10.5" fill="#8B949E">returns: true/false + probability</text>
+
+  <!-- cross-cutting strip -->
+  <rect x="44" y="312" width="872" height="64" rx="10" fill="#EAEEF2"/>
+  <text x="480" y="336" text-anchor="middle" font-size="11.5" fill="#1B2A4A">cross-cutting: <tspan font-weight="600">routing &amp; triage</tspan> · <tspan font-weight="600">guardrails &amp; verification</tspan> · <tspan font-weight="600">context compaction</tspan> · <tspan font-weight="600">embodied &amp; multimodal</tspan> · <tspan font-weight="600">structured-state</tspan></text>
+  <text x="480" y="360" text-anchor="middle" font-size="11.5" fill="#57606A">before shipping any of the above: read the <tspan font-weight="600">anti-patterns</tspan>, then fit thresholds under <tspan font-weight="600">calibration &amp; eval</tspan></text>
+
+  <!-- footer rule -->
+  <rect x="44" y="396" width="872" height="42" rx="10" fill="#1B2A4A"/>
+  <text x="480" y="422" text-anchor="middle" font-size="12" font-style="italic" fill="#F2B33D">questions describe judgments — code owns composition, thresholds, and side effects</text>
+</svg>
