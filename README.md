@@ -15,7 +15,7 @@ Jev returns typed answers — **Choice**, **Score**, **Noul** — with probabili
 
 ## Contents
 
-- [Leaderboard — every listed project by stars & weekly change](LEADERBOARD.md)
+- [Leaderboard — every listed project by stars & weekly change](#leaderboard)
 - [Lint your questions](#lint-your-questions)
 - [Ask the same question on every engine](#ask-the-same-question-on-every-engine)
 - [Using this with the skills](#using-this-with-the-skills)
@@ -23,6 +23,25 @@ Jev returns typed answers — **Choice**, **Score**, **Noul** — with probabili
 - [Official resources](#official-resources)
 - [Related](#related)
 - [Related lists](#related-lists)
+
+## Leaderboard
+
+<!-- leaderboard:start -->
+Top 10 of the 59 GitHub projects this list references, by stars — the full ranking plus the weekly-change table live in [LEADERBOARD.md](LEADERBOARD.md).
+
+| # | Project | Stars | Δ 7d |
+|---|---|---:|---:|
+| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 119,669 | — |
+| 2 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | 64,427 | — |
+| 3 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | 37,403 | — |
+| 4 | [vllm-project/semantic-router](https://github.com/vllm-project/semantic-router) | 6,369 | — |
+| 5 | [typesafe-ai/skills](https://github.com/typesafe-ai/skills) | 2,863 | — |
+| 6 | [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | 2,524 | — |
+| 7 | [StartLuxLabs/Startlux-Decision](https://github.com/StartLuxLabs/Startlux-Decision) | 1,633 | — |
+| 8 | [heyjunpenn/awesome-jev](https://github.com/heyjunpenn/awesome-jev) | 1,020 | — |
+| 9 | [mode-io/vllm-jev](https://github.com/mode-io/vllm-jev) | 917 | — |
+| 10 | [Liuziyu77/Valen](https://github.com/Liuziyu77/Valen) | 898 | — |
+<!-- leaderboard:end -->
 
 ## What is Jev?
 
@@ -254,10 +273,6 @@ The pattern library is the drafting layer of a small toolbox — the community s
 - [TypeSafeAI/jev-harness](https://github.com/TypeSafeAI/jev-harness) — reference coding harness from the TypeSafeAI community org (independent of TypeSafe AI): "the model proposes, Jev supplies evidence, code decides"
 - [Evals](https://evals.typesafe.ai/) · [Console & playground](https://console.typesafe.ai/) · [Launch post](https://typesafe.ai/blog/introducing-system-one-models-and-jev)
 - Also available via [Vercel AI Gateway](https://vercel.com/ai-gateway/models/jev) and [Cloudflare Workers AI](https://developers.cloudflare.com/ai/models/typesafe/jev/)
-
-## Leaderboard
-
-All GitHub projects this list references — ranked by total stars and by weekly change, refreshed daily by CI: [LEADERBOARD.md](LEADERBOARD.md) · [Chinese version](LEADERBOARD.zh-CN.md)
 
 ## Related lists
 

@@ -84,10 +84,10 @@
     "hist": [
       [
         "2026-11-02",
-        37400
+        37403
       ]
     ],
-    "stars": 37400
+    "stars": 37403
   },
   "JoacoMarc/jev-harness-router": {
     "desc": "Per-turn router for agent harnesses: one 350ms Jev call picks the model tier, effort, tools and skill, behind a hard deadline with a regex fallback. Claude Agent SDK adapter included.",
@@ -184,10 +184,10 @@
     "hist": [
       [
         "2026-11-02",
-        119657
+        119669
       ]
     ],
-    "stars": 119657
+    "stars": 119669
   },
   "TypeSafeAI/jev-harness": {
     "desc": "A custom coding harness for TypeSafe AI's Jev: an LLM proposes, Jev answers narrow questions, code decides, every step leaves a receipt.",
@@ -514,10 +514,10 @@
     "hist": [
       [
         "2026-11-02",
-        64426
+        64427
       ]
     ],
-    "stars": 64426
+    "stars": 64427
   },
   "vllm-project/semantic-router": {
     "desc": "An open, programmable decision layer for models and compute.",
@@ -534,10 +534,10 @@
     "hist": [
       [
         "2026-11-02",
-        474
+        475
       ]
     ],
-    "stars": 474
+    "stars": 475
   },
   "wjw66/deepseek-harness-jev-pre-compaction": {
     "desc": "A pre-compaction advisor for DeepSeek Harness. Runs before the standard `compaction-basic` backend, using TypeSafe JEV to safely prune low-value tool results from model context. Original session events stay in the append-only log; only the model-visible view is replaced with compact markers or archive pointers to reduce context bloat.",

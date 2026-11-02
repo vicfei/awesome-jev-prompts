@@ -14,7 +14,7 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 
 ## Contents
 
-- [Leaderboard — 收录项目按星数与周增量排行](LEADERBOARD.zh-CN.md)
+- [Leaderboard — 收录项目按星数与周增量排行](#排行榜)
 - [Lint your questions](#lint-your-questions)
 - [Ask the same question on every engine](#ask-the-same-question-on-every-engine)
 - [Using this with the skills](#using-this-with-the-skills)
@@ -22,6 +22,25 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 - [Official resources](#official-resources)
 - [Related](#related)
 - [Related lists](#related-lists)
+
+## 排行榜
+
+<!-- leaderboard:start -->
+本清单引用的 59 个 GitHub 项目星数 Top 10——完整排名与周增量表见[LEADERBOARD.zh-CN.md](LEADERBOARD.zh-CN.md)。
+
+| # | 项目 | 星数 | 周增量 |
+|---|---|---:|---:|
+| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 119,669 | — |
+| 2 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | 64,427 | — |
+| 3 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | 37,403 | — |
+| 4 | [vllm-project/semantic-router](https://github.com/vllm-project/semantic-router) | 6,369 | — |
+| 5 | [typesafe-ai/skills](https://github.com/typesafe-ai/skills) | 2,863 | — |
+| 6 | [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | 2,524 | — |
+| 7 | [StartLuxLabs/Startlux-Decision](https://github.com/StartLuxLabs/Startlux-Decision) | 1,633 | — |
+| 8 | [heyjunpenn/awesome-jev](https://github.com/heyjunpenn/awesome-jev) | 1,020 | — |
+| 9 | [mode-io/vllm-jev](https://github.com/mode-io/vllm-jev) | 917 | — |
+| 10 | [Liuziyu77/Valen](https://github.com/Liuziyu77/Valen) | 898 | — |
+<!-- leaderboard:end -->
 
 ## Jev 是什么
 
@@ -162,10 +181,6 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 - [TypeSafeAI/jev-harness](https://github.com/TypeSafeAI/jev-harness) — TypeSafeAI 社区组织（独立于 TypeSafe AI）的参考编码 harness："模型提议，Jev 提供证据，代码做决定"
 - [评测](https://evals.typesafe.ai/) · [控制台与 Playground](https://console.typesafe.ai/) · [发布文章](https://typesafe.ai/blog/introducing-system-one-models-and-jev)
 - 也可通过 [Vercel AI Gateway](https://vercel.com/ai-gateway/models/jev) 与 [Cloudflare Workers AI](https://developers.cloudflare.com/ai/models/typesafe/jev/) 使用
-
-## 排行榜
-
-本清单引用的全部 GitHub 项目——按总星数与周增量排序，CI 每日刷新：[LEADERBOARD.zh-CN.md](LEADERBOARD.zh-CN.md) · [English](LEADERBOARD.md)
 
 ## 相关清单
 

@@ -8,9 +8,9 @@
 
 | # | 项目 | 简介 | 星数 | 周增量 |
 |---|---|---|---:|---:|
-| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | TradingAgents: Multi-Agents LLM Financial Trading Framework | 119,657 | — |
-| 2 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | An AI Hedge Fund Team | 64,426 | — |
-| 3 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | "Vibe-Trading: Your Personal Trading Agent" | 37,400 | — |
+| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | TradingAgents: Multi-Agents LLM Financial Trading Framework | 119,669 | — |
+| 2 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | An AI Hedge Fund Team | 64,427 | — |
+| 3 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | "Vibe-Trading: Your Personal Trading Agent" | 37,403 | — |
 | 4 | [vllm-project/semantic-router](https://github.com/vllm-project/semantic-router) | An open, programmable decision layer for models and compute. | 6,369 | — |
 | 5 | [typesafe-ai/skills](https://github.com/typesafe-ai/skills) | Agent skills for building with TypeSafe's System One API | 2,863 | — |
 | 6 | [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | A curated list of public projects, integrations, and discussions built… | 2,524 | — |
@@ -25,7 +25,7 @@
 | 15 | [AbdelStark/awesome-typesafe-jev](https://github.com/AbdelStark/awesome-typesafe-jev) | Awesome Jev: a source-backed field guide to TypeSafe's System One model… | 613 | — |
 | 16 | [kydlikebtc/awesome-jev](https://github.com/kydlikebtc/awesome-jev) | 1207 public resources for Jev, TypeSafe AI's System One decision model,… | 596 | — |
 | 17 | [cobanov/awesome-jev](https://github.com/cobanov/awesome-jev) | A curated, source-backed list of projects built with Jev, TypeSafe AI's… | 587 | — |
-| 18 | [walidboulanouar/awesome-jev-use-cases](https://github.com/walidboulanouar/awesome-jev-use-cases) | Awesome list of TypeSafe AI Jev use cases: 74 demos ranked by likes, 15… | 474 | — |
+| 18 | [walidboulanouar/awesome-jev-use-cases](https://github.com/walidboulanouar/awesome-jev-use-cases) | Awesome list of TypeSafe AI Jev use cases: 74 demos ranked by likes, 15… | 475 | — |
 | 19 | [typesafe-ai/system-one-adapter-python](https://github.com/typesafe-ai/system-one-adapter-python) | Drop-in TypeSafeClient replacement backed by LLM APIs | 406 | — |
 | 20 | [ekzhang/openjev-sglang](https://github.com/ekzhang/openjev-sglang) | Jev-compatible API endpoint based on open models (prefill-only) | 333 | — |
 | 21 | [FBddcz/embodied-jev](https://github.com/FBddcz/embodied-jev) | EmbodiedJev: MuJoCo robot decision workbench with MiniCPM5-2B, Jev and… | 331 | — |
@@ -70,5 +70,6 @@
 
 ## 按周增量
 
+暂无周增量数据——自 2026-11-02 开始追踪，2026-11-09 起可见增量。
 
 *更新于 2026-11-02，共追踪 59 个项目。*

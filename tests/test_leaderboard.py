@@ -13,7 +13,9 @@ from leaderboard import (  # noqa: E402
     delta7,
     extract_repos,
     fmt_delta,
+    preview,
     render,
+    replace_between,
 )
 
 
@@ -84,3 +86,18 @@ def test_cell_collapses_whitespace_escapes_pipes_and_truncates():
     assert cell("  multiple   spaces  ") == "multiple spaces"
     assert cell("") == "—"
     assert len(cell("x" * 200)) == 72
+
+
+def test_preview_capped_at_ten_rows_sorted_by_stars():
+    rows = [{"repo": f"r/{i}", "desc": "", "stars": i, "delta": None} for i in range(15)]
+    out = preview(rows, "en")
+    assert out.count("](https://github.com/r/") == 10
+    assert "r/14" in out and "r/10" in out and "r/5" in out and "r/4" not in out
+    assert out.index("r/14") < out.index("r/10")
+    assert "of the 15 GitHub projects" in out
+
+
+def test_replace_between_keeps_markers():
+    text = "head\n<!-- leaderboard:start -->old<!-- leaderboard:end -->tail"
+    out = replace_between(text, "<!-- leaderboard:start -->", "<!-- leaderboard:end -->", "NEW")
+    assert out == "head\n<!-- leaderboard:start -->\nNEW\n<!-- leaderboard:end -->tail"
