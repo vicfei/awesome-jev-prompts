@@ -23,9 +23,12 @@ ROOT = Path(__file__).resolve().parent.parent
 HISTORY = ROOT / "data" / "leaderboard-history.json"
 OUT_EN = ROOT / "LEADERBOARD.md"
 OUT_ZH = ROOT / "LEADERBOARD.zh-CN.md"
+README_EN = ROOT / "README.md"
+README_ZH = ROOT / "README.zh-CN.md"
 SELF = "vicfei/awesome-jev-prompts"
 GRAPHQL = "https://api.github.com/graphql"
 KEEP_DAYS = 35
+PREVIEW_START, PREVIEW_END = "<!-- leaderboard:start -->", "<!-- leaderboard:end -->"
 
 # github.com path prefixes that are site sections, not owner/repo targets.
 RESERVED_OWNERS = {
@@ -55,6 +58,12 @@ LABELS = {
         "head_total": ("| # | Project | About | Stars | Δ 7d |",
                        "|---|---|---|---:|---:|"),
         "head_week": ("| # | Project | Δ 7d | Stars |", "|---|---|---:|---:|"),
+        "head_preview": ("| # | Project | Stars | Δ 7d |", "|---|---|---:|---:|"),
+        "preview_intro": (
+            "Top 10 of the {n} GitHub projects this list references, by stars — "
+            "the full ranking plus the weekly-change table live in "
+            "[LEADERBOARD.md](LEADERBOARD.md)."
+        ),
         "updated": "*Updated {date}. {n} projects tracked.*",
         "unavailable": "*(unavailable)*",
     },
@@ -71,6 +80,11 @@ LABELS = {
         "head_total": ("| # | 项目 | 简介 | 星数 | 周增量 |",
                        "|---|---|---|---:|---:|"),
         "head_week": ("| # | 项目 | 周增量 | 星数 |", "|---|---|---:|---:|"),
+        "head_preview": ("| # | 项目 | 星数 | 周增量 |", "|---|---|---:|---:|"),
+        "preview_intro": (
+            "本清单引用的 {n} 个 GitHub 项目星数 Top 10——完整排名与周增量表见"
+            "[LEADERBOARD.zh-CN.md](LEADERBOARD.zh-CN.md)。"
+        ),
         "updated": "*更新于 {date}，共追踪 {n} 个项目。*",
         "unavailable": "*(暂不可用)*",
     },
@@ -185,6 +199,23 @@ def render(rows: list[dict], first_date: str | None, today: str, lang: str) -> s
     return "\n".join(lines) + "\n"
 
 
+def preview(rows: list[dict], lang: str) -> str:
+    """Top-10-by-stars table for embedding in the READMEs."""
+    L = LABELS[lang]
+    ranked = sorted(rows, key=lambda r: (-(r["stars"] if r["stars"] is not None else -1), r["repo"]))[:10]
+    lines = [L["preview_intro"].format(n=len(rows)), "", *L["head_preview"]]
+    for i, r in enumerate(ranked, 1):
+        stars = f"{r['stars']:,}" if r["stars"] is not None else "—"
+        lines.append(f"| {i} | [{r['repo']}](https://github.com/{r['repo']}) | {stars} | {fmt_delta(r['delta'])} |")
+    return "\n".join(lines)
+
+
+def replace_between(text: str, start: str, end: str, body: str) -> str:
+    s = text.index(start) + len(start)
+    e = text.index(end)
+    return text[:s] + "\n" + body + "\n" + text[e:]
+
+
 def main() -> int:
     today = dt.date.today()
     repos = collect_repos()
@@ -216,7 +247,10 @@ def main() -> int:
     HISTORY.write_text(json.dumps(hist_file, indent=2, sort_keys=True, ensure_ascii=False) + "\n", encoding="utf-8")
     OUT_EN.write_text(render(rows, first_date, today.isoformat(), "en"), encoding="utf-8")
     OUT_ZH.write_text(render(rows, first_date, today.isoformat(), "zh"), encoding="utf-8")
-    print(f"leaderboard: {len(rows)} repos, {len(live)} live, wrote {OUT_EN.name} + {OUT_ZH.name}")
+    for path, lang in ((README_EN, "en"), (README_ZH, "zh")):
+        text = path.read_text(encoding="utf-8")
+        path.write_text(replace_between(text, PREVIEW_START, PREVIEW_END, preview(rows, lang)), encoding="utf-8")
+    print(f"leaderboard: {len(rows)} repos, {len(live)} live, wrote {OUT_EN.name} + {OUT_ZH.name} + README previews")
     return 0
 
 
