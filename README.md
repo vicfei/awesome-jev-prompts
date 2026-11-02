@@ -13,6 +13,10 @@
 Jev returns typed answers — **Choice**, **Score**, **Noul** — with probabilities, in 70–500 ms. It never writes text, so none of your prompt-engineering habits transfer. What transfers instead is **question design**: how you split a decision into atomic judgments, how you word option descriptions, where you set thresholds, and when you refuse to trust the number. This list collects the patterns that work — and the anti-patterns that quietly break production systems.
 
 
+<p align="center">
+  <img src="assets/banner.png" alt="Awesome Jev Prompts — question patterns, anti-patterns and calibration notes for typed decision models" width="880">
+</p>
+
 ## Contents
 
 - [Leaderboard — every listed project by stars & weekly change](#leaderboard)
@@ -160,6 +164,10 @@ Every entry gives the question template, threshold/wiring guidance, known failur
 
 ## Which pattern do I need?
 
+<p align="center">
+  <img src="assets/which-pattern.svg" alt="Decision shape routing: pick-one-option → Choice, grade-on-a-scale → Score, true-or-violates → Noul; cross-cutting categories and the code-owns-composition rule" width="880">
+</p>
+
 - **Picking one option from a set you control** → [Choice patterns](categories/choice-patterns.md) — intent, tool, model routing, best-of-N
 - **Grading intensity or quality on a scale** → [Score patterns](categories/score-patterns.md) — severity, gates, moderation, relevance
 - **Asking "is this true / does it violate / are these the same"** → [Noul patterns](categories/noul-patterns.md) — policy, dedup, citation, escalation
@@ -227,6 +235,10 @@ Errors (E\*) are violations; warnings (W\*) are judgment calls for the reviewer.
 ## Ask the same question on every engine
 
 The wire format is converging (see the ecosystem notes below): one question set, many engines. The same ticket-triage trio — `team` (Choice), `urgent` (Noul), `severity` (Score) — against the state `"I was charged twice for order #4411 and the app still shows it as unpaid."`:
+
+<p align="center">
+  <img src="assets/engine-cookbook.svg" alt="One question set (team Choice, urgent Noul, severity Score) served by five engines — Jev, StartLux, SGLang, Clef, vllm-jev — with portability notes" width="880">
+</p>
 
 | Engine | Endpoint / transport | Notes |
 |---|---|---|

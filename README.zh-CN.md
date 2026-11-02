@@ -12,6 +12,10 @@
 Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（评分）、**Noul**（0–1 概率判断）——附带概率，70–500 毫秒内出结果。它不生成任何文本，所以你在 LLM 上积累的提示词技巧几乎全部失效。真正起作用的是**问题设计**：怎么把一个决策拆成原子判断、选项描述怎么措辞、阈值定在哪、什么时候不该信任那个数字。本库收录实践中有效的模式，以及悄悄毁掉生产系统的反模式。
 
 
+<p align="center">
+  <img src="assets/banner.png" alt="Awesome Jev Prompts — 面向类型化决策模型的问题模式库" width="880">
+</p>
+
 ## Contents
 
 - [Leaderboard — 收录项目按星数与周增量排行](#排行榜)
@@ -86,6 +90,10 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 
 ## 我该用哪个模式？
 
+<p align="center">
+  <img src="assets/which-pattern.svg" alt="决策形状路由：挑选项 → Choice，评等级 → Score，判真假 → Noul" width="880">
+</p>
+
 - **从你可控的选项集合里挑一个** → [Choice 模式](categories/choice-patterns.zh-CN.md)——意图、工具、模型路由、Best-of-N
 - **在量表上给强度或质量打分** → [Score 模式](categories/score-patterns.zh-CN.md)——严重度、门禁、审核、相关性
 - **问"是否为真 / 是否违规 / 是否同一个"** → [Noul 模式](categories/noul-patterns.zh-CN.md)——策略、去重、引用、升级
@@ -142,6 +150,10 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 ## 同一个问题，问遍每台引擎
 
 线格式正在收敛（见下方生态动态）：一套问题，多台引擎。同一个工单分诊三件套——`team`（Choice）、`urgent`（Noul）、`severity`（Score）——打在状态 `"I was charged twice for order #4411 and the app still shows it as unpaid."` 上：
+
+<p align="center">
+  <img src="assets/engine-cookbook.svg" alt="同一套问题（team Choice、urgent Noul、severity Score）跑在五台引擎上——Jev、StartLux、SGLang、Clef、vllm-jev——附可移植性注意事项" width="880">
+</p>
 
 | 引擎 | 端点 / 接入 | 备注 |
 |---|---|---|

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606A"/>
+    </marker>
+  </defs>
+
+  <rect x="4" y="4" width="952" height="552" rx="14" fill="#F6F8FA" stroke="#C6CDD5" stroke-width="1.5"/>
+
+  <!-- state -->
+  <rect x="200" y="18" width="560" height="52" rx="10" fill="#FFFFFF" stroke="#C6CDD5" stroke-width="1.5"/>
+  <text x="480" y="39" text-anchor="middle" font-size="10" font-weight="700" fill="#8B949E">STATE</text>
+  <text x="480" y="57" text-anchor="middle" font-size="11" font-style="italic" fill="#1B2A4A">“I was charged twice for order #4411 and the app still shows it as unpaid.”</text>
+
+  <line x1="480" y1="70" x2="480" y2="90" stroke="#57606A" stroke-width="1.6" marker-end="url(#arr)"/>
+
+  <!-- question trio -->
+  <rect x="160" y="92" width="640" height="128" rx="12" fill="#1B2A4A"/>
+  <text x="480" y="114" text-anchor="middle" font-size="10" font-weight="700" fill="#9FB0CC">ONE QUESTION SET — WORDING IS THE PORTABLE PART</text>
+  <text x="480" y="140" text-anchor="middle" font-size="12" fill="#FFFFFF"><tspan font-weight="700" fill="#F2B33D">team</tspan> · Choice — “Which team should handle this ticket?”</text>
+  <text x="480" y="164" text-anchor="middle" font-size="12" fill="#FFFFFF"><tspan font-weight="700" fill="#F2B33D">urgent</tspan> · Noul — “Does this need an answer today?”</text>
+  <text x="480" y="188" text-anchor="middle" font-size="12" fill="#FFFFFF"><tspan font-weight="700" fill="#F2B33D">severity</tspan> · Score — “How bad is it for the customer?”</text>
+
+  <!-- fan out -->
+  <line x1="480" y1="220" x2="108" y2="264" stroke="#57606A" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="480" y1="220" x2="294" y2="264" stroke="#57606A" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="480" y1="220" x2="480" y2="264" stroke="#57606A" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="480" y1="220" x2="666" y2="264" stroke="#57606A" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="480" y1="220" x2="852" y2="264" stroke="#57606A" stroke-width="1.6" marker-end="url(#arr)"/>
+
+  <!-- engines -->
+  <rect x="23" y="266" width="170" height="88" rx="10" fill="#FFFFFF" stroke="#F2B33D" stroke-width="2"/>
+  <text x="108" y="292" text-anchor="middle" font-size="14" font-weight="800" fill="#1B2A4A">Jev</text>
+  <text x="108" y="312" text-anchor="middle" font-size="10.5" fill="#57606A">POST /v1/systemone</text>
+  <text x="108" y="330" text-anchor="middle" font-size="10.5" fill="#57606A">hosted reference format</text>
+  <text x="108" y="346" text-anchor="middle" font-size="9.5" font-style="italic" fill="#8B949E">also via OpenRouter</text>
+
+  <rect x="209" y="266" width="170" height="88" rx="10" fill="#FFFFFF" stroke="#C6CDD5" stroke-width="1.5"/>
+  <text x="294" y="292" text-anchor="middle" font-size="14" font-weight="800" fill="#1B2A4A">StartLux</text>
+  <text x="294" y="312" text-anchor="middle" font-size="10.5" fill="#57606A">POST /v1/systemone</text>
+  <text x="294" y="330" text-anchor="middle" font-size="10.5" fill="#57606A">free 27B hosting</text>
+  <text x="294" y="346" text-anchor="middle" font-size="9.5" font-style="italic" fill="#8B949E">AutoThink on uncertain</text>
+
+  <rect x="395" y="266" width="170" height="88" rx="10" fill="#FFFFFF" stroke="#C6CDD5" stroke-width="1.5"/>
+  <text x="480" y="292" text-anchor="middle" font-size="14" font-weight="800" fill="#1B2A4A">SGLang</text>
+  <text x="480" y="312" text-anchor="middle" font-size="10.5" fill="#57606A">POST /v1/decisions</text>
+  <text x="480" y="330" text-anchor="middle" font-size="10.5" fill="#57606A">any chat model</text>
+  <text x="480" y="346" text-anchor="middle" font-size="9.5" font-style="italic" fill="#8B949E">no special checkpoint</text>
+
+  <rect x="581" y="266" width="170" height="88" rx="10" fill="#FFFFFF" stroke="#C6CDD5" stroke-width="1.5"/>
+  <text x="666" y="292" text-anchor="middle" font-size="14" font-weight="800" fill="#1B2A4A">Clef</text>
+  <text x="666" y="312" text-anchor="middle" font-size="10.5" fill="#57606A">Cloudflare Workers AI</text>
+  <text x="666" y="330" text-anchor="middle" font-size="10.5" fill="#57606A">Apache-2.0 weights</text>
+  <text x="666" y="346" text-anchor="middle" font-size="9.5" font-style="italic" fill="#8B949E">vision · flash ~39ms</text>
+
+  <rect x="767" y="266" width="170" height="88" rx="10" fill="#FFFFFF" stroke="#C6CDD5" stroke-width="1.5"/>
+  <text x="852" y="292" text-anchor="middle" font-size="14" font-weight="800" fill="#1B2A4A">vllm-jev</text>
+  <text x="852" y="312" text-anchor="middle" font-size="10.5" fill="#57606A">vllm-jev serve &lt;model&gt;</text>
+  <text x="852" y="330" text-anchor="middle" font-size="10.5" fill="#57606A">fully local</text>
+  <text x="852" y="346" text-anchor="middle" font-size="9.5" font-style="italic" fill="#8B949E">24+ open checkpoints</text>
+
+  <!-- portability notes -->
+  <rect x="44" y="378" width="872" height="76" rx="10" fill="#EAEEF2"/>
+  <text x="480" y="404" text-anchor="middle" font-size="11" font-weight="700" fill="#1B2A4A">WHAT DIFFERS — THE PORTABILITY NOTES</text>
+  <text x="480" y="426" text-anchor="middle" font-size="11" fill="#57606A">option caps (26 A–Z per pass) · none-of-the-above handling · thinking modes</text>
+  <text x="480" y="444" text-anchor="middle" font-size="11" fill="#57606A">calibration drift — thresholds fitted on one engine do not transfer: re-fit per engine</text>
+
+  <!-- footer -->
+  <rect x="44" y="474" width="872" height="42" rx="10" fill="#1B2A4A"/>
+  <text x="480" y="500" text-anchor="middle" font-size="12" font-style="italic" fill="#F2B33D">same question wording — five engines, one decision surface</text>
+
+  <text x="480" y="540" text-anchor="middle" font-size="10.5" fill="#8B949E">full endpoint table and request JSON in “Ask the same question on every engine”</text>
+</svg>
