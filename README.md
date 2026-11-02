@@ -15,6 +15,7 @@ Jev returns typed answers — **Choice**, **Score**, **Noul** — with probabili
 
 ## Contents
 
+- [Leaderboard — every listed project by stars & weekly change](LEADERBOARD.md)
 - [Lint your questions](#lint-your-questions)
 - [Ask the same question on every engine](#ask-the-same-question-on-every-engine)
 - [Using this with the skills](#using-this-with-the-skills)
@@ -253,6 +254,10 @@ The pattern library is the drafting layer of a small toolbox — the community s
 - [TypeSafeAI/jev-harness](https://github.com/TypeSafeAI/jev-harness) — reference coding harness from the TypeSafeAI community org (independent of TypeSafe AI): "the model proposes, Jev supplies evidence, code decides"
 - [Evals](https://evals.typesafe.ai/) · [Console & playground](https://console.typesafe.ai/) · [Launch post](https://typesafe.ai/blog/introducing-system-one-models-and-jev)
 - Also available via [Vercel AI Gateway](https://vercel.com/ai-gateway/models/jev) and [Cloudflare Workers AI](https://developers.cloudflare.com/ai/models/typesafe/jev/)
+
+## Leaderboard
+
+All GitHub projects this list references — ranked by total stars and by weekly change, refreshed daily by CI: [LEADERBOARD.md](LEADERBOARD.md) · [Chinese version](LEADERBOARD.zh-CN.md)
 
 ## Related lists
 

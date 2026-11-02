@@ -14,6 +14,7 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 
 ## Contents
 
+- [Leaderboard — 收录项目按星数与周增量排行](LEADERBOARD.zh-CN.md)
 - [Lint your questions](#lint-your-questions)
 - [Ask the same question on every engine](#ask-the-same-question-on-every-engine)
 - [Using this with the skills](#using-this-with-the-skills)
@@ -161,6 +162,10 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 - [TypeSafeAI/jev-harness](https://github.com/TypeSafeAI/jev-harness) — TypeSafeAI 社区组织（独立于 TypeSafe AI）的参考编码 harness："模型提议，Jev 提供证据，代码做决定"
 - [评测](https://evals.typesafe.ai/) · [控制台与 Playground](https://console.typesafe.ai/) · [发布文章](https://typesafe.ai/blog/introducing-system-one-models-and-jev)
 - 也可通过 [Vercel AI Gateway](https://vercel.com/ai-gateway/models/jev) 与 [Cloudflare Workers AI](https://developers.cloudflare.com/ai/models/typesafe/jev/) 使用
+
+## 排行榜
+
+本清单引用的全部 GitHub 项目——按总星数与周增量排序，CI 每日刷新：[LEADERBOARD.zh-CN.md](LEADERBOARD.zh-CN.md) · [English](LEADERBOARD.md)
 
 ## 相关清单
 
