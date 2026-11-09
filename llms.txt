@@ -1,6 +1,6 @@
 # Awesome Jev Prompts
 
-> A curated library of 60 question patterns, anti-patterns, and calibration notes for typed decision models — Jev and every System One-compatible engine (Clef, StartLux, d3, SGLang). Question design is the prompt engineering of typed decisions — and question wording is the portable part.
+> A curated library of 63 question patterns, anti-patterns, and calibration notes for typed decision models — Jev and every System One-compatible engine (Clef, StartLux, d3, SGLang). Question design is the prompt engineering of typed decisions — and question wording is the portable part.
 
 Facts: Jev 1.14 is the latest release; POST https://api.typesafe.ai/v1/systemone, $0.042/1M input tokens (output free), 64k context (32k state + longest question), 250k tokens/sec, 1,200 req/min, text-only. Multiple compatible engines exist: Clef (Cloudflare, Apache-2.0), StartLux (open weights, free 27B hosting), SGLang /v1/decisions (any Jinja-template chat model), vllm-jev (local, 24+ open checkpoints). Core rule: questions describe judgments; code owns composition, thresholds, and side effects.
 
@@ -10,7 +10,7 @@ Facts: Jev 1.14 is the latest release; POST https://api.typesafe.ai/v1/systemone
 - [Project leaderboard](https://github.com/vicfei/awesome-jev-prompts/blob/main/LEADERBOARD.md): every GitHub project referenced in this list, ranked by total stars and weekly star change, refreshed daily by CI.
 - [Engine Cookbook](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/README.md#ask-the-same-question-on-every-engine): one question trio rendered across 5 verified engines (Jev, StartLux, SGLang, Clef, vllm-jev) with portability notes on option caps, none-of-the-above, thinking modes, and calibration drift.
 
-## Index — 10 categories, 60 entries
+## Index — 10 categories, 63 entries
 
 - [Choice patterns](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/choice-patterns.md): intent routing, tool selection, model routing, best-of-N, document classification, skill routing, research conviction scoring
 - [Score patterns](https://raw.githubusercontent.com/vicfei/awesome-jev-prompts/main/categories/score-patterns.md): severity rubrics, quality gates, moderation, RAG relevance, priority queues

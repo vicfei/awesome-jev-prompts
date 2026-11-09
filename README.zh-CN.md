@@ -7,7 +7,7 @@
 [![Tests](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/tests.yml/badge.svg)](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/tests.yml)
 [![License: CC0](https://img.shields.io/badge/license-CC0-007ec6)](LICENSE)
 
-**English version is [here](README.md).** 全部 63 条条目均提供[中文译本](#-模式库--9-个分类-51-条)（以英文版为准，同步于 2026-10-08）。
+**English version is [here](README.md).** 全部 63 条条目均提供[中文译本](#模式库--10-个分类-63-条)（以英文版为准，同步于 2026-11-06）。
 
 Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（评分）、**Noul**（0–1 概率判断）——附带概率，70–500 毫秒内出结果。它不生成任何文本，所以你在 LLM 上积累的提示词技巧几乎全部失效。真正起作用的是**问题设计**：怎么把一个决策拆成原子判断、选项描述怎么措辞、阈值定在哪、什么时候不该信任那个数字。本库收录实践中有效的模式，以及悄悄毁掉生产系统的反模式。
 
@@ -18,14 +18,12 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 
 ## Contents
 
-- [Leaderboard — 收录项目按星数与周增量排行](#排行榜)
-- [Lint your questions](#lint-your-questions)
-- [Ask the same question on every engine](#ask-the-same-question-on-every-engine)
-- [Using this with the skills](#using-this-with-the-skills)
-- [Ecosystem notes](#ecosystem-notes)
-- [Official resources](#official-resources)
-- [Related](#related)
-- [Related lists](#related-lists)
+- [排行榜 — 收录项目按星数与周增量排行](#排行榜)
+- [同一个问题，问遍每台引擎](#同一个问题问遍每台引擎)
+- [生态动态](#生态动态)
+- [官方资源](#官方资源)
+- [相关](#相关)
+- [相关清单](#相关清单)
 
 ## 排行榜
 
