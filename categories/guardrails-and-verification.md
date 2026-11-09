@@ -141,6 +141,8 @@ if conf < CONF_FLOOR or top_prob < PROB_FLOOR:
 **Failure modes**
 - Escalating everything (floors too high) trains ops to ignore the queue — tune from real logs until escalation rate matches your actual human capacity.
 
+**Sources:** [Docs — confidence](https://docs.typesafe.ai/confidence) · [Cookbook — classification using confidence](https://docs.typesafe.ai/cookbooks/classification_using_confidence)
+
 ---
 
 ### Alignment-failure screening
@@ -197,7 +199,6 @@ injection = Noul(
 
 **Sources:** [Gaurav-Gosain/jev-sec-bench](https://github.com/Gaurav-Gosain/jev-sec-bench) (blind prompt-injection and vulnerable-code detection benches)
 
-**Sources:** [Docs — confidence](https://docs.typesafe.ai/confidence) · [Cookbook — classification using confidence](https://docs.typesafe.ai/cookbooks/classification_using_confidence)
 ---
 
 ### Signal-vs-noise screening
