@@ -35,16 +35,16 @@ Top 10 of the 59 GitHub projects this list references, by stars — the full ran
 
 | # | Project | Stars | Δ 7d |
 |---|---|---:|---:|
-| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 121,993 | +1,236 |
-| 2 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | 64,631 | +130 |
-| 3 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | 38,036 | +333 |
-| 4 | [vllm-project/semantic-router](https://github.com/vllm-project/semantic-router) | 6,452 | +53 |
-| 5 | [typesafe-ai/skills](https://github.com/typesafe-ai/skills) | 2,892 | +15 |
-| 6 | [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | 2,570 | +28 |
-| 7 | [StartLuxLabs/Startlux-Decision](https://github.com/StartLuxLabs/Startlux-Decision) | 1,727 | +76 |
-| 8 | [heyjunpenn/awesome-jev](https://github.com/heyjunpenn/awesome-jev) | 1,067 | +11 |
+| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 122,236 | +1,301 |
+| 2 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | 64,648 | +131 |
+| 3 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | 38,103 | +339 |
+| 4 | [vllm-project/semantic-router](https://github.com/vllm-project/semantic-router) | 6,458 | +50 |
+| 5 | [typesafe-ai/skills](https://github.com/typesafe-ai/skills) | 2,894 | +16 |
+| 6 | [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | 2,580 | +33 |
+| 7 | [StartLuxLabs/Startlux-Decision](https://github.com/StartLuxLabs/Startlux-Decision) | 1,737 | +79 |
+| 8 | [heyjunpenn/awesome-jev](https://github.com/heyjunpenn/awesome-jev) | 1,071 | +15 |
 | 9 | [mode-io/vllm-jev](https://github.com/mode-io/vllm-jev) | 954 | +8 |
-| 10 | [Liuziyu77/Valen](https://github.com/Liuziyu77/Valen) | 909 | +8 |
+| 10 | [Liuziyu77/Valen](https://github.com/Liuziyu77/Valen) | 913 | +10 |
 <!-- leaderboard:end -->
 
 ## What is Jev?
@@ -291,17 +291,17 @@ The pattern library is the drafting layer of a small toolbox — the community s
 <!-- related-lists:start -->
 | List | Focus | Stars |
 |---|---|---:|
-| [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | General list, highest-frequency updates | 2,570 |
-| [heyjunpenn/awesome-jev](https://github.com/heyjunpenn/awesome-jev) | 900+ project catalog with companion site | 1,067 |
+| [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | General list, highest-frequency updates | 2,580 |
+| [heyjunpenn/awesome-jev](https://github.com/heyjunpenn/awesome-jev) | 900+ project catalog with companion site | 1,071 |
 | [v-modal/awesome-jev-tools](https://github.com/v-modal/awesome-jev-tools) | Tools list with inclusion criteria | 733 |
 | [logicrw/awesome-jev-projects](https://github.com/logicrw/awesome-jev-projects) | Ecosystem radar web app, auto GitHub sync | 726 |
-| [AnotiaWang/awesome-decision-models](https://github.com/AnotiaWang/awesome-decision-models) | Classic minimal list (renamed from awesome-jev), open replicas & benchmarks | 708 |
+| [AnotiaWang/awesome-decision-models](https://github.com/AnotiaWang/awesome-decision-models) | Classic minimal list (renamed from awesome-jev), open replicas & benchmarks | 713 |
 | [AbdelStark/awesome-typesafe-jev](https://github.com/AbdelStark/awesome-typesafe-jev) | Field guide with platform routing & evals | 616 |
 | [kydlikebtc/awesome-jev](https://github.com/kydlikebtc/awesome-jev) | Machine-readable catalog by decision pattern | 602 |
-| [cobanov/awesome-jev](https://github.com/cobanov/awesome-jev) | Curated list with dated review notes | 592 |
+| [cobanov/awesome-jev](https://github.com/cobanov/awesome-jev) | Curated list with dated review notes | 595 |
 | [walidboulanouar/awesome-jev-use-cases](https://github.com/walidboulanouar/awesome-jev-use-cases) | Demos ranked by social metrics, limits & cost | 491 |
 | [yzfly/awesome-jev-zh](https://github.com/yzfly/awesome-jev-zh) | Chinese-language curated list with an independent, skeptical voice | 93 |
-| [Anil-matcha/awesome-jev-by-typesafe](https://github.com/Anil-matcha/awesome-jev-by-typesafe) | Use cases, starter code, design rules | 3 |
+| [Anil-matcha/awesome-jev-by-typesafe](https://github.com/Anil-matcha/awesome-jev-by-typesafe) | Use cases, starter code, design rules | 4 |
 <!-- related-lists:end -->
 
 *Star counts refresh daily via CI.*
@@ -317,5 +317,5 @@ Found a pattern that works, or an anti-pattern that bit you? PRs and issues welc
 **Disclaimer:** this is an independent community resource. It is not affiliated with or endorsed by TypeSafe AI. Facts (pricing, limits, behavior) are cited from public sources and can change — always verify against the [official docs](https://docs.typesafe.ai/).
 
 <!-- last-checked:start -->
-*Last checked: 2026-11-11*
+*Last checked: 2026-11-12*
 <!-- last-checked:end -->

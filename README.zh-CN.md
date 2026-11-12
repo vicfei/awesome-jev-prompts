@@ -32,16 +32,16 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 
 | # | 项目 | 星数 | 周增量 |
 |---|---|---:|---:|
-| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 121,993 | +1,236 |
-| 2 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | 64,631 | +130 |
-| 3 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | 38,036 | +333 |
-| 4 | [vllm-project/semantic-router](https://github.com/vllm-project/semantic-router) | 6,452 | +53 |
-| 5 | [typesafe-ai/skills](https://github.com/typesafe-ai/skills) | 2,892 | +15 |
-| 6 | [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | 2,570 | +28 |
-| 7 | [StartLuxLabs/Startlux-Decision](https://github.com/StartLuxLabs/Startlux-Decision) | 1,727 | +76 |
-| 8 | [heyjunpenn/awesome-jev](https://github.com/heyjunpenn/awesome-jev) | 1,067 | +11 |
+| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 122,236 | +1,301 |
+| 2 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | 64,648 | +131 |
+| 3 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | 38,103 | +339 |
+| 4 | [vllm-project/semantic-router](https://github.com/vllm-project/semantic-router) | 6,458 | +50 |
+| 5 | [typesafe-ai/skills](https://github.com/typesafe-ai/skills) | 2,894 | +16 |
+| 6 | [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | 2,580 | +33 |
+| 7 | [StartLuxLabs/Startlux-Decision](https://github.com/StartLuxLabs/Startlux-Decision) | 1,737 | +79 |
+| 8 | [heyjunpenn/awesome-jev](https://github.com/heyjunpenn/awesome-jev) | 1,071 | +15 |
 | 9 | [mode-io/vllm-jev](https://github.com/mode-io/vllm-jev) | 954 | +8 |
-| 10 | [Liuziyu77/Valen](https://github.com/Liuziyu77/Valen) | 909 | +8 |
+| 10 | [Liuziyu77/Valen](https://github.com/Liuziyu77/Valen) | 913 | +10 |
 <!-- leaderboard:end -->
 
 ## Jev 是什么
