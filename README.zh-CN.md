@@ -28,20 +28,20 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 ## 排行榜
 
 <!-- leaderboard:start -->
-本清单引用的 59 个 GitHub 项目星数 Top 10——完整排名与周增量表见[LEADERBOARD.zh-CN.md](LEADERBOARD.zh-CN.md)。
+本清单引用的 62 个 GitHub 项目星数 Top 10——完整排名与周增量表见[LEADERBOARD.zh-CN.md](LEADERBOARD.zh-CN.md)。
 
 | # | 项目 | 星数 | 周增量 |
 |---|---|---:|---:|
-| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 122,666 | +1,151 |
-| 2 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | 64,690 | +95 |
-| 3 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | 38,283 | +331 |
-| 4 | [vllm-project/semantic-router](https://github.com/vllm-project/semantic-router) | 6,478 | +47 |
-| 5 | [typesafe-ai/skills](https://github.com/typesafe-ai/skills) | 2,901 | +11 |
-| 6 | [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | 2,591 | +29 |
-| 7 | [StartLuxLabs/Startlux-Decision](https://github.com/StartLuxLabs/Startlux-Decision) | 1,747 | +43 |
-| 8 | [heyjunpenn/awesome-jev](https://github.com/heyjunpenn/awesome-jev) | 1,076 | +12 |
-| 9 | [mode-io/vllm-jev](https://github.com/mode-io/vllm-jev) | 953 | +3 |
-| 10 | [Liuziyu77/Valen](https://github.com/Liuziyu77/Valen) | 915 | +9 |
+| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 122,811 | +1,001 |
+| 2 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | 64,710 | +95 |
+| 3 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | 38,369 | +374 |
+| 4 | [vllm-project/semantic-router](https://github.com/vllm-project/semantic-router) | 6,486 | +42 |
+| 5 | [typesafe-ai/skills](https://github.com/typesafe-ai/skills) | 2,903 | +12 |
+| 6 | [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | 2,598 | +33 |
+| 7 | [StartLuxLabs/Startlux-Decision](https://github.com/StartLuxLabs/Startlux-Decision) | 1,756 | +39 |
+| 8 | [heyjunpenn/awesome-jev](https://github.com/heyjunpenn/awesome-jev) | 1,076 | +11 |
+| 9 | [mode-io/vllm-jev](https://github.com/mode-io/vllm-jev) | 953 | -1 |
+| 10 | [Liuziyu77/Valen](https://github.com/Liuziyu77/Valen) | 917 | +10 |
 <!-- leaderboard:end -->
 
 ## Jev 是什么
