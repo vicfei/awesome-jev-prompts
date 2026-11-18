@@ -39,7 +39,7 @@ Ask the same judgment twice with different phrasings (or a Choice and a Noul enc
 
 Run the Jev decision alongside the existing rule-based or LLM-based decision, log disagreement rate and would-have-been-wrong rate, and cut over only when the numbers clear your bar. Community harnesses ship this as a first-class feature.
 
-**Sources:** [AntonioCoppe/jev-harness (shadow mode)](https://github.com/AntonioCoppe/jev-harness) · [kenhuangus/jev-usecases (confidence-gated logic)](https://github.com/kenhuangus/jev-usecases)
+**Sources:** [AntonioCoppe/jev-harness (shadow mode)](https://github.com/AntonioCoppe/jev-harness)
 
 ---
 

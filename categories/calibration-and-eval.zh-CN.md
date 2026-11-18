@@ -41,7 +41,7 @@
 
 让 Jev 的决定与现有规则/LLM 决定并行运行，记录分歧率和"本可避免的错误"率，数字达标再切换。社区 harness 已把它做成一等公民特性。
 
-**来源：** [AntonioCoppe/jev-harness（shadow mode）](https://github.com/AntonioCoppe/jev-harness) · [kenhuangus/jev-usecases（置信度门控）](https://github.com/kenhuangus/jev-usecases)
+**来源：** [AntonioCoppe/jev-harness（shadow mode）](https://github.com/AntonioCoppe/jev-harness)
 
 ---
 
