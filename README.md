@@ -23,6 +23,7 @@ Jev returns typed answers — **Choice**, **Score**, **Noul** — with probabili
 - [Lint your questions](#lint-your-questions)
 - [Ask the same question on every engine](#ask-the-same-question-on-every-engine)
 - [Benchmarks & datasets](#benchmarks--datasets)
+- [which-jev — pick an engine by scenario](#which-jev--pick-an-engine-by-scenario)
 - [Using this with the skills](#using-this-with-the-skills)
 - [Ecosystem notes](#ecosystem-notes)
 - [Official resources](#official-resources)
@@ -295,6 +296,32 @@ Training data — link-only, and every test suite stays held-out:
 - [JevAny](https://github.com/SimpleJev/JevAny) trains its five checkpoints on 2.18M labeled decisions (release status in repo)
 
 **Discipline:** never let training-data listings touch test suites — contamination is what kills independence, and the Decision Index hides its Full-score tests for exactly this reason.
+
+## which-jev — pick an engine by scenario
+
+No universal decision model exists: engines are sized for speed, and size bounds generality — so selection is per scenario, per budget. These cards collect the evidence; one card per scenario, updated as numbers land.
+
+### Card 1 — Tool approval & admission control
+
+**The decisions.** Before a tool call executes: read-only or destructive? does it delete or overwrite user data? leak credentials? widen permissions? — the four-question rubric that [Piccolo in QwenPaw](https://github.com/agentscope-ai/Piccolo) productized and that plugin gates ([dsh-permission-rules](https://github.com/PerryLink/dsh-permission-rules), [jev-permission-gate](https://github.com/madisonrickert/jev-permission-gate)) implement.
+
+**What the scenario demands**
+- **Latency** — the gate runs on *every* tool call; budget tens of milliseconds, not seconds.
+- **Cost** — per-call × high frequency; a $42/1M-input gate on a chatty agent compounds.
+- **Calibration over accuracy** — thresholds route to auto-approve / flag / human; probability quality *is* the product.
+- **Asymmetric failure** — blocking a legit call costs a retry, passing a destructive one costs the workspace: tune toward false-block (the [injection-screening gate](categories/guardrails-and-verification.md#injection-screening-gate) rule).
+
+**Evidence so far**
+
+| Engine | Signal | Source |
+|---|---|---|
+| Piccolo-27B | 84.41% on HarnessJevBench Hard (harness duties incl. permission boundaries); GGUF, runs local via QwenPaw | [launch evals](https://github.com/agentscope-ai/Piccolo) |
+| Clef-flash | ~38.8 ms median answer | [launch notes](https://blog.cloudflare.com/clef-decision-models) |
+| THX-01 (322M) | ~10 ms one forward pass; edge-deployable | [model card](https://huggingface.co/doofz/THX-01) |
+| Jev (hosted) | 92 ms/task; AA v2 score 66 — mid-pack | [Artificial Analysis](https://artificialanalysis.ai/decision-models/jev-1-14) |
+| Laya (421M) | 33 ms p50; weak zero-shot — tune on the task first | [benchmarks](https://flowtivity.ai/blog/laya-open-source-jev-alternative) |
+
+**The open slot** — no independent cross-engine comparison exists for *this* scenario yet: HarnessJevBench is vendor-run and the aggregate indices don't slice it. [which-jev](https://github.com/vicfei/which-jev) is the scenario-leaderboard effort to fill it (suite #1 = tool approval; suite #0 = [jev-rag-zh-benchmark](https://github.com/vicfei/jev-rag-zh-benchmark)).
 
 ## Using this with the skills
 
