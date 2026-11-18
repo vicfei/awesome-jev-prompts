@@ -512,10 +512,10 @@
       ],
       [
         "2026-11-18",
-        341
+        342
       ]
     ],
-    "stars": 341
+    "stars": 342
   },
   "Gaurav-Gosain/jev-sec-bench": {
     "desc": "Blind security benchmarks for Jev, TypeSafe's System One model: prompt injection and vulnerable code detection, built on jev-go",
@@ -660,10 +660,10 @@
       ],
       [
         "2026-11-18",
-        38482
+        38485
       ]
     ],
-    "stars": 38482
+    "stars": 38485
   },
   "JoacoMarc/jev-harness-router": {
     "desc": "Per-turn router for agent harnesses: one 350ms Jev call picks the model tier, effort, tools and skill, behind a hard deadline with a regex fallback. Claude Agent SDK adapter included.",
@@ -961,6 +961,16 @@
     ],
     "stars": 1
   },
+  "PerryLink/dsh-permission-rules": {
+    "desc": "Claude Code-style declarative permission rules for DeepSeek Harness: ordered allow/deny/ask rules with tool-name, argument (glob/regex), and workspace-path matching on the tools/pre-execute waterfall, session-log audit, and HMR reload.",
+    "hist": [
+      [
+        "2026-11-18",
+        138
+      ]
+    ],
+    "stars": 138
+  },
   "PerryLink/jevcore": {
     "desc": "TypeSafe Jev for DeepSeek Harness, the Model Context Protocol, and plain Node: typed judgments instead of prose, offline by default.",
     "hist": [
@@ -1178,10 +1188,10 @@
       ],
       [
         "2026-11-18",
-        300
+        301
       ]
     ],
-    "stars": 300
+    "stars": 301
   },
   "SimpleJev/JevAny": {
     "desc": "Open infrastructure for training, evaluating, and deploying System 1 decision models across language and multimodal backbones.",
@@ -1326,10 +1336,10 @@
       ],
       [
         "2026-11-18",
-        1770
+        1771
       ]
     ],
-    "stars": 1770
+    "stars": 1771
   },
   "TauricResearch/TradingAgents": {
     "desc": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
@@ -1400,10 +1410,10 @@
       ],
       [
         "2026-11-18",
-        123051
+        123062
       ]
     ],
-    "stars": 123051
+    "stars": 123062
   },
   "TypeSafeAI/jev-harness": {
     "desc": "A custom coding harness for TypeSafe AI's Jev: an LLM proposes, Jev answers narrow questions, code decides, every step leaves a receipt.",
@@ -1553,6 +1563,16 @@
     ],
     "stars": 1
   },
+  "Valen-Team/JevalKit": {
+    "desc": "Evaluate typed decision models such as Jev and Valen on text, image and video benchmarks, with one runner and a public leaderboard.",
+    "hist": [
+      [
+        "2026-11-18",
+        11
+      ]
+    ],
+    "stars": 11
+  },
   "WiktorB2004/llama-index-jev": {
     "desc": "LlamaIndex reranker + router powered by TypeSafe Jev - typed scores/choices, cheaper than LLM-as-judge.",
     "hist": [
@@ -1700,6 +1720,26 @@
       ]
     ],
     "stars": 2
+  },
+  "agentscope-ai/HarnessJevBench": {
+    "desc": "Benchmarking Jev-style models at agent harness decision points.",
+    "hist": [
+      [
+        "2026-11-18",
+        5
+      ]
+    ],
+    "stars": 5
+  },
+  "agentscope-ai/Piccolo": {
+    "desc": "Piccolo: 4B, 9B and 27B decision models for agent tool review, context retention and data workflows, with an interactive Arena.",
+    "hist": [
+      [
+        "2026-11-18",
+        51
+      ]
+    ],
+    "stars": 51
   },
   "ai-ecoverse/jev-omni.js": {
     "desc": "Jev-Omni multimodal decision classifier in the browser: WebGPU via onnxruntime-web",
@@ -1922,6 +1962,16 @@
       ]
     ],
     "stars": 600
+  },
+  "datajuicer/DataJevBench": {
+    "desc": "",
+    "hist": [
+      [
+        "2026-11-18",
+        2
+      ]
+    ],
+    "stars": 2
   },
   "ekzhang/openjev-sglang": {
     "desc": "Jev-compatible API endpoint based on open models (prefill-only)",
@@ -2236,6 +2286,16 @@
       ]
     ],
     "stars": 3
+  },
+  "fstandhartinger/jevbench": {
+    "desc": "JevBench by Benchmark Heaven: benchmark and leaderboard for AI decision models, measuring typed decision accuracy, calibration, latency and cost.",
+    "hist": [
+      [
+        "2026-11-18",
+        348
+      ]
+    ],
+    "stars": 348
   },
   "heyjunpenn/awesome-jev": {
     "desc": "A verified, community-maintained catalog of 997 open-source projects built with Jev.",
@@ -3827,6 +3887,16 @@
     ],
     "stars": 0
   },
+  "vicfei/which-jev": {
+    "desc": "Scenario-level leaderboard for Jev-class decision models — pick an engine by seat, latency and cost, not by aggregate score. Suite #0: Chinese RAG reranking; suite #1: tool approval.",
+    "hist": [
+      [
+        "2026-11-18",
+        0
+      ]
+    ],
+    "stars": 0
+  },
   "virattt/ai-hedge-fund": {
     "desc": "An AI Hedge Fund Team",
     "hist": [
@@ -3896,10 +3966,10 @@
       ],
       [
         "2026-11-18",
-        64742
+        64744
       ]
     ],
-    "stars": 64742
+    "stars": 64744
   },
   "vllm-project/semantic-router": {
     "desc": "An open, programmable decision layer for models and compute.",
@@ -4044,10 +4114,10 @@
       ],
       [
         "2026-11-18",
-        495
+        496
       ]
     ],
-    "stars": 495
+    "stars": 496
   },
   "wjw66/deepseek-harness-jev-pre-compaction": {
     "desc": "A pre-compaction advisor for DeepSeek Harness. Runs before the standard `compaction-basic` backend, using TypeSafe JEV to safely prune low-value tool results from model context. Original session events stay in the append-only log; only the model-visible view is replaced with compact markers or archive pointers to reduce context bloat.",

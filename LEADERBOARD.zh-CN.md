@@ -8,13 +8,13 @@
 
 | # | 项目 | 简介 | 星数 | 周增量 |
 |---|---|---|---:|---:|
-| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | TradingAgents: Multi-Agents LLM Financial Trading Framework | 123,051 | +815 |
-| 2 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | An AI Hedge Fund Team | 64,742 | +94 |
-| 3 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | "Vibe-Trading: Your Personal Trading Agent" | 38,482 | +379 |
+| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | TradingAgents: Multi-Agents LLM Financial Trading Framework | 123,062 | +826 |
+| 2 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | An AI Hedge Fund Team | 64,744 | +96 |
+| 3 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | "Vibe-Trading: Your Personal Trading Agent" | 38,485 | +382 |
 | 4 | [vllm-project/semantic-router](https://github.com/vllm-project/semantic-router) | An open, programmable decision layer for models and compute. | 6,503 | +45 |
 | 5 | [typesafe-ai/skills](https://github.com/typesafe-ai/skills) | Agent skills for building with TypeSafe's System One API | 2,906 | +12 |
 | 6 | [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | A curated list of public projects, integrations, and discussions built… | 2,611 | +31 |
-| 7 | [StartLuxLabs/Startlux-Decision](https://github.com/StartLuxLabs/Startlux-Decision) | Open decision models from 0.8B to 27B: a calibrated probability for eve… | 1,770 | +33 |
+| 7 | [StartLuxLabs/Startlux-Decision](https://github.com/StartLuxLabs/Startlux-Decision) | Open decision models from 0.8B to 27B: a calibrated probability for eve… | 1,771 | +34 |
 | 8 | [heyjunpenn/awesome-jev](https://github.com/heyjunpenn/awesome-jev) | A verified, community-maintained catalog of 997 open-source projects bu… | 1,081 | +10 |
 | 9 | [mode-io/vllm-jev](https://github.com/mode-io/vllm-jev) | Native vLLM serving for Jev decision models | 955 | +1 |
 | 10 | [Liuziyu77/Valen](https://github.com/Liuziyu77/Valen) | Open multimodal decision models, 0.8B to 27B, for text, images and vide… | 926 | +13 |
@@ -26,60 +26,66 @@
 | 16 | [qybaihe/mu](https://github.com/qybaihe/mu) | mu (μ): most of what a coding agent decides isn't code. mu hands 40 kin… | 609 | — |
 | 17 | [kydlikebtc/awesome-jev](https://github.com/kydlikebtc/awesome-jev) | Launch what you built on Jev, TypeSafe AI's System One decision model:… | 603 | +1 |
 | 18 | [cobanov/awesome-jev](https://github.com/cobanov/awesome-jev) | A curated, source-backed list of projects built with Jev, TypeSafe AI's… | 600 | +5 |
-| 19 | [walidboulanouar/awesome-jev-use-cases](https://github.com/walidboulanouar/awesome-jev-use-cases) | Awesome list of TypeSafe AI Jev use cases: 74 demos ranked by likes, 15… | 495 | +4 |
+| 19 | [walidboulanouar/awesome-jev-use-cases](https://github.com/walidboulanouar/awesome-jev-use-cases) | Awesome list of TypeSafe AI Jev use cases: 74 demos ranked by likes, 15… | 496 | +5 |
 | 20 | [typesafe-ai/system-one-adapter-python](https://github.com/typesafe-ai/system-one-adapter-python) | Drop-in TypeSafeClient replacement backed by LLM APIs | 410 | -1 |
-| 21 | [FBddcz/embodied-jev](https://github.com/FBddcz/embodied-jev) | EmbodiedJev: MuJoCo robot decision workbench with MiniCPM5-2B, Jev and… | 341 | +5 |
-| 22 | [ekzhang/openjev-sglang](https://github.com/ekzhang/openjev-sglang) | Jev-compatible API endpoint based on open models (prefill-only) | 334 | 0 |
-| 23 | [typesafe-ai/typesafe-sdk-python](https://github.com/typesafe-ai/typesafe-sdk-python) | The official Python library for the TypeSafe API | 315 | +2 |
-| 24 | [RomanSlack/jev-drone](https://github.com/RomanSlack/jev-drone) | Camera-only autonomous drone in MuJoCo with a small judgment model (Typ… | 300 | 0 |
-| 25 | [typesafe-ai/typesafe-sdk-js](https://github.com/typesafe-ai/typesafe-sdk-js) | The official TypeScript/JavaScript library for the TypeSafe API | 288 | +3 |
-| 26 | [OmniJev/OneJev](https://github.com/OmniJev/OneJev) | 🚀🚀 A multimodal System One decision model that gives calibrated answers… | 276 | +10 |
-| 27 | [libingzheren/Jev-Mem](https://github.com/libingzheren/Jev-Mem) | Jev-Mem: System-One Controlled Agentic Memory | 274 | +12 |
-| 28 | [fatwang2/awesome-jev](https://github.com/fatwang2/awesome-jev) | A source-backed Jev project directory with a reusable Jev-only GitHub r… | 234 | 0 |
-| 29 | [tinnel123666888/OmniJev](https://github.com/tinnel123666888/OmniJev) | — | 177 | +1 |
-| 30 | [SimpleJev/JevAny](https://github.com/SimpleJev/JevAny) | Open infrastructure for training, evaluating, and deploying System 1 de… | 138 | +3 |
-| 31 | [PerryLink/jevcore](https://github.com/PerryLink/jevcore) | TypeSafe Jev for DeepSeek Harness, the Model Context Protocol, and plai… | 108 | +3 |
-| 32 | [yzfly/awesome-jev-zh](https://github.com/yzfly/awesome-jev-zh) | Jev / TypeSafe System One 中文精选列表：官方资料、SDK、爆款应用、Agent 工具、开源复现与独立评测，附中文上手… | 96 | +3 |
-| 33 | [spring-ai-community/spring-ai-typesafe](https://github.com/spring-ai-community/spring-ai-typesafe) | Archived: moved to Spring AI and Spring AI Decision Extensions | 66 | +2 |
-| 34 | [hotchpotch/jev-reranker](https://github.com/hotchpotch/jev-reranker) | Jev-powered relevance filtering and reranking for RAG in Python. | 58 | +1 |
-| 35 | [TypeSafeAI/jev-harness](https://github.com/TypeSafeAI/jev-harness) | A custom coding harness for TypeSafe AI's Jev: an LLM proposes, Jev ans… | 40 | +1 |
-| 36 | [madisonrickert/jev-permission-gate](https://github.com/madisonrickert/jev-permission-gate) | A Claude Code mod that uses TypeSafe's Jev to decide auto mode tool cal… | 36 | 0 |
-| 37 | [sumleo/RLCDAlignBench](https://github.com/sumleo/RLCDAlignBench) | RLCDAlignBench: 44 alignment-failure detection benchmarks and code for… | 31 | 0 |
-| 38 | [kenhuangus/jev-usecases](https://github.com/kenhuangus/jev-usecases) | Production TypeSafe Jev (System One) use-case harnesses with confidence… | 28 | 0 |
-| 39 | [shapsider/OmniJev](https://github.com/shapsider/OmniJev) | OmniJev — multimodal finite-choice decision interface and MuJoCo embodi… | 22 | 0 |
-| 40 | [aifabrice/jev-rag](https://github.com/aifabrice/jev-rag) | Jev RAG (Jev-RAG / JevRAG): open-source local knowledge search with BM2… | 20 | +1 |
-| 41 | [erendikmenn/jev-rag-benchmark](https://github.com/erendikmenn/jev-rag-benchmark) | Reproducible benchmark for measuring Jev reranking quality, latency, an… | 20 | 0 |
-| 42 | [sgstq0811/VerdictAD-Jev-AD](https://github.com/sgstq0811/VerdictAD-Jev-AD) | Jev for Anomaly Detection: Training-Free Few-Shot Industrial Anomaly De… | 16 | — |
-| 43 | [AntonioCoppe/jev-harness](https://github.com/AntonioCoppe/jev-harness) | Decision harness for TypeSafe Jev — confidence gates, shadow mode, reci… | 15 | 0 |
-| 44 | [AbdelStark/bicameral](https://github.com/AbdelStark/bicameral) | Hybrid coding harness: System 2 writes, System 1 (Jev) runs reflexes. | 8 | 0 |
-| 45 | [WiktorB2004/llama-index-jev](https://github.com/WiktorB2004/llama-index-jev) | LlamaIndex reranker + router powered by TypeSafe Jev - typed scores/cho… | 8 | 0 |
-| 46 | [Astro-Han/jev-harness](https://github.com/Astro-Han/jev-harness) | A coding agent that filters every tool result through Jev before the mo… | 7 | 0 |
-| 47 | [yangyu666/dsh-jev-prune](https://github.com/yangyu666/dsh-jev-prune) | Jev-judged context compaction for DeepSeek Harness: semantic tool-resul… | 7 | 0 |
-| 48 | [wjw66/deepseek-harness-jev-pre-compaction](https://github.com/wjw66/deepseek-harness-jev-pre-compaction) | A pre-compaction advisor for DeepSeek Harness. Runs before the standard… | 6 | +1 |
-| 49 | [Anil-matcha/awesome-jev-by-typesafe](https://github.com/Anil-matcha/awesome-jev-by-typesafe) | Evidence-backed use cases, patterns, prompts, and starter code for Type… | 5 | +1 |
-| 50 | [JoacoMarc/jev-harness-router](https://github.com/JoacoMarc/jev-harness-router) | Per-turn router for agent harnesses: one 350ms Jev call picks the model… | 4 | 0 |
-| 51 | [Gaurav-Gosain/jev-sec-bench](https://github.com/Gaurav-Gosain/jev-sec-bench) | Blind security benchmarks for Jev, TypeSafe's System One model: prompt… | 3 | 0 |
-| 52 | [frodi-karlsson/onesie](https://github.com/frodi-karlsson/onesie) | Gate scripts and CI on fast, calibrated System One judgments like Jev:… | 3 | — |
-| 53 | [abhisheksharma001/jev-skill](https://github.com/abhisheksharma001/jev-skill) | Agent skill for TypeSafe AI's Jev decision model: fit assessment, integ… | 2 | 0 |
-| 54 | [ai-ecoverse/jev-omni.js](https://github.com/ai-ecoverse/jev-omni.js) | Jev-Omni multimodal decision classifier in the browser: WebGPU via onnx… | 2 | 0 |
-| 55 | [PPRAMANIK62/yc-jev-bench](https://github.com/PPRAMANIK62/yc-jev-bench) | Can Jev replace an LLM reranker? A benchmark of TypeSafe's Jev vs Claud… | 1 | 0 |
-| 56 | [PyModel/jev-skill](https://github.com/PyModel/jev-skill) | Unofficial agent skill for TypeSafe AI's Jev: typed Choice, Score, and… | 1 | 0 |
-| 57 | [VBS2004/jev-questions-skill](https://github.com/VBS2004/jev-questions-skill) | Claude Code skill: designing typed Noul/Choice/Score questions for Jev… | 1 | 0 |
-| 58 | [f-tiger/jev-decision-gate](https://github.com/f-tiger/jev-decision-gate) | — | 1 | 0 |
-| 59 | [vicfei/awesome-ai-quant](https://github.com/vicfei/awesome-ai-quant) | The bridge from AI engineering to quantitative finance: trading agents,… | 1 | +1 |
-| 60 | [vicfei/jev-pipeline-skill](https://github.com/vicfei/jev-pipeline-skill) | v0.1 prototype: one workflow for Jev question design — find → fit → dra… | 0 | 0 |
-| 61 | [vicfei/jev-rag-zh-benchmark](https://github.com/vicfei/jev-rag-zh-benchmark) | Reproducible Chinese RAG reranking benchmark for Jev (TypeSafe System O… | 0 | 0 |
-| 62 | [vicfei/minimind-jev](https://github.com/vicfei/minimind-jev) | Train your own tiny Jev (System One decision model) — v0.1: frozen Chin… | 0 | 0 |
+| 21 | [fstandhartinger/jevbench](https://github.com/fstandhartinger/jevbench) | JevBench by Benchmark Heaven: benchmark and leaderboard for AI decision… | 348 | — |
+| 22 | [FBddcz/embodied-jev](https://github.com/FBddcz/embodied-jev) | EmbodiedJev: MuJoCo robot decision workbench with MiniCPM5-2B, Jev and… | 342 | +6 |
+| 23 | [ekzhang/openjev-sglang](https://github.com/ekzhang/openjev-sglang) | Jev-compatible API endpoint based on open models (prefill-only) | 334 | 0 |
+| 24 | [typesafe-ai/typesafe-sdk-python](https://github.com/typesafe-ai/typesafe-sdk-python) | The official Python library for the TypeSafe API | 315 | +2 |
+| 25 | [RomanSlack/jev-drone](https://github.com/RomanSlack/jev-drone) | Camera-only autonomous drone in MuJoCo with a small judgment model (Typ… | 301 | +1 |
+| 26 | [typesafe-ai/typesafe-sdk-js](https://github.com/typesafe-ai/typesafe-sdk-js) | The official TypeScript/JavaScript library for the TypeSafe API | 288 | +3 |
+| 27 | [OmniJev/OneJev](https://github.com/OmniJev/OneJev) | 🚀🚀 A multimodal System One decision model that gives calibrated answers… | 276 | +10 |
+| 28 | [libingzheren/Jev-Mem](https://github.com/libingzheren/Jev-Mem) | Jev-Mem: System-One Controlled Agentic Memory | 274 | +12 |
+| 29 | [fatwang2/awesome-jev](https://github.com/fatwang2/awesome-jev) | A source-backed Jev project directory with a reusable Jev-only GitHub r… | 234 | 0 |
+| 30 | [tinnel123666888/OmniJev](https://github.com/tinnel123666888/OmniJev) | — | 177 | +1 |
+| 31 | [PerryLink/dsh-permission-rules](https://github.com/PerryLink/dsh-permission-rules) | Claude Code-style declarative permission rules for DeepSeek Harness: or… | 138 | — |
+| 32 | [SimpleJev/JevAny](https://github.com/SimpleJev/JevAny) | Open infrastructure for training, evaluating, and deploying System 1 de… | 138 | +3 |
+| 33 | [PerryLink/jevcore](https://github.com/PerryLink/jevcore) | TypeSafe Jev for DeepSeek Harness, the Model Context Protocol, and plai… | 108 | +3 |
+| 34 | [yzfly/awesome-jev-zh](https://github.com/yzfly/awesome-jev-zh) | Jev / TypeSafe System One 中文精选列表：官方资料、SDK、爆款应用、Agent 工具、开源复现与独立评测，附中文上手… | 96 | +3 |
+| 35 | [spring-ai-community/spring-ai-typesafe](https://github.com/spring-ai-community/spring-ai-typesafe) | Archived: moved to Spring AI and Spring AI Decision Extensions | 66 | +2 |
+| 36 | [hotchpotch/jev-reranker](https://github.com/hotchpotch/jev-reranker) | Jev-powered relevance filtering and reranking for RAG in Python. | 58 | +1 |
+| 37 | [agentscope-ai/Piccolo](https://github.com/agentscope-ai/Piccolo) | Piccolo: 4B, 9B and 27B decision models for agent tool review, context… | 51 | — |
+| 38 | [TypeSafeAI/jev-harness](https://github.com/TypeSafeAI/jev-harness) | A custom coding harness for TypeSafe AI's Jev: an LLM proposes, Jev ans… | 40 | +1 |
+| 39 | [madisonrickert/jev-permission-gate](https://github.com/madisonrickert/jev-permission-gate) | A Claude Code mod that uses TypeSafe's Jev to decide auto mode tool cal… | 36 | 0 |
+| 40 | [sumleo/RLCDAlignBench](https://github.com/sumleo/RLCDAlignBench) | RLCDAlignBench: 44 alignment-failure detection benchmarks and code for… | 31 | 0 |
+| 41 | [shapsider/OmniJev](https://github.com/shapsider/OmniJev) | OmniJev — multimodal finite-choice decision interface and MuJoCo embodi… | 22 | 0 |
+| 42 | [aifabrice/jev-rag](https://github.com/aifabrice/jev-rag) | Jev RAG (Jev-RAG / JevRAG): open-source local knowledge search with BM2… | 20 | +1 |
+| 43 | [erendikmenn/jev-rag-benchmark](https://github.com/erendikmenn/jev-rag-benchmark) | Reproducible benchmark for measuring Jev reranking quality, latency, an… | 20 | 0 |
+| 44 | [sgstq0811/VerdictAD-Jev-AD](https://github.com/sgstq0811/VerdictAD-Jev-AD) | Jev for Anomaly Detection: Training-Free Few-Shot Industrial Anomaly De… | 16 | — |
+| 45 | [AntonioCoppe/jev-harness](https://github.com/AntonioCoppe/jev-harness) | Decision harness for TypeSafe Jev — confidence gates, shadow mode, reci… | 15 | 0 |
+| 46 | [Valen-Team/JevalKit](https://github.com/Valen-Team/JevalKit) | Evaluate typed decision models such as Jev and Valen on text, image and… | 11 | — |
+| 47 | [AbdelStark/bicameral](https://github.com/AbdelStark/bicameral) | Hybrid coding harness: System 2 writes, System 1 (Jev) runs reflexes. | 8 | 0 |
+| 48 | [WiktorB2004/llama-index-jev](https://github.com/WiktorB2004/llama-index-jev) | LlamaIndex reranker + router powered by TypeSafe Jev - typed scores/cho… | 8 | 0 |
+| 49 | [Astro-Han/jev-harness](https://github.com/Astro-Han/jev-harness) | A coding agent that filters every tool result through Jev before the mo… | 7 | 0 |
+| 50 | [yangyu666/dsh-jev-prune](https://github.com/yangyu666/dsh-jev-prune) | Jev-judged context compaction for DeepSeek Harness: semantic tool-resul… | 7 | 0 |
+| 51 | [wjw66/deepseek-harness-jev-pre-compaction](https://github.com/wjw66/deepseek-harness-jev-pre-compaction) | A pre-compaction advisor for DeepSeek Harness. Runs before the standard… | 6 | +1 |
+| 52 | [Anil-matcha/awesome-jev-by-typesafe](https://github.com/Anil-matcha/awesome-jev-by-typesafe) | Evidence-backed use cases, patterns, prompts, and starter code for Type… | 5 | +1 |
+| 53 | [agentscope-ai/HarnessJevBench](https://github.com/agentscope-ai/HarnessJevBench) | Benchmarking Jev-style models at agent harness decision points. | 5 | — |
+| 54 | [JoacoMarc/jev-harness-router](https://github.com/JoacoMarc/jev-harness-router) | Per-turn router for agent harnesses: one 350ms Jev call picks the model… | 4 | 0 |
+| 55 | [Gaurav-Gosain/jev-sec-bench](https://github.com/Gaurav-Gosain/jev-sec-bench) | Blind security benchmarks for Jev, TypeSafe's System One model: prompt… | 3 | 0 |
+| 56 | [frodi-karlsson/onesie](https://github.com/frodi-karlsson/onesie) | Gate scripts and CI on fast, calibrated System One judgments like Jev:… | 3 | — |
+| 57 | [abhisheksharma001/jev-skill](https://github.com/abhisheksharma001/jev-skill) | Agent skill for TypeSafe AI's Jev decision model: fit assessment, integ… | 2 | 0 |
+| 58 | [ai-ecoverse/jev-omni.js](https://github.com/ai-ecoverse/jev-omni.js) | Jev-Omni multimodal decision classifier in the browser: WebGPU via onnx… | 2 | 0 |
+| 59 | [datajuicer/DataJevBench](https://github.com/datajuicer/DataJevBench) | — | 2 | — |
+| 60 | [PPRAMANIK62/yc-jev-bench](https://github.com/PPRAMANIK62/yc-jev-bench) | Can Jev replace an LLM reranker? A benchmark of TypeSafe's Jev vs Claud… | 1 | 0 |
+| 61 | [PyModel/jev-skill](https://github.com/PyModel/jev-skill) | Unofficial agent skill for TypeSafe AI's Jev: typed Choice, Score, and… | 1 | 0 |
+| 62 | [VBS2004/jev-questions-skill](https://github.com/VBS2004/jev-questions-skill) | Claude Code skill: designing typed Noul/Choice/Score questions for Jev… | 1 | 0 |
+| 63 | [f-tiger/jev-decision-gate](https://github.com/f-tiger/jev-decision-gate) | — | 1 | 0 |
+| 64 | [vicfei/awesome-ai-quant](https://github.com/vicfei/awesome-ai-quant) | The bridge from AI engineering to quantitative finance: trading agents,… | 1 | +1 |
+| 65 | [vicfei/jev-pipeline-skill](https://github.com/vicfei/jev-pipeline-skill) | v0.1 prototype: one workflow for Jev question design — find → fit → dra… | 0 | 0 |
+| 66 | [vicfei/jev-rag-zh-benchmark](https://github.com/vicfei/jev-rag-zh-benchmark) | Reproducible Chinese RAG reranking benchmark for Jev (TypeSafe System O… | 0 | 0 |
+| 67 | [vicfei/minimind-jev](https://github.com/vicfei/minimind-jev) | Train your own tiny Jev (System One decision model) — v0.1: frozen Chin… | 0 | 0 |
+| 68 | [vicfei/which-jev](https://github.com/vicfei/which-jev) | Scenario-level leaderboard for Jev-class decision models — pick an engi… | 0 | — |
 
 ## 按周增量
 
 | # | 项目 | 周增量 | 星数 |
 |---|---|---:|---:|
-| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | +815 | 123,051 |
-| 2 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | +379 | 38,482 |
-| 3 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | +94 | 64,742 |
+| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | +826 | 123,062 |
+| 2 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | +382 | 38,485 |
+| 3 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | +96 | 64,744 |
 | 4 | [vllm-project/semantic-router](https://github.com/vllm-project/semantic-router) | +45 | 6,503 |
-| 5 | [StartLuxLabs/Startlux-Decision](https://github.com/StartLuxLabs/Startlux-Decision) | +33 | 1,770 |
+| 5 | [StartLuxLabs/Startlux-Decision](https://github.com/StartLuxLabs/Startlux-Decision) | +34 | 1,771 |
 | 6 | [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | +31 | 2,611 |
 | 7 | [v-modal/awesome-jev-tools](https://github.com/v-modal/awesome-jev-tools) | +31 | 764 |
 | 8 | [Liuziyu77/Valen](https://github.com/Liuziyu77/Valen) | +13 | 926 |
@@ -90,9 +96,9 @@
 | 13 | [logicrw/awesome-jev-projects](https://github.com/logicrw/awesome-jev-projects) | +10 | 736 |
 | 14 | [OmniJev/OneJev](https://github.com/OmniJev/OneJev) | +10 | 276 |
 | 15 | [AnotiaWang/awesome-decision-models](https://github.com/AnotiaWang/awesome-decision-models) | +6 | 719 |
-| 16 | [cobanov/awesome-jev](https://github.com/cobanov/awesome-jev) | +5 | 600 |
-| 17 | [FBddcz/embodied-jev](https://github.com/FBddcz/embodied-jev) | +5 | 341 |
-| 18 | [walidboulanouar/awesome-jev-use-cases](https://github.com/walidboulanouar/awesome-jev-use-cases) | +4 | 495 |
+| 16 | [FBddcz/embodied-jev](https://github.com/FBddcz/embodied-jev) | +6 | 342 |
+| 17 | [cobanov/awesome-jev](https://github.com/cobanov/awesome-jev) | +5 | 600 |
+| 18 | [walidboulanouar/awesome-jev-use-cases](https://github.com/walidboulanouar/awesome-jev-use-cases) | +5 | 496 |
 | 19 | [AbdelStark/awesome-typesafe-jev](https://github.com/AbdelStark/awesome-typesafe-jev) | +3 | 619 |
 | 20 | [typesafe-ai/typesafe-sdk-js](https://github.com/typesafe-ai/typesafe-sdk-js) | +3 | 288 |
 | 21 | [SimpleJev/JevAny](https://github.com/SimpleJev/JevAny) | +3 | 138 |
@@ -102,37 +108,36 @@
 | 25 | [spring-ai-community/spring-ai-typesafe](https://github.com/spring-ai-community/spring-ai-typesafe) | +2 | 66 |
 | 26 | [mode-io/vllm-jev](https://github.com/mode-io/vllm-jev) | +1 | 955 |
 | 27 | [kydlikebtc/awesome-jev](https://github.com/kydlikebtc/awesome-jev) | +1 | 603 |
-| 28 | [tinnel123666888/OmniJev](https://github.com/tinnel123666888/OmniJev) | +1 | 177 |
-| 29 | [hotchpotch/jev-reranker](https://github.com/hotchpotch/jev-reranker) | +1 | 58 |
-| 30 | [TypeSafeAI/jev-harness](https://github.com/TypeSafeAI/jev-harness) | +1 | 40 |
-| 31 | [aifabrice/jev-rag](https://github.com/aifabrice/jev-rag) | +1 | 20 |
-| 32 | [wjw66/deepseek-harness-jev-pre-compaction](https://github.com/wjw66/deepseek-harness-jev-pre-compaction) | +1 | 6 |
-| 33 | [Anil-matcha/awesome-jev-by-typesafe](https://github.com/Anil-matcha/awesome-jev-by-typesafe) | +1 | 5 |
-| 34 | [vicfei/awesome-ai-quant](https://github.com/vicfei/awesome-ai-quant) | +1 | 1 |
-| 35 | [ekzhang/openjev-sglang](https://github.com/ekzhang/openjev-sglang) | 0 | 334 |
-| 36 | [RomanSlack/jev-drone](https://github.com/RomanSlack/jev-drone) | 0 | 300 |
+| 28 | [RomanSlack/jev-drone](https://github.com/RomanSlack/jev-drone) | +1 | 301 |
+| 29 | [tinnel123666888/OmniJev](https://github.com/tinnel123666888/OmniJev) | +1 | 177 |
+| 30 | [hotchpotch/jev-reranker](https://github.com/hotchpotch/jev-reranker) | +1 | 58 |
+| 31 | [TypeSafeAI/jev-harness](https://github.com/TypeSafeAI/jev-harness) | +1 | 40 |
+| 32 | [aifabrice/jev-rag](https://github.com/aifabrice/jev-rag) | +1 | 20 |
+| 33 | [wjw66/deepseek-harness-jev-pre-compaction](https://github.com/wjw66/deepseek-harness-jev-pre-compaction) | +1 | 6 |
+| 34 | [Anil-matcha/awesome-jev-by-typesafe](https://github.com/Anil-matcha/awesome-jev-by-typesafe) | +1 | 5 |
+| 35 | [vicfei/awesome-ai-quant](https://github.com/vicfei/awesome-ai-quant) | +1 | 1 |
+| 36 | [ekzhang/openjev-sglang](https://github.com/ekzhang/openjev-sglang) | 0 | 334 |
 | 37 | [fatwang2/awesome-jev](https://github.com/fatwang2/awesome-jev) | 0 | 234 |
 | 38 | [madisonrickert/jev-permission-gate](https://github.com/madisonrickert/jev-permission-gate) | 0 | 36 |
 | 39 | [sumleo/RLCDAlignBench](https://github.com/sumleo/RLCDAlignBench) | 0 | 31 |
-| 40 | [kenhuangus/jev-usecases](https://github.com/kenhuangus/jev-usecases) | 0 | 28 |
-| 41 | [shapsider/OmniJev](https://github.com/shapsider/OmniJev) | 0 | 22 |
-| 42 | [erendikmenn/jev-rag-benchmark](https://github.com/erendikmenn/jev-rag-benchmark) | 0 | 20 |
-| 43 | [AntonioCoppe/jev-harness](https://github.com/AntonioCoppe/jev-harness) | 0 | 15 |
-| 44 | [AbdelStark/bicameral](https://github.com/AbdelStark/bicameral) | 0 | 8 |
-| 45 | [WiktorB2004/llama-index-jev](https://github.com/WiktorB2004/llama-index-jev) | 0 | 8 |
-| 46 | [Astro-Han/jev-harness](https://github.com/Astro-Han/jev-harness) | 0 | 7 |
-| 47 | [yangyu666/dsh-jev-prune](https://github.com/yangyu666/dsh-jev-prune) | 0 | 7 |
-| 48 | [JoacoMarc/jev-harness-router](https://github.com/JoacoMarc/jev-harness-router) | 0 | 4 |
-| 49 | [Gaurav-Gosain/jev-sec-bench](https://github.com/Gaurav-Gosain/jev-sec-bench) | 0 | 3 |
-| 50 | [abhisheksharma001/jev-skill](https://github.com/abhisheksharma001/jev-skill) | 0 | 2 |
-| 51 | [ai-ecoverse/jev-omni.js](https://github.com/ai-ecoverse/jev-omni.js) | 0 | 2 |
-| 52 | [PPRAMANIK62/yc-jev-bench](https://github.com/PPRAMANIK62/yc-jev-bench) | 0 | 1 |
-| 53 | [PyModel/jev-skill](https://github.com/PyModel/jev-skill) | 0 | 1 |
-| 54 | [VBS2004/jev-questions-skill](https://github.com/VBS2004/jev-questions-skill) | 0 | 1 |
-| 55 | [f-tiger/jev-decision-gate](https://github.com/f-tiger/jev-decision-gate) | 0 | 1 |
-| 56 | [vicfei/jev-pipeline-skill](https://github.com/vicfei/jev-pipeline-skill) | 0 | 0 |
-| 57 | [vicfei/jev-rag-zh-benchmark](https://github.com/vicfei/jev-rag-zh-benchmark) | 0 | 0 |
-| 58 | [vicfei/minimind-jev](https://github.com/vicfei/minimind-jev) | 0 | 0 |
-| 59 | [typesafe-ai/system-one-adapter-python](https://github.com/typesafe-ai/system-one-adapter-python) | -1 | 410 |
+| 40 | [shapsider/OmniJev](https://github.com/shapsider/OmniJev) | 0 | 22 |
+| 41 | [erendikmenn/jev-rag-benchmark](https://github.com/erendikmenn/jev-rag-benchmark) | 0 | 20 |
+| 42 | [AntonioCoppe/jev-harness](https://github.com/AntonioCoppe/jev-harness) | 0 | 15 |
+| 43 | [AbdelStark/bicameral](https://github.com/AbdelStark/bicameral) | 0 | 8 |
+| 44 | [WiktorB2004/llama-index-jev](https://github.com/WiktorB2004/llama-index-jev) | 0 | 8 |
+| 45 | [Astro-Han/jev-harness](https://github.com/Astro-Han/jev-harness) | 0 | 7 |
+| 46 | [yangyu666/dsh-jev-prune](https://github.com/yangyu666/dsh-jev-prune) | 0 | 7 |
+| 47 | [JoacoMarc/jev-harness-router](https://github.com/JoacoMarc/jev-harness-router) | 0 | 4 |
+| 48 | [Gaurav-Gosain/jev-sec-bench](https://github.com/Gaurav-Gosain/jev-sec-bench) | 0 | 3 |
+| 49 | [abhisheksharma001/jev-skill](https://github.com/abhisheksharma001/jev-skill) | 0 | 2 |
+| 50 | [ai-ecoverse/jev-omni.js](https://github.com/ai-ecoverse/jev-omni.js) | 0 | 2 |
+| 51 | [PPRAMANIK62/yc-jev-bench](https://github.com/PPRAMANIK62/yc-jev-bench) | 0 | 1 |
+| 52 | [PyModel/jev-skill](https://github.com/PyModel/jev-skill) | 0 | 1 |
+| 53 | [VBS2004/jev-questions-skill](https://github.com/VBS2004/jev-questions-skill) | 0 | 1 |
+| 54 | [f-tiger/jev-decision-gate](https://github.com/f-tiger/jev-decision-gate) | 0 | 1 |
+| 55 | [vicfei/jev-pipeline-skill](https://github.com/vicfei/jev-pipeline-skill) | 0 | 0 |
+| 56 | [vicfei/jev-rag-zh-benchmark](https://github.com/vicfei/jev-rag-zh-benchmark) | 0 | 0 |
+| 57 | [vicfei/minimind-jev](https://github.com/vicfei/minimind-jev) | 0 | 0 |
+| 58 | [typesafe-ai/system-one-adapter-python](https://github.com/typesafe-ai/system-one-adapter-python) | -1 | 410 |
 
-*更新于 2026-11-18，共追踪 62 个项目。*
+*更新于 2026-11-18，共追踪 68 个项目。*
