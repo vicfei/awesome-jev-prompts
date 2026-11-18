@@ -20,6 +20,7 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 
 - [排行榜 — 收录项目按星数与周增量排行](#排行榜)
 - [同一个问题，问遍每台引擎](#同一个问题问遍每台引擎)
+- [基准与数据集](#基准与数据集)
 - [生态动态](#生态动态)
 - [官方资源](#官方资源)
 - [相关](#相关)
@@ -183,6 +184,32 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 可移植性注记：各引擎在**选项上限**（单趟 A–Z 26 个是公共上界，超出走分组淘汰或拒收）、**none-of-the-above 处理**（显式附加选项 vs 隐藏检查）、**思考模式**（Jev 无；StartLux AutoThink 可选；SGLang 拒绝答案落在推理块内）与**校准漂移**上各不相同——在一台引擎上拟合的阈值不可直接迁移，按引擎重拟合（见[校准与评测](categories/calibration-and-eval.zh-CN.md)分类）。待其文档落地后收录：[d3](https://huggingface.co/vllm-sr)（vLLM Semantic Router）、[pplx-decider](https://huggingface.co/perplexity-ai)（Perplexity）。
 
 **与这些技能的配合方式**：① 在本库挑模式起草问题 → ② 用 [VBS2004/jev-questions-skill](https://github.com/VBS2004/jev-questions-skill) 的 `lint_questions.py` + `spread.py` 做静态与区分度检查（纯标准库、不调 API）→ ③ 拿不准该不该用 Jev 就跑 [abhisheksharma001/jev-skill](https://github.com/abhisheksharma001/jev-skill) 的 `fit_check.py`（确定性 go/no-go）→ ④ 或直接用 [jev-pipeline-skill](https://github.com/vicfei/jev-pipeline-skill) 一条命令串起来（可装为 Claude Code / Codex / OpenCode / ClawHub 技能）。
+
+## 基准与数据集
+
+上面的模式库回答"怎么问"；这些回答"该问哪台引擎"。没有哪台引擎能通吃所有场景——尺寸、延迟与校准的权衡因任务而异，而已发表的大多数数字出自厂商自己。地图如下：
+
+| 基准 | 测什么 | 语言 | 校准 | 延迟/成本 | 独立性 |
+|---|---|---|---|---|---|
+| [Jev Decision Index](https://huggingface.co/spaces/multimodalart/jev-decision-index) | 通用排名——30+ 开源权重模型 × 35+ 基准、13.2 万冻结条目；Full 分混合公开基准、私有同技能测试与新领域任务 | en | 各基准分 | — | 社区 |
+| [Artificial Analysis Decision Index v2](https://artificialanalysis.ai/decision-models/jev-1-14) | 托管+开源模型、六个文档决策基准（简历/收据等）；分数同时奖励正确率与校准置信 | en | ✓（计入总分） | ✓ | 是（专有） |
+| [JevBench](https://github.com/fstandhartinger/jevbench) | 类型化决策的准确率、校准、延迟、成本一次测齐；12 个切片 | en | ✓ | ✓ | 是 |
+| [JevalKit](https://github.com/Valen-Team/JevalKit) | 文本/图像/视频决策基准，统一 runner，公开榜单 | en | 各基准 | — | 社区 |
+| [HarnessJevBench](https://github.com/agentscope-ai/HarnessJevBench) | Harness 职责——工具执行、资源调度、上下文管理、权限边界、异常恢复；另报 TV 分布距离 | en | TV 距离 | — | 厂商（AgentScope） |
+| [DataJevBench](https://github.com/datajuicer/DataJevBench) | 数据工作流——准入、处理方案、质量、就绪、披露；500 题 | 中+英 | ECE + Brier | — | 厂商（Data-Juicer） |
+| [RLCDAlignBench](https://github.com/sumleo/RLCDAlignBench) | 对齐失败检测——44 个基准上零样本中位 AUROC 0.886 | en | AUROC | — | 学术 |
+| [jev-rag-zh-benchmark](https://github.com/vicfei/jev-rag-zh-benchmark) | 中文 RAG 重排——nDCG@5 配对置信区间对比托管 Jev 与 BM25，引擎版本钉死 | 中 | 配对 CI | — | 我方 |
+
+注意榜单互相打架：托管 Jev 在部分社区榜居首，在 [AA v2](https://artificialanalysis.ai/decision-models/jev-1-14) 却**低于中位（66 分）**——聚合指数回答"谁最聪明"，回答不了"谁适合你的场景"。
+
+训练数据——只做链接收录，且一切测试集保持 held-out：
+
+- [THX-01](https://huggingface.co/doofz/THX-01) 权重、训练数据与脚本齐发（210 万决策、八个后训练阶段）
+- [RLCDAlignBench](https://github.com/sumleo/RLCDAlignBench)——代码 + 判定数据
+- [t2reranking-4level-judgments](https://huggingface.co/datasets/cnfeichen/t2reranking-4level-judgments)——T2Reranking 四级教师判定（我方）
+- [JevAny](https://github.com/SimpleJev/JevAny)——五个检查点在 218 万标注决策上训练（发布状态见仓库）
+
+**纪律**：训练数据收录永不触碰测试集——污染是独立性的死穴，Decision Index 把 Full 分测试集藏起来正是这个原因。
 
 ## 相关
 

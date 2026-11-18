@@ -22,6 +22,7 @@ Jev returns typed answers — **Choice**, **Score**, **Noul** — with probabili
 - [Leaderboard — every listed project by stars & weekly change](#leaderboard)
 - [Lint your questions](#lint-your-questions)
 - [Ask the same question on every engine](#ask-the-same-question-on-every-engine)
+- [Benchmarks & datasets](#benchmarks--datasets)
 - [Using this with the skills](#using-this-with-the-skills)
 - [Ecosystem notes](#ecosystem-notes)
 - [Official resources](#official-resources)
@@ -268,6 +269,32 @@ The wire format is converging (see the ecosystem notes below): one question set,
 ```
 
 Portability notes: engines differ in **option caps** (26 letters per single pass is the common A–Z bound; beyond it engines knock out in groups or reject), **none-of-the-above handling** (opt-in extra option vs hidden check), **thinking modes** (Jev none; StartLux AutoThink optional; SGLang refuses inside reasoning blocks), and **calibration drift** — thresholds fitted on one engine do not transfer; re-fit per engine (the [Calibration & eval](categories/calibration-and-eval.md) category). Coming as their request formats land in docs: [d3](https://huggingface.co/vllm-sr) (vLLM Semantic Router), [pplx-decider](https://huggingface.co/perplexity-ai) (Perplexity).
+
+## Benchmarks & datasets
+
+The patterns above tell you *how to ask*; these tell you *which engine to ask*. No engine wins every scenario — size, latency and calibration trade differently per task, and most published numbers come from the vendors themselves. The map:
+
+| Benchmark | What it measures | Lang | Calibration | Latency / cost | Independent |
+|---|---|---|---|---|---|
+| [Jev Decision Index](https://huggingface.co/spaces/multimodalart/jev-decision-index) | general ranking — 30+ open-weight models × 35+ benchmarks, 132k frozen items; Full score mixes public benches with private same-skill tests and new-domain tasks | en | per-bench scores | — | community |
+| [Artificial Analysis Decision Index v2](https://artificialanalysis.ai/decision-models/jev-1-14) | hosted + open models on six document-decision benchmarks (resumes, receipts…); the score rewards correctness **and** calibrated confidence | en | ✓ (inside score) | ✓ | yes (proprietary) |
+| [JevBench](https://github.com/fstandhartinger/jevbench) | typed-decision accuracy, calibration, latency and cost in one run; 12 slices | en | ✓ | ✓ | yes |
+| [JevalKit](https://github.com/Valen-Team/JevalKit) | text / image / video decision benchmarks, one runner, public leaderboard | en | per-bench | — | community |
+| [HarnessJevBench](https://github.com/agentscope-ai/HarnessJevBench) | harness duties — tool execution, resource scheduling, context management, permission boundaries, recovery; also reports TV distribution distance | en | TV distance | — | vendor (AgentScope) |
+| [DataJevBench](https://github.com/datajuicer/DataJevBench) | data workflows — admission, processing choice, quality, readiness, disclosure; 500 tasks | zh+en | ECE + Brier | — | vendor (Data-Juicer) |
+| [RLCDAlignBench](https://github.com/sumleo/RLCDAlignBench) | alignment-failure detection — median AUROC 0.886 zero-shot across 44 benchmarks | en | AUROC | — | academic |
+| [jev-rag-zh-benchmark](https://github.com/vicfei/jev-rag-zh-benchmark) | Chinese RAG reranking — nDCG@5 with paired confidence intervals vs hosted Jev & BM25, pinned engine versions | zh | paired CI | — | ours |
+
+Note the disagreement: hosted Jev tops some community rankings yet scores **below median (66)** on [AA v2](https://artificialanalysis.ai/decision-models/jev-1-14) — aggregate indices answer "which model is smartest", not "which model fits *your* scenario.
+
+Training data — link-only, and every test suite stays held-out:
+
+- [THX-01](https://huggingface.co/doofz/THX-01) ships weights, training data and scripts (2.1M decisions, 8 post-training stages)
+- [RLCDAlignBench](https://github.com/sumleo/RLCDAlignBench) — code + judgment data
+- [t2reranking-4level-judgments](https://huggingface.co/datasets/cnfeichen/t2reranking-4level-judgments) — 4-level teacher judgments on T2Reranking (ours)
+- [JevAny](https://github.com/SimpleJev/JevAny) trains its five checkpoints on 2.18M labeled decisions (release status in repo)
+
+**Discipline:** never let training-data listings touch test suites — contamination is what kills independence, and the Decision Index hides its Full-score tests for exactly this reason.
 
 ## Using this with the skills
 
