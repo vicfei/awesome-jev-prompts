@@ -21,6 +21,7 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 - [排行榜 — 收录项目按星数与周增量排行](#排行榜)
 - [同一个问题，问遍每台引擎](#同一个问题问遍每台引擎)
 - [基准与数据集](#基准与数据集)
+- [which-jev——按场景选引擎](#which-jev按场景选引擎)
 - [生态动态](#生态动态)
 - [官方资源](#官方资源)
 - [相关](#相关)
@@ -210,6 +211,32 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 - [JevAny](https://github.com/SimpleJev/JevAny)——五个检查点在 218 万标注决策上训练（发布状态见仓库）
 
 **纪律**：训练数据收录永不触碰测试集——污染是独立性的死穴，Decision Index 把 Full 分测试集藏起来正是这个原因。
+
+## which-jev——按场景选引擎
+
+不存在万能决策模型：引擎为速度而生的尺寸，尺寸又约束了通用性——所以选型必须按场景、按预算。下面按场景收集证据，一场景一张卡，数字落地即更新。
+
+### 卡 1——工具审批与准入控制
+
+**要做的判断。** 工具调用执行前：只读还是破坏性？会不会删除/覆盖用户数据？泄露凭据？扩大权限？——这是 [Piccolo 在 QwenPaw](https://github.com/agentscope-ai/Piccolo) 里产品化的四问 rubric，也是插件门禁（[dsh-permission-rules](https://github.com/PerryLink/dsh-permission-rules)、[jev-permission-gate](https://github.com/madisonrickert/jev-permission-gate)）的实现面。
+
+**这个场景要什么**
+- **延迟**——门跑在*每一次*工具调用上；预算是几十毫秒，不是几秒。
+- **成本**——单次 × 高频；$42/百万输入的门挂在一个话痨 Agent 上会复利。
+- **校准优先于准确率**——阈值决定自动放行/标记/转人工；概率质量*就是*产品。
+- **失效不对称**——拦下合法调用损失一次重试，放过破坏性调用损失整个工作区：阈值偏向误拦（[注入筛选门禁](categories/guardrails-and-verification.zh-CN.md#注入筛选门禁)的规则）。
+
+**现有证据**
+
+| 引擎 | 信号 | 来源 |
+|---|---|---|
+| Piccolo-27B | HarnessJevBench Hard 84.41%（含权限边界的 Harness 职责）；GGUF 可经 QwenPaw 本地跑 | [发布评测](https://github.com/agentscope-ai/Piccolo) |
+| Clef-flash | 中位应答 ~38.8 ms | [发布公告](https://blog.cloudflare.com/clef-decision-models) |
+| THX-01（322M） | 单次前向 ~10 ms；可边缘部署 | [模型卡](https://huggingface.co/doofz/THX-01) |
+| Jev（托管） | 92 ms/任务；AA v2 66 分——中游 | [Artificial Analysis](https://artificialanalysis.ai/decision-models/jev-1-14) |
+| Laya（421M） | p50 33 ms；零样本弱——先在任务上调优 | [评测](https://flowtivity.ai/blog/laya-open-source-jev-alternative) |
+
+**空位**——该场景尚无独立的跨引擎对比：HarnessJevBench 是厂商自建，聚合指数不做场景切片。[which-jev](https://github.com/vicfei/which-jev) 就是为填这个空的场景榜单（suite #1 = 工具审批；suite #0 = [jev-rag-zh-benchmark](https://github.com/vicfei/jev-rag-zh-benchmark)）。
 
 ## 相关
 
