@@ -1,6 +1,6 @@
 # Awesome Jev Prompts（中文版）
 
-> 面向**类型化决策模型**的问题模式库——[Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) 及一切 System One 兼容引擎（Clef、StartLux、d3、SGLang `/v1/decisions`、任何 `/v1/systemone` 端点）：经过验证的问题模板、反模式与校准实践。**在类型化决策的世界里，"问题设计"就是提示词工程——而且问题措辞是可移植的部分。**
+> 面向**类型化决策模型**的问题模式库——[Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) 及一切 System One 兼容引擎（Clef、StartLux、d3、SGLang `/v1/decisions`、任何 `/v1/systemone` 端点）：经过验证的问题模板、反模式与校准实践。**在类型化决策的世界里，"问题设计"就是提示词工程——而且问题措辞是可移植的部分。** 本库同时承载选型层（基准地图与场景卡）与每日自动更新的生态排行榜——问题设计、引擎选型、生态追踪，一处齐全。
 
 [![Stars](https://img.shields.io/github/stars/vicfei/awesome-jev-prompts?style=social&label=Star)](https://github.com/vicfei/awesome-jev-prompts/stargazers)
 [![Link check](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/link-check.yml/badge.svg)](https://github.com/vicfei/awesome-jev-prompts/actions/workflows/link-check.yml)
@@ -236,7 +236,18 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 | Jev（托管） | 92 ms/任务；AA v2 66 分——中游 | [Artificial Analysis](https://artificialanalysis.ai/decision-models/jev-1-14) |
 | Laya（421M） | p50 33 ms；零样本弱——先在任务上调优 | [评测](https://flowtivity.ai/blog/laya-open-source-jev-alternative) |
 
-**空位**——该场景尚无独立的跨引擎对比：HarnessJevBench 是厂商自建，聚合指数不做场景切片。[which-jev](https://github.com/vicfei/which-jev) 就是为填这个空的场景榜单（suite #1 = 工具审批；suite #0 = [jev-rag-zh-benchmark](https://github.com/vicfei/jev-rag-zh-benchmark)）。
+**空位**——该场景尚无独立的跨引擎对比：HarnessJevBench 是厂商自建，聚合指数不做场景切片。下面的场景榜单程序就是为填这个空而立项。
+
+### 场景榜单程序
+
+场景卡负责组织证据；suite 负责裁决。一个场景 = 一个 suite = held-out 测试集 + runner + 榜单，所有 suite 强制同构四列：**准确率 · ECE + Brier · p50/p95 延迟 · 每千次决策 $**。
+
+| # | Suite | 状态 |
+|---|---|---|
+| 0 | [中文 RAG 重排](https://github.com/vicfei/jev-rag-zh-benchmark) | 已运行——原仓进行，钉死引擎版本、配对置信区间 |
+| 1 | 工具审批与准入控制（卡 1） | 已立项——held-out 测试集与 runner 随后 |
+
+地面规则：测试集保持 **held-out**（污染是独立性的死穴）；厂商可提交但须**标注**；榜单**实时渲染**、行文永不写死分数；不能改变工程师选择的 suite 不发。Suite #1 立项书：每次工具调用前的门——只读 vs 破坏性、数据丢失、凭据泄露、权限扩大——按阈值敏感性曲线计分，不报单点。
 
 ## 相关
 
