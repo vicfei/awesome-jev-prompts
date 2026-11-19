@@ -1,6 +1,6 @@
 # Awesome Jev Prompts
 
-> A curated library of question patterns, anti-patterns, and calibration notes for typed decision models — [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) and every System One-compatible engine (Clef, StartLux, d3, SGLang `/v1/decisions`, any `/v1/systemone` endpoint). **Question design is the prompt engineering of typed decisions — and question wording is the portable part.**
+> A curated library of question patterns, anti-patterns, and calibration notes for typed decision models — [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) and every System One-compatible engine (Clef, StartLux, d3, SGLang `/v1/decisions`, any `/v1/systemone` endpoint). **Question design is the prompt engineering of typed decisions — and question wording is the portable part.** Paired with an engine-selection layer (benchmark map + scenario cards) and a daily-refreshed ecosystem leaderboard — question design, engine choice and ecosystem tracking in one place.
 
 [![Stars](https://img.shields.io/github/stars/vicfei/awesome-jev-prompts?style=social&label=Star)](https://github.com/vicfei/awesome-jev-prompts/stargazers)
 [![Last commit](https://img.shields.io/github/last-commit/vicfei/awesome-jev-prompts?label=last%20commit)](https://github.com/vicfei/awesome-jev-prompts/commits)
@@ -321,7 +321,18 @@ No universal decision model exists: engines are sized for speed, and size bounds
 | Jev (hosted) | 92 ms/task; AA v2 score 66 — mid-pack | [Artificial Analysis](https://artificialanalysis.ai/decision-models/jev-1-14) |
 | Laya (421M) | 33 ms p50; weak zero-shot — tune on the task first | [benchmarks](https://flowtivity.ai/blog/laya-open-source-jev-alternative) |
 
-**The open slot** — no independent cross-engine comparison exists for *this* scenario yet: HarnessJevBench is vendor-run and the aggregate indices don't slice it. [which-jev](https://github.com/vicfei/which-jev) is the scenario-leaderboard effort to fill it (suite #1 = tool approval; suite #0 = [jev-rag-zh-benchmark](https://github.com/vicfei/jev-rag-zh-benchmark)).
+**The open slot** — no independent cross-engine comparison exists for *this* scenario yet: HarnessJevBench is vendor-run and the aggregate indices don't slice it. The scenario-leaderboard program below is chartered to fill it.
+
+### The scenario-leaderboard program
+
+Cards organize the evidence; suites settle it. One scenario = one suite = a held-out test set + a runner + a leaderboard, reporting the same mandatory columns everywhere: **accuracy · ECE + Brier · p50/p95 latency · $ per 1k decisions**.
+
+| # | Suite | Status |
+|---|---|---|
+| 0 | [Chinese RAG reranking](https://github.com/vicfei/jev-rag-zh-benchmark) | live — runs in its own repo, pinned engines, paired CIs |
+| 1 | Tool approval & admission control (Card 1) | chartered — held-out test set + runner next |
+
+Ground rules: test sets stay **held-out** (contamination kills independence); vendor runs welcome but **labeled**; leaderboards render **live**, prose never hardcodes scores; a suite ships only if it would **change an engineer's choice**. Suite #1's charter: the gate before every tool call — read-only vs destructive, data loss, credential leak, permission widening — scored on threshold-sensitivity curves, not single operating points.
 
 ## Using this with the skills
 
