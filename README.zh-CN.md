@@ -35,16 +35,16 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 
 | # | 项目 | 星数 | 周增量 |
 |---|---|---:|---:|
-| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 123,753 | +614 |
-| 2 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | 64,849 | +93 |
-| 3 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | 38,893 | +368 |
-| 4 | [agentscope-ai/QwenPaw](https://github.com/agentscope-ai/QwenPaw) | 38,195 | +222 |
-| 5 | [vllm-project/semantic-router](https://github.com/vllm-project/semantic-router) | 6,529 | +19 |
-| 6 | [typesafe-ai/skills](https://github.com/typesafe-ai/skills) | 2,920 | +12 |
-| 7 | [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | 2,639 | +26 |
-| 8 | [StartLuxLabs/Startlux-Decision](https://github.com/StartLuxLabs/Startlux-Decision) | 1,793 | +18 |
-| 9 | [heyjunpenn/awesome-jev](https://github.com/heyjunpenn/awesome-jev) | 1,105 | +23 |
-| 10 | [mode-io/vllm-jev](https://github.com/mode-io/vllm-jev) | 957 | +2 |
+| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 123,831 | +577 |
+| 2 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | 64,862 | +88 |
+| 3 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | 38,976 | +378 |
+| 4 | [agentscope-ai/QwenPaw](https://github.com/agentscope-ai/QwenPaw) | 38,227 | +201 |
+| 5 | [vllm-project/semantic-router](https://github.com/vllm-project/semantic-router) | 6,534 | +21 |
+| 6 | [typesafe-ai/skills](https://github.com/typesafe-ai/skills) | 2,924 | +13 |
+| 7 | [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | 2,642 | +25 |
+| 8 | [StartLuxLabs/Startlux-Decision](https://github.com/StartLuxLabs/Startlux-Decision) | 1,798 | +21 |
+| 9 | [heyjunpenn/awesome-jev](https://github.com/heyjunpenn/awesome-jev) | 1,108 | +21 |
+| 10 | [mode-io/vllm-jev](https://github.com/mode-io/vllm-jev) | 970 | +16 |
 <!-- leaderboard:end -->
 
 ## Jev 是什么

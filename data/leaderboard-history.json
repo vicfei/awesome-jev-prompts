@@ -97,6 +97,10 @@
       [
         "2026-11-25",
         620
+      ],
+      [
+        "2026-11-26",
+        620
       ]
     ],
     "stars": 620
@@ -198,6 +202,10 @@
       ],
       [
         "2026-11-25",
+        8
+      ],
+      [
+        "2026-11-26",
         8
       ]
     ],
@@ -301,6 +309,10 @@
       [
         "2026-11-25",
         8
+      ],
+      [
+        "2026-11-26",
+        8
       ]
     ],
     "stars": 8
@@ -402,6 +414,10 @@
       ],
       [
         "2026-11-25",
+        729
+      ],
+      [
+        "2026-11-26",
         729
       ]
     ],
@@ -505,6 +521,10 @@
       [
         "2026-11-25",
         15
+      ],
+      [
+        "2026-11-26",
+        15
       ]
     ],
     "stars": 15
@@ -606,6 +626,10 @@
       ],
       [
         "2026-11-25",
+        7
+      ],
+      [
+        "2026-11-26",
         7
       ]
     ],
@@ -709,6 +733,10 @@
       [
         "2026-11-25",
         342
+      ],
+      [
+        "2026-11-26",
+        342
       ]
     ],
     "stars": 342
@@ -810,6 +838,10 @@
       ],
       [
         "2026-11-25",
+        3
+      ],
+      [
+        "2026-11-26",
         3
       ]
     ],
@@ -913,9 +945,13 @@
       [
         "2026-11-25",
         38893
+      ],
+      [
+        "2026-11-26",
+        38976
       ]
     ],
-    "stars": 38893
+    "stars": 38976
   },
   "JoacoMarc/jev-harness-router": {
     "desc": "Per-turn router for agent harnesses: one 350ms Jev call picks the model tier, effort, tools and skill, behind a hard deadline with a regex fallback. Claude Agent SDK adapter included.",
@@ -1014,6 +1050,10 @@
       ],
       [
         "2026-11-25",
+        4
+      ],
+      [
+        "2026-11-26",
         4
       ]
     ],
@@ -1117,9 +1157,13 @@
       [
         "2026-11-25",
         938
+      ],
+      [
+        "2026-11-26",
+        939
       ]
     ],
-    "stars": 938
+    "stars": 939
   },
   "OmniJev/OneJev": {
     "desc": "🚀🚀 A multimodal System One decision model that gives calibrated answers to typed questions about screens, photos, video and text in one forward pass.",
@@ -1219,9 +1263,13 @@
       [
         "2026-11-25",
         286
+      ],
+      [
+        "2026-11-26",
+        287
       ]
     ],
-    "stars": 286
+    "stars": 287
   },
   "PPRAMANIK62/yc-jev-bench": {
     "desc": "Can Jev replace an LLM reranker? A benchmark of TypeSafe's Jev vs Claude Haiku and BGE on natural-language search over all 6,245 YC companies, with a live search demo.",
@@ -1321,6 +1369,10 @@
       [
         "2026-11-25",
         1
+      ],
+      [
+        "2026-11-26",
+        1
       ]
     ],
     "stars": 1
@@ -1358,6 +1410,10 @@
       ],
       [
         "2026-11-25",
+        143
+      ],
+      [
+        "2026-11-26",
         143
       ]
     ],
@@ -1461,6 +1517,10 @@
       [
         "2026-11-25",
         112
+      ],
+      [
+        "2026-11-26",
+        112
       ]
     ],
     "stars": 112
@@ -1562,6 +1622,10 @@
       ],
       [
         "2026-11-25",
+        1
+      ],
+      [
+        "2026-11-26",
         1
       ]
     ],
@@ -1665,6 +1729,10 @@
       [
         "2026-11-25",
         305
+      ],
+      [
+        "2026-11-26",
+        305
       ]
     ],
     "stars": 305
@@ -1766,6 +1834,10 @@
       ],
       [
         "2026-11-25",
+        144
+      ],
+      [
+        "2026-11-26",
         144
       ]
     ],
@@ -1869,9 +1941,13 @@
       [
         "2026-11-25",
         1793
+      ],
+      [
+        "2026-11-26",
+        1798
       ]
     ],
-    "stars": 1793
+    "stars": 1798
   },
   "TauricResearch/TradingAgents": {
     "desc": "TradingAgents: Towards Agentic Finance Research",
@@ -1971,9 +2047,13 @@
       [
         "2026-11-25",
         123753
+      ],
+      [
+        "2026-11-26",
+        123831
       ]
     ],
-    "stars": 123753
+    "stars": 123831
   },
   "TypeSafeAI/jev-harness": {
     "desc": "A custom coding harness for TypeSafe AI's Jev: an LLM proposes, Jev answers narrow questions, code decides, every step leaves a receipt.",
@@ -2072,6 +2152,10 @@
       ],
       [
         "2026-11-25",
+        42
+      ],
+      [
+        "2026-11-26",
         42
       ]
     ],
@@ -2175,6 +2259,10 @@
       [
         "2026-11-25",
         1
+      ],
+      [
+        "2026-11-26",
+        1
       ]
     ],
     "stars": 1
@@ -2212,6 +2300,10 @@
       ],
       [
         "2026-11-25",
+        12
+      ],
+      [
+        "2026-11-26",
         12
       ]
     ],
@@ -2315,6 +2407,10 @@
       [
         "2026-11-25",
         8
+      ],
+      [
+        "2026-11-26",
+        8
       ]
     ],
     "stars": 8
@@ -2417,6 +2513,10 @@
       [
         "2026-11-25",
         2
+      ],
+      [
+        "2026-11-26",
+        2
       ]
     ],
     "stars": 2
@@ -2454,6 +2554,10 @@
       ],
       [
         "2026-11-25",
+        5
+      ],
+      [
+        "2026-11-26",
         5
       ]
     ],
@@ -2493,9 +2597,13 @@
       [
         "2026-11-25",
         67
+      ],
+      [
+        "2026-11-26",
+        68
       ]
     ],
-    "stars": 67
+    "stars": 68
   },
   "agentscope-ai/QwenPaw": {
     "desc": "Your Personal AI Assistant; easy to install, deploy on your own machine or on the cloud; supports multiple chat apps with easily extensible capabilities.",
@@ -2527,9 +2635,13 @@
       [
         "2026-11-25",
         38195
+      ],
+      [
+        "2026-11-26",
+        38227
       ]
     ],
-    "stars": 38195
+    "stars": 38227
   },
   "ai-ecoverse/jev-omni.js": {
     "desc": "Jev-Omni multimodal decision classifier in the browser: WebGPU via onnxruntime-web",
@@ -2628,6 +2740,10 @@
       ],
       [
         "2026-11-25",
+        2
+      ],
+      [
+        "2026-11-26",
         2
       ]
     ],
@@ -2731,6 +2847,10 @@
       [
         "2026-11-25",
         22
+      ],
+      [
+        "2026-11-26",
+        22
       ]
     ],
     "stars": 22
@@ -2833,9 +2953,13 @@
       [
         "2026-11-25",
         602
+      ],
+      [
+        "2026-11-26",
+        601
       ]
     ],
-    "stars": 602
+    "stars": 601
   },
   "datajuicer/DataJevBench": {
     "desc": "",
@@ -2870,6 +2994,10 @@
       ],
       [
         "2026-11-25",
+        4
+      ],
+      [
+        "2026-11-26",
         4
       ]
     ],
@@ -2973,6 +3101,10 @@
       [
         "2026-11-25",
         334
+      ],
+      [
+        "2026-11-26",
+        334
       ]
     ],
     "stars": 334
@@ -3074,6 +3206,10 @@
       ],
       [
         "2026-11-25",
+        20
+      ],
+      [
+        "2026-11-26",
         20
       ]
     ],
@@ -3177,6 +3313,10 @@
       [
         "2026-11-25",
         1
+      ],
+      [
+        "2026-11-26",
+        1
       ]
     ],
     "stars": 1
@@ -3279,6 +3419,10 @@
       [
         "2026-11-25",
         234
+      ],
+      [
+        "2026-11-26",
+        234
       ]
     ],
     "stars": 234
@@ -3325,6 +3469,10 @@
       [
         "2026-11-25",
         3
+      ],
+      [
+        "2026-11-26",
+        3
       ]
     ],
     "stars": 3
@@ -3363,9 +3511,13 @@
       [
         "2026-11-25",
         352
+      ],
+      [
+        "2026-11-26",
+        355
       ]
     ],
-    "stars": 352
+    "stars": 355
   },
   "heyjunpenn/awesome-jev": {
     "desc": "A verified, community-maintained catalog of 997 open-source projects built with Jev.",
@@ -3465,9 +3617,13 @@
       [
         "2026-11-25",
         1105
+      ],
+      [
+        "2026-11-26",
+        1108
       ]
     ],
-    "stars": 1105
+    "stars": 1108
   },
   "hotchpotch/jev-reranker": {
     "desc": "Jev-powered relevance filtering and reranking for RAG in Python.",
@@ -3567,9 +3723,13 @@
       [
         "2026-11-25",
         58
+      ],
+      [
+        "2026-11-26",
+        59
       ]
     ],
-    "stars": 58
+    "stars": 59
   },
   "kenhuangus/jev-usecases": {
     "desc": "Production TypeSafe Jev (System One) use-case harnesses with confidence-gated decision logic",
@@ -3743,6 +3903,10 @@
       [
         "2026-11-25",
         605
+      ],
+      [
+        "2026-11-26",
+        605
       ]
     ],
     "stars": 605
@@ -3844,6 +4008,10 @@
       ],
       [
         "2026-11-25",
+        280
+      ],
+      [
+        "2026-11-26",
         280
       ]
     ],
@@ -3947,9 +4115,13 @@
       [
         "2026-11-25",
         741
+      ],
+      [
+        "2026-11-26",
+        742
       ]
     ],
-    "stars": 741
+    "stars": 742
   },
   "madisonrickert/jev-permission-gate": {
     "desc": "A Claude Code mod that uses TypeSafe's Jev to decide auto mode tool calls. 2x faster than the built-in classifier on the calls it decides.",
@@ -4048,6 +4220,10 @@
       ],
       [
         "2026-11-25",
+        36
+      ],
+      [
+        "2026-11-26",
         36
       ]
     ],
@@ -4151,9 +4327,13 @@
       [
         "2026-11-25",
         957
+      ],
+      [
+        "2026-11-26",
+        970
       ]
     ],
-    "stars": 957
+    "stars": 970
   },
   "qybaihe/mu": {
     "desc": "mu (μ): most of what a coding agent decides isn't code. mu hands 40 kinds of yes/no calls to a small model: fewer wasted tokens, fewer approvals on autopilot, fewer runs that stop halfway. Built on pi.",
@@ -4197,9 +4377,13 @@
       [
         "2026-11-25",
         619
+      ],
+      [
+        "2026-11-26",
+        620
       ]
     ],
-    "stars": 619
+    "stars": 620
   },
   "sgstq0811/VerdictAD-Jev-AD": {
     "desc": "Jev for Anomaly Detection: Training-Free Few-Shot Industrial Anomaly Detection via Decision-Guided Refinement (VerdictAD).",
@@ -4242,6 +4426,10 @@
       ],
       [
         "2026-11-25",
+        19
+      ],
+      [
+        "2026-11-26",
         19
       ]
     ],
@@ -4345,6 +4533,10 @@
       [
         "2026-11-25",
         22
+      ],
+      [
+        "2026-11-26",
+        22
       ]
     ],
     "stars": 22
@@ -4446,6 +4638,10 @@
       ],
       [
         "2026-11-25",
+        67
+      ],
+      [
+        "2026-11-26",
         67
       ]
     ],
@@ -4549,6 +4745,10 @@
       [
         "2026-11-25",
         32
+      ],
+      [
+        "2026-11-26",
+        32
       ]
     ],
     "stars": 32
@@ -4650,6 +4850,10 @@
       ],
       [
         "2026-11-25",
+        178
+      ],
+      [
+        "2026-11-26",
         178
       ]
     ],
@@ -4753,9 +4957,13 @@
       [
         "2026-11-25",
         2920
+      ],
+      [
+        "2026-11-26",
+        2924
       ]
     ],
-    "stars": 2920
+    "stars": 2924
   },
   "typesafe-ai/system-one-adapter-python": {
     "desc": "Drop-in TypeSafeClient replacement backed by LLM APIs",
@@ -4854,6 +5062,10 @@
       ],
       [
         "2026-11-25",
+        410
+      ],
+      [
+        "2026-11-26",
         410
       ]
     ],
@@ -4957,6 +5169,10 @@
       [
         "2026-11-25",
         288
+      ],
+      [
+        "2026-11-26",
+        288
       ]
     ],
     "stars": 288
@@ -5058,6 +5274,10 @@
       ],
       [
         "2026-11-25",
+        317
+      ],
+      [
+        "2026-11-26",
         317
       ]
     ],
@@ -5161,6 +5381,10 @@
       [
         "2026-11-25",
         538
+      ],
+      [
+        "2026-11-26",
+        538
       ]
     ],
     "stars": 538
@@ -5262,6 +5486,10 @@
       ],
       [
         "2026-11-25",
+        1
+      ],
+      [
+        "2026-11-26",
         1
       ]
     ],
@@ -5365,6 +5593,10 @@
       [
         "2026-11-25",
         0
+      ],
+      [
+        "2026-11-26",
+        0
       ]
     ],
     "stars": 0
@@ -5467,6 +5699,10 @@
       [
         "2026-11-25",
         0
+      ],
+      [
+        "2026-11-26",
+        0
       ]
     ],
     "stars": 0
@@ -5568,6 +5804,10 @@
       ],
       [
         "2026-11-25",
+        0
+      ],
+      [
+        "2026-11-26",
         0
       ]
     ],
@@ -5681,9 +5921,13 @@
       [
         "2026-11-25",
         64849
+      ],
+      [
+        "2026-11-26",
+        64862
       ]
     ],
-    "stars": 64849
+    "stars": 64862
   },
   "vllm-project/semantic-router": {
     "desc": "An open, programmable decision layer for models and compute.",
@@ -5783,9 +6027,13 @@
       [
         "2026-11-25",
         6529
+      ],
+      [
+        "2026-11-26",
+        6534
       ]
     ],
-    "stars": 6529
+    "stars": 6534
   },
   "walidboulanouar/awesome-jev-use-cases": {
     "desc": "Awesome list of TypeSafe AI Jev use cases: 74 demos ranked by likes, 150+ GitHub repos, limits, cost and API examples. CC0",
@@ -5884,6 +6132,10 @@
       ],
       [
         "2026-11-25",
+        499
+      ],
+      [
+        "2026-11-26",
         499
       ]
     ],
@@ -5987,6 +6239,10 @@
       [
         "2026-11-25",
         6
+      ],
+      [
+        "2026-11-26",
+        6
       ]
     ],
     "stars": 6
@@ -6088,6 +6344,10 @@
       ],
       [
         "2026-11-25",
+        687
+      ],
+      [
+        "2026-11-26",
         687
       ]
     ],
@@ -6191,6 +6451,10 @@
       [
         "2026-11-25",
         7
+      ],
+      [
+        "2026-11-26",
+        7
       ]
     ],
     "stars": 7
@@ -6293,9 +6557,13 @@
       [
         "2026-11-25",
         2639
+      ],
+      [
+        "2026-11-26",
+        2642
       ]
     ],
-    "stars": 2639
+    "stars": 2642
   },
   "yzfly/awesome-jev-zh": {
     "desc": "Jev / TypeSafe System One 中文精选列表：官方资料、SDK、爆款应用、Agent 工具、开源复现与独立评测，附中文上手指南，每日自动收录 GitHub 热门项目。",
@@ -6394,6 +6662,10 @@
       ],
       [
         "2026-11-25",
+        97
+      ],
+      [
+        "2026-11-26",
         97
       ]
     ],
