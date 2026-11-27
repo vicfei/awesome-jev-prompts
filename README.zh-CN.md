@@ -31,20 +31,20 @@ Jev 返回的是**类型化答案**——**Choice**（选择）、**Score**（�
 ## 排行榜
 
 <!-- leaderboard:start -->
-本清单引用的 68 个 GitHub 项目星数 Top 10——完整排名与周增量表见[LEADERBOARD.zh-CN.md](LEADERBOARD.zh-CN.md)。
+本清单引用的 71 个 GitHub 项目星数 Top 10——完整排名与周增量表见[LEADERBOARD.zh-CN.md](LEADERBOARD.zh-CN.md)。
 
 | # | 项目 | 星数 | 周增量 |
 |---|---|---:|---:|
-| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 123,831 | +577 |
-| 2 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | 64,862 | +88 |
-| 3 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | 38,976 | +378 |
-| 4 | [agentscope-ai/QwenPaw](https://github.com/agentscope-ai/QwenPaw) | 38,227 | +201 |
-| 5 | [vllm-project/semantic-router](https://github.com/vllm-project/semantic-router) | 6,534 | +21 |
-| 6 | [typesafe-ai/skills](https://github.com/typesafe-ai/skills) | 2,924 | +13 |
-| 7 | [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | 2,642 | +25 |
-| 8 | [StartLuxLabs/Startlux-Decision](https://github.com/StartLuxLabs/Startlux-Decision) | 1,798 | +21 |
-| 9 | [heyjunpenn/awesome-jev](https://github.com/heyjunpenn/awesome-jev) | 1,108 | +21 |
-| 10 | [mode-io/vllm-jev](https://github.com/mode-io/vllm-jev) | 970 | +16 |
+| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 123,916 | +563 |
+| 2 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | 64,872 | +81 |
+| 3 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | 39,062 | +420 |
+| 4 | [agentscope-ai/QwenPaw](https://github.com/agentscope-ai/QwenPaw) | 38,258 | +186 |
+| 5 | [vllm-project/semantic-router](https://github.com/vllm-project/semantic-router) | 6,547 | +33 |
+| 6 | [HarnessRouter/harnessrouter](https://github.com/HarnessRouter/harnessrouter) | 4,580 | — |
+| 7 | [typesafe-ai/skills](https://github.com/typesafe-ai/skills) | 2,928 | +17 |
+| 8 | [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | 2,648 | +30 |
+| 9 | [StartLuxLabs/Startlux-Decision](https://github.com/StartLuxLabs/Startlux-Decision) | 1,799 | +19 |
+| 10 | [heyjunpenn/awesome-jev](https://github.com/heyjunpenn/awesome-jev) | 1,111 | +22 |
 <!-- leaderboard:end -->
 
 ## Jev 是什么
