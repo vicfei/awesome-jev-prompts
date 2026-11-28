@@ -38,16 +38,16 @@ Top 10 of the 71 GitHub projects this list references, by stars — the full ran
 
 | # | Project | Stars | Δ 7d |
 |---|---|---:|---:|
-| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 123,916 | +563 |
-| 2 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | 64,872 | +81 |
-| 3 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | 39,062 | +420 |
-| 4 | [agentscope-ai/QwenPaw](https://github.com/agentscope-ai/QwenPaw) | 38,258 | +186 |
-| 5 | [vllm-project/semantic-router](https://github.com/vllm-project/semantic-router) | 6,547 | +33 |
-| 6 | [HarnessRouter/harnessrouter](https://github.com/HarnessRouter/harnessrouter) | 4,580 | — |
-| 7 | [typesafe-ai/skills](https://github.com/typesafe-ai/skills) | 2,928 | +17 |
-| 8 | [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | 2,648 | +30 |
-| 9 | [StartLuxLabs/Startlux-Decision](https://github.com/StartLuxLabs/Startlux-Decision) | 1,799 | +19 |
-| 10 | [heyjunpenn/awesome-jev](https://github.com/heyjunpenn/awesome-jev) | 1,111 | +22 |
+| 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 124,000 | +545 |
+| 2 | [virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | 64,880 | +70 |
+| 3 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | 39,142 | +460 |
+| 4 | [agentscope-ai/QwenPaw](https://github.com/agentscope-ai/QwenPaw) | 38,277 | +176 |
+| 5 | [vllm-project/semantic-router](https://github.com/vllm-project/semantic-router) | 6,560 | +42 |
+| 6 | [HarnessRouter/harnessrouter](https://github.com/HarnessRouter/harnessrouter) | 4,588 | — |
+| 7 | [typesafe-ai/skills](https://github.com/typesafe-ai/skills) | 2,928 | +16 |
+| 8 | [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | 2,648 | +25 |
+| 9 | [StartLuxLabs/Startlux-Decision](https://github.com/StartLuxLabs/Startlux-Decision) | 1,805 | +24 |
+| 10 | [heyjunpenn/awesome-jev](https://github.com/heyjunpenn/awesome-jev) | 1,111 | +19 |
 <!-- leaderboard:end -->
 
 ## What is Jev?
@@ -369,13 +369,13 @@ The question-design approach in this list transfers across System One models. No
 |---|---|---:|
 | [yibie/awesome-jev](https://github.com/yibie/awesome-jev) | General list, highest-frequency updates | 2,648 |
 | [heyjunpenn/awesome-jev](https://github.com/heyjunpenn/awesome-jev) | 900+ project catalog with companion site | 1,111 |
-| [logicrw/awesome-jev-projects](https://github.com/logicrw/awesome-jev-projects) | Ecosystem radar web app, auto GitHub sync | 745 |
-| [AnotiaWang/awesome-decision-models](https://github.com/AnotiaWang/awesome-decision-models) | Classic minimal list (renamed from awesome-jev), open replicas & benchmarks | 730 |
+| [logicrw/awesome-jev-projects](https://github.com/logicrw/awesome-jev-projects) | Ecosystem radar web app, auto GitHub sync | 744 |
+| [AnotiaWang/awesome-decision-models](https://github.com/AnotiaWang/awesome-decision-models) | Classic minimal list (renamed from awesome-jev), open replicas & benchmarks | 737 |
 | [AbdelStark/awesome-typesafe-jev](https://github.com/AbdelStark/awesome-typesafe-jev) | Field guide with platform routing & evals | 620 |
 | [kydlikebtc/awesome-jev](https://github.com/kydlikebtc/awesome-jev) | Machine-readable catalog by decision pattern | 605 |
 | [cobanov/awesome-jev](https://github.com/cobanov/awesome-jev) | Curated list with dated review notes | 601 |
 | [v-modal/awesome-jev-tools](https://github.com/v-modal/awesome-jev-tools) | Tools list with inclusion criteria | 537 |
-| [walidboulanouar/awesome-jev-use-cases](https://github.com/walidboulanouar/awesome-jev-use-cases) | Demos ranked by social metrics, limits & cost | 499 |
+| [walidboulanouar/awesome-jev-use-cases](https://github.com/walidboulanouar/awesome-jev-use-cases) | Demos ranked by social metrics, limits & cost | 500 |
 | [yzfly/awesome-jev-zh](https://github.com/yzfly/awesome-jev-zh) | Chinese-language curated list with an independent, skeptical voice | 97 |
 | [Anil-matcha/awesome-jev-by-typesafe](https://github.com/Anil-matcha/awesome-jev-by-typesafe) | Use cases, starter code, design rules | 8 |
 <!-- related-lists:end -->
@@ -393,5 +393,5 @@ Found a pattern that works, or an anti-pattern that bit you? PRs and issues welc
 **Disclaimer:** this is an independent community resource. It is not affiliated with or endorsed by TypeSafe AI. Facts (pricing, limits, behavior) are cited from public sources and can change — always verify against the [official docs](https://docs.typesafe.ai/).
 
 <!-- last-checked:start -->
-*Last checked: 2026-11-27*
+*Last checked: 2026-11-28*
 <!-- last-checked:end -->
